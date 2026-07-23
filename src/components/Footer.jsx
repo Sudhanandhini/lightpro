@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo.jsx'
 import { nav, company } from '../data/site.js'
+import logo from '../assets/logolight1.png'
 
 export default function Footer() {
   const groups = nav.filter(n => n.children)
@@ -10,6 +11,7 @@ export default function Footer() {
       <div className="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo className="h-20 w-auto" light />
+          {/* <img src={logo} alt="LightPro Technologies" className="h-auto w-[160px]" /> */}
           <p className="mt-6 max-w-[32ch] text-[14px] leading-relaxed text-white/55">
             IT infrastructure partner since {company.since}. We build and run the digital
             workspace - devices, network, security and the people who keep it all working.
@@ -50,8 +52,8 @@ export default function Footer() {
         <div className="wrap flex flex-col gap-3 py-6 text-[12.5px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} {company.name}. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white">Privacy policy</a>
-            <a href="#" className="hover:text-white">Terms of service</a>
+            <a href="https://www.sunsys.in/" className="hover:text-white"> Developed By Sunsys Technologies</a>
+          
           </div>
         </div>
       </div>

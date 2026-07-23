@@ -42,3 +42,7 @@
   @keyframes blip { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
   .animate-blip { animation: blip 2s infinite; }
 }
+
+.wrap{
+  max-width: 1300px !important;
+}

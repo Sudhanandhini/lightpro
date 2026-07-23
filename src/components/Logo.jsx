@@ -9,7 +9,7 @@ export default function Logo({ className = 'h-11', light = false }) {
     { w: 30 }, { w: 62 }, { w: 94 }, { w: 126 }, { w: 158 }, { w: 190 }
   ]
   return (
-    <svg viewBox="0 0 260 108" className={className} role="img" aria-label="LightPro Technologies">
+    <svg viewBox="0 0 260 115" className={className} role="img" aria-label="LightPro Technologies">
       <g fill={ink}>
         {bars.map((b, i) => (
           <rect key={i} x={(260 - b.w) / 2} y={6 + i * 9} width={b.w} height="3.2" />

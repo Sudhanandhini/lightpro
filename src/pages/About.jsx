@@ -1,5 +1,6 @@
 import { PageHero, Section, RuleList, Steps, CTA } from '../components/UI.jsx'
 import { company } from '../data/site.js'
+import teamImage from '../assets/team.jpg'
 
 export default function About() {
   return (
@@ -16,24 +17,25 @@ export default function About() {
           <div>
             <p className="eyebrow">Our story</p>
             <h2 className="h2 mt-5">Built around one uncomfortable truth</h2>
-          </div>
-          <div className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
-            <p>
+             <p className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
               Hardware is easy to buy and hard to run. Most companies discover this the week a
               new team starts and forty machines arrive in boxes with no image, no enrolment
               and no asset tag - and no one on the invoice is responsible for that gap.
             </p>
-            <p>
+            <p className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
               LightPro was founded in {company.since} to close it. We began supplying devices to
               startups in {company.city}, then added the network they plugged into, the security
               policy that governed them, the management platform that enforced it and, eventually,
               the engineers who ran the whole thing day to day.
             </p>
-            <p>
+            <p className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
               Today that is one continuous service: digital workspace solutions, network and cyber
               security services, and professional services. Different teams inside LightPro, but a
               single contract and a single point of accountability for the customer.
             </p>
+          </div>
+          <div >
+           <img src={teamImage} alt="Our team" />
           </div>
         </div>
       </Section>

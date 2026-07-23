@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { LogoMark } from './Logo.jsx'
 import { nav, company } from '../data/site.js'
+import logo from '../assets/logo-light.jpg'
 
 function Caret({ open }) {
   return (
@@ -40,7 +41,7 @@ export default function Navbar() {
   }, [])
 
   const linkClass = ({ isActive }) =>
-    `relative py-2 text-[13.5px] font-medium tracking-tight transition-colors ${
+    `relative py-2 text-[16px] font-medium tracking-tight transition-colors ${
       isActive ? 'text-brand' : 'text-ink-700 hover:text-brand'
     }`
 
@@ -61,14 +62,15 @@ export default function Navbar() {
 
       <header
         ref={barRef}
-        className={`sticky top-0 z-50 border-b bg-white/95 backdrop-blur transition-shadow ${
+        className={`sticky top-0 z-50 border-b bg-white backdrop-blur transition-shadow ${
           scrolled ? 'border-hair shadow-[0_10px_30px_-24px_rgba(11,12,11,.55)]' : 'border-transparent'
         }`}
       >
-        <div className="wrap flex h-[72px] items-center justify-between gap-6">
+        <div className="wrap flex h-auto items-center justify-between gap-6">
           {/* logo, left */}
           <Link to="/" aria-label="LightPro Technologies home" className="shrink-0">
-            <LogoMark className="h-[42px] w-auto" />
+            {/* <LogoMark className="h-auto w-[200px]" /> */}
+            <img src={logo} alt="LightPro Technologies" className="h-auto w-[160px]" />
           </Link>
 
           {/* menu, right */}
@@ -79,7 +81,7 @@ export default function Navbar() {
                      onMouseEnter={() => setOpenKey(item.to)}
                      onMouseLeave={() => setOpenKey(null)}>
                   <button
-                    className={`flex items-center gap-1.5 py-2 text-[13.5px] font-medium tracking-tight transition-colors ${
+                    className={`flex items-center gap-1.5 py-2 text-[16px] font-medium tracking-tight transition-colors ${
                       pathname.startsWith(item.to) ? 'text-brand' : 'text-ink-700 hover:text-brand'
                     }`}
                     aria-expanded={openKey === item.to}
@@ -94,7 +96,7 @@ export default function Navbar() {
                       <div className="border border-hair bg-white shadow-[0_28px_60px_-30px_rgba(11,12,11,.5)]">
                         <div className="rule" />
                         <Link to={item.to}
-                              className="block border-b border-hair px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-ink-300 hover:text-brand">
+                              className="block border-b border-hair px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-ink-300 hover:text-brand">
                           Overview
                         </Link>
                         {item.children.map(c => (
@@ -104,7 +106,7 @@ export default function Navbar() {
                                 isActive ? 'bg-brand-tint' : 'hover:bg-brand-tint'
                               }`}>
                             <span className="block text-[14px] font-medium text-ink group-hover:text-brand-dark">{c.label}</span>
-                            <span className="mt-0.5 block text-[12.5px] leading-snug text-ink-300">{c.blurb}</span>
+                            <span className="mt-0.5 block text-[12px] leading-snug text-ink-300">{c.blurb}</span>
                           </NavLink>
                         ))}
                       </div>
@@ -142,7 +144,7 @@ export default function Navbar() {
                 item.children ? (
                   <div key={item.to} className="border-b border-hair">
                     <button
-                      className="flex w-full items-center justify-between py-4 text-left text-[15px] font-medium text-ink"
+                      className="flex w-full items-center justify-between py-4 text-left text-[16px] font-medium text-ink"
                       onClick={() => setMobileSub(mobileSub === item.to ? null : item.to)}
                       aria-expanded={mobileSub === item.to}
                     >
@@ -150,9 +152,9 @@ export default function Navbar() {
                     </button>
                     {mobileSub === item.to && (
                       <div className="border-l-2 border-brand pb-3 pl-4">
-                        <Link to={item.to} className="block py-2 text-[14px] text-ink-500">Overview</Link>
+                        <Link to={item.to} className="block py-2 text-[16px] text-ink-500">Overview</Link>
                         {item.children.map(c => (
-                          <Link key={c.to} to={c.to} className="block py-2 text-[14px] text-ink-500 hover:text-brand">
+                          <Link key={c.to} to={c.to} className="block py-2 text-[16px] text-ink-500 hover:text-brand">
                             {c.label}
                           </Link>
                         ))}
@@ -161,7 +163,7 @@ export default function Navbar() {
                   </div>
                 ) : (
                   <Link key={item.to} to={item.to}
-                        className="block border-b border-hair py-4 text-[15px] font-medium text-ink">
+                        className="block border-b border-hair py-4 text-[16px] font-medium text-ink">
                     {item.label}
                   </Link>
                 )

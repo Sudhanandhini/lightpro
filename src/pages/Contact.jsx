@@ -10,7 +10,8 @@ const interests = [
   'IT Staffing Services',
   'Seamless Deployment',
   'On-Demand Services',
-  'Warehousing'
+  'Warehousing',
+  
 ]
 
 export default function Contact() {
@@ -160,7 +161,7 @@ export default function Contact() {
       <section className="border-t border-hair bg-[#F7F8F6] py-14">
         <div className="wrap">
           <p className="eyebrow">Not sure who to ask for?</p>
-          <div className="mt-8 grid gap-px bg-hair sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-px  sm:grid-cols-2 lg:grid-cols-3">
             {nav.filter(n => n.children).flatMap(g => g.children).map(c => (
               <a key={c.to} href={c.to} className="group bg-white p-6 transition hover:bg-ink">
                 <span className="block font-display text-[15px] font-medium text-ink transition group-hover:text-brand">{c.label}</span>

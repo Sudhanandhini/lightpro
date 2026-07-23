@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { getBrandLogo } from '../data/brandLogos.js'
 
 /* ---------- section shell ---------- */
 export function Section({ eyebrow, title, lede, children, tone = 'white', center = false, id }) {
@@ -67,15 +68,32 @@ export function BrandGrid({ title, note, items }) {
           <span className="text-[12px] text-ink-300">{items.length} partners</span>
         </div>
       )}
-      <ul className="grid grid-cols-2 gap-px bg-hair sm:grid-cols-3 lg:grid-cols-5">
-        {items.map(b => (
-          <li key={b}
-              className="group flex min-h-[86px] items-center justify-center bg-white px-3 text-center transition hover:bg-ink">
-            <span className="font-display text-[15px] font-medium tracking-tight text-ink-700 transition group-hover:text-brand">
-              {b}
-            </span>
-          </li>
-        ))}
+      <ul className="grid grid-cols-2 gap-px  sm:grid-cols-3 lg:grid-cols-5">
+        {items.map(b => {
+          const logo = getBrandLogo(b)
+          return (
+            <li key={b}
+                className="group flex min-h-[86px] items-center justify-center bg-white px-5 text-center transition hover:bg-brand-tint/60">
+              {logo ? (
+                <img
+                  src={logo}
+                  alt={b}
+                  className="max-h-8 max-w-[120px] object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                />
+
+                //  <img
+                //   src={logo}
+                //   alt={b}
+                //   className="max-h-8 max-w-[120px] object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                // />
+              ) : (
+                <span className="font-display text-[15px] font-medium tracking-tight text-ink-700 transition group-hover:text-brand">
+                  {b}
+                </span>
+              )}
+            </li>
+          )
+        })}
       </ul>
       {note && <p className="mt-4 text-[13px] text-ink-300">{note}</p>}
     </div>
@@ -93,6 +111,25 @@ export function RuleList({ items, dark = false }) {
         </li>
       ))}
     </ul>
+  )
+}
+
+/* ---------- icon card, used for solutions and industries grids ---------- */
+export function IconCard({ icon, title, text, meta }) {
+  return (
+    <div className="card group flex flex-col">
+      <div className="mb-6 flex h-12 w-12 items-center justify-center border border-hair bg-[#F7F8F6] text-brand transition duration-300 group-hover:border-brand group-hover:bg-brand group-hover:text-white">
+        {icon}
+      </div>
+      <h3 className="h3">{title}</h3>
+      {text && <p className="mt-2.5 flex-1 text-[14.5px] leading-relaxed text-ink-500">{text}</p>}
+      {meta && (
+        <div className="mt-5 flex items-center justify-between border-t border-dashed border-hair pt-4 text-[12px] font-semibold text-ink-700">
+          <span>{meta[0]}</span>
+          <span className="text-brand">{meta[1]}</span>
+        </div>
+      )}
+    </div>
   )
 }
 
