@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LightPro Technologies | Digital Workspace, Network &amp; Cyber Security, IT Services</title>
+<meta name="description" content="LightPro Technologies Private Limited - Bengaluru based IT infrastructure partner since 2016. Digital workspace solutions, network and cyber security services, IT staffing, deployment, on-demand support and warehousing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: { DEFAULT:'#67A93B', dark:'#528B2C', deep:'#3C6A1D', tint:'#F1F7EA' },
+        ink:   { DEFAULT:'#0B0C0B', 700:'#2C302A', 500:'#5C6259', 300:'#9AA096' },
+        hair:  '#E6E9E3'
+      },
+      fontFamily: {
+        display: ['Outfit','system-ui','sans-serif'],
+        sans: ['Inter','system-ui','sans-serif']
+      },
+      borderRadius: { DEFAULT:'3px', sm:'2px' },
+      maxWidth: { wrap:'1240px' },
+      keyframes: { slide:{ to:{ transform:'translateX(-50%)' } } },
+      animation: { slide:'slide 42s linear infinite' }
+    }
+  }
+}
+</script>
+<style>
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;color:#5C6259}
+  h1,h2,h3,h4{font-family:Outfit,system-ui,sans-serif;color:#0B0C0B}
+  .wrap{margin-inline:auto;width:100%;max-width:1240px;padding-inline:20px}
+  @media(min-width:640px){.wrap{padding-inline:32px}}
+  .h1{font-family:Outfit;font-weight:300;font-size:clamp(2.35rem,5vw,3.5rem);line-height:1.06;letter-spacing:-.02em;color:#0B0C0B}
+  .h2{font-family:Outfit;font-weight:300;font-size:clamp(1.85rem,3.4vw,2.5rem);line-height:1.1;letter-spacing:-.02em;color:#0B0C0B}
+  .h3{font-family:Outfit;font-weight:500;font-size:1.25rem;line-height:1.35;letter-spacing:-.01em;color:#0B0C0B}
+  .eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.22em;color:#67A93B}
+  .eyebrow::before{content:"";display:block;height:3px;width:28px;background:#67A93B}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:2px;padding:14px 24px;font-size:14px;font-weight:600;letter-spacing:.02em;transition:.2s}
+  .btn-primary{background:#67A93B;color:#fff}.btn-primary:hover{background:#528B2C}
+  .btn-light{border:1px solid rgba(255,255,255,.3);color:#fff}.btn-light:hover{background:#fff;color:#0B0C0B}
+  .btn-outline{border:1px solid rgba(11,12,11,.2);color:#0B0C0B}.btn-outline:hover{background:#0B0C0B;color:#fff}
+  .rule{height:3px;width:100%;background:#67A93B}
+  .section{padding-block:5rem}
+  @media(min-width:640px){.section{padding-block:6rem}}
+  :focus-visible{outline:2px solid #67A93B;outline-offset:3px}
+  .dd:hover .dd-panel{display:block}
+</style>
+</head>
+<body class="bg-white antialiased">
+
+<!-- utility strip -->
+<div class="hidden bg-ink text-white lg:block">
+  <div class="wrap flex h-9 items-center justify-between text-[12px]">
+    <p class="text-white/60">IT infrastructure partner since 2016 · Bengaluru · deploying across India</p>
+    <div class="flex items-center gap-6 text-white/75">
+      <a href="tel:+918041234567" class="hover:text-brand">+91 80 4123 4567</a>
+      <a href="mailto:sales@lightpro.in" class="hover:text-brand">sales@lightpro.in</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER : logo left, menu right -->
+<header id="hdr" class="sticky top-0 z-50 border-b border-transparent bg-white/95 backdrop-blur transition-shadow">
+  <div class="wrap flex h-[72px] items-center justify-between gap-6">
+
+    <a href="#top" aria-label="LightPro Technologies home" class="shrink-0">
+      <svg viewBox="0 0 200 62" class="h-[42px] w-auto">
+        <g fill="#0B0C0B">
+          <rect x="86" y="2" width="28" height="2.6"/><rect x="70" y="9" width="60" height="2.6"/>
+          <rect x="54" y="16" width="92" height="2.6"/><rect x="38" y="23" width="124" height="2.6"/>
+        </g>
+        <rect x="26" y="30" width="148" height="4" fill="#67A93B"/>
+        <text x="26" y="57" font-family="Outfit, sans-serif" font-size="27" font-weight="300">
+          <tspan fill="#0B0C0B">Ligh</tspan><tspan fill="#67A93B">TPRO</tspan>
+        </text>
+      </svg>
+    </a>
+
+    <nav class="hidden items-center gap-7 lg:flex">
+      <a href="/about" class="py-2 text-[13.5px] font-medium text-ink-700 hover:text-brand">About</a>
+
+      <!-- Digital Workspace Solutions : 3 sub menu -->
+      <div class="dd relative">
+        <button class="flex items-center gap-1.5 py-2 text-[13.5px] font-medium text-ink-700 hover:text-brand">
+          Digital Workspace Solutions
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dd-panel absolute left-1/2 top-full hidden w-[330px] -translate-x-1/2 pt-3">
+          <div class="border border-hair bg-white shadow-[0_28px_60px_-30px_rgba(11,12,11,.5)]">
+            <div class="rule"></div>
+            <a href="/digital-workspace-solutions" class="block border-b border-hair px-5 py-3 text-[12px] font-semibold uppercase tracking-[.18em] text-ink-300 hover:text-brand">Overview</a>
+            <a href="/digital-workspace-solutions/network-and-endpoint" class="group block border-b border-hair px-5 py-3.5 hover:bg-brand-tint">
+              <span class="block text-[14px] font-medium text-ink group-hover:text-brand-dark">Network &amp; End-point</span>
+              <span class="mt-0.5 block text-[12.5px] leading-snug text-ink-300">Devices, networking and edge hardware</span></a>
+            <a href="/digital-workspace-solutions/device-management-solutions" class="group block border-b border-hair px-5 py-3.5 hover:bg-brand-tint">
+              <span class="block text-[14px] font-medium text-ink group-hover:text-brand-dark">Device Management Solutions</span>
+              <span class="mt-0.5 block text-[12.5px] leading-snug text-ink-300">MDM, identity and backup platforms</span></a>
+            <a href="/digital-workspace-solutions/productivity-software-and-tools" class="group block px-5 py-3.5 hover:bg-brand-tint">
+              <span class="block text-[14px] font-medium text-ink group-hover:text-brand-dark">Productivity Software &amp; Tools</span>
+              <span class="mt-0.5 block text-[12.5px] leading-snug text-ink-300">Licensing for the applications your teams run on</span></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/network-and-cyber-security-services" class="py-2 text-[13.5px] font-medium text-ink-700 hover:text-brand">Network &amp; Cyber Security Services</a>
+
+      <!-- LightPro Professional Services : 4 sub menu -->
+      <div class="dd relative">
+        <button class="flex items-center gap-1.5 py-2 text-[13.5px] font-medium text-ink-700 hover:text-brand">
+          LightPro Professional Services
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="dd-panel absolute left-1/2 top-full hidden w-[330px] -translate-x-1/2 pt-3">
+          <div class="border border-hair bg-white shadow-[0_28px_60px_-30px_rgba(11,12,11,.5)]">
+            <div class="rule"></div>
+            <a href="/professional-services" class="block border-b border-hair px-5 py-3 text-[12px] font-semibold uppercase tracking-[.18em] text-ink-300 hover:text-brand">Overview</a>
+            <a href="/professional-services/it-staffing-services" class="group block border-b border-hair px-5 py-3.5 hover:bg-brand-tint">
+              <span class="block text-[14px] font-medium text-ink group-hover:text-brand-dark">IT Staffing Services</span>
+              <span class="mt-0.5 block text-[12.5px] leading-snug text-ink-300">Certified engineers, on your site or ours</span></a>
+            <a href="/professional-services/seamless-deployment" class="group block border-b border-hair px-5 py-3.5 hover:bg-brand-tint">
+              <span class="block text-[14px] font-medium text-ink group-hover:text-brand-dark">Seamless Deployment</span>
+              <span class="mt-0.5 block text-[12.5px] leading-snug text-ink-300">Imaging, rollout and desk-side handover</span></a>
+            <a href="/professional-services/on-demand-services" class="group block border-b border-hair px-5 py-3.5 hover:bg-brand-tint">
+              <span class="block text-[14px] font-medium text-ink group-hover:text-brand-dark">On-Demand Services</span>
+              <span class="mt-0.5 block text-[12.5px] leading-snug text-ink-300">Break-fix, AMC and scheduled visits</span></a>
+            <a href="/professional-services/warehousing" class="group block px-5 py-3.5 hover:bg-brand-tint">
+              <span class="block text-[14px] font-medium text-ink group-hover:text-brand-dark">Warehousing</span>
+              <span class="mt-0.5 block text-[12.5px] leading-snug text-ink-300">Secure storage, staging and asset custody</span></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/contact" class="btn btn-primary !px-5 !py-2.5 !text-[13px]">Contact Us</a>
+    </nav>
+
+    <button id="burger" class="flex h-11 w-11 flex-col items-center justify-center gap-[5px] border border-hair lg:hidden" aria-label="Open menu" aria-expanded="false">
+      <span class="block h-[2px] w-5 bg-ink"></span><span class="block h-[2px] w-5 bg-ink"></span><span class="block h-[2px] w-5 bg-brand"></span>
+    </button>
+  </div>
+
+  <!-- mobile drawer -->
+  <div id="mob" class="hidden border-t border-hair bg-white lg:hidden">
+    <nav class="wrap py-2">
+      <a href="/about" class="block border-b border-hair py-4 text-[15px] font-medium text-ink">About</a>
+      <details class="border-b border-hair"><summary class="cursor-pointer py-4 text-[15px] font-medium text-ink">Digital Workspace Solutions</summary>
+        <div class="border-l-2 border-brand pb-3 pl-4">
+          <a href="/digital-workspace-solutions/network-and-endpoint" class="block py-2 text-[14px] text-ink-500">Network &amp; End-point</a>
+          <a href="/digital-workspace-solutions/device-management-solutions" class="block py-2 text-[14px] text-ink-500">Device Management Solutions</a>
+          <a href="/digital-workspace-solutions/productivity-software-and-tools" class="block py-2 text-[14px] text-ink-500">Productivity Software &amp; Tools</a>
+        </div></details>
+      <a href="/network-and-cyber-security-services" class="block border-b border-hair py-4 text-[15px] font-medium text-ink">Network &amp; Cyber Security Services</a>
+      <details class="border-b border-hair"><summary class="cursor-pointer py-4 text-[15px] font-medium text-ink">LightPro Professional Services</summary>
+        <div class="border-l-2 border-brand pb-3 pl-4">
+          <a href="/professional-services/it-staffing-services" class="block py-2 text-[14px] text-ink-500">IT Staffing Services</a>
+          <a href="/professional-services/seamless-deployment" class="block py-2 text-[14px] text-ink-500">Seamless Deployment</a>
+          <a href="/professional-services/on-demand-services" class="block py-2 text-[14px] text-ink-500">On-Demand Services</a>
+          <a href="/professional-services/warehousing" class="block py-2 text-[14px] text-ink-500">Warehousing</a>
+        </div></details>
+      <a href="/contact" class="btn btn-primary my-5 w-full">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="relative overflow-hidden bg-ink text-white">
+  <div class="pointer-events-none absolute inset-0 opacity-[.06]" style="background-image:repeating-linear-gradient(180deg,#fff 0 1px,transparent 1px 64px)"></div>
+  <div class="wrap relative grid items-center gap-16 py-20 lg:grid-cols-[1.05fr_.95fr] lg:py-28">
+    <div>
+      <p class="eyebrow">Since 2016 · Bengaluru</p>
+      <h1 class="h1 mt-6 !text-white">The complete <span class="text-brand">digital workspace</span>, built and run by one partner.</h1>
+      <p class="mt-7 max-w-[56ch] text-[1.08rem] leading-relaxed text-white/60">
+        LightPro Technologies supplies the devices, the network, the security and the people behind them — from a single laptop to a multi-site rollout, specified, deployed and supported end to end.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="/contact" class="btn btn-primary">Request a consultation</a>
+        <a href="/digital-workspace-solutions" class="btn btn-light">Explore solutions</a>
+      </div>
+      <dl class="mt-14 grid max-w-lg grid-cols-3 gap-px border-t border-white/10 bg-white/10">
+        <div class="bg-ink pt-6"><dt class="font-display text-[1.7rem] font-light text-white">400+</dt><dd class="mt-1 text-[12.5px] text-white/40">Business clients</dd></div>
+        <div class="bg-ink pt-6"><dt class="font-display text-[1.7rem] font-light text-white">25,000+</dt><dd class="mt-1 text-[12.5px] text-white/40">Devices deployed</dd></div>
+        <div class="bg-ink pt-6"><dt class="font-display text-[1.7rem] font-light text-white">18</dt><dd class="mt-1 text-[12.5px] text-white/40">Cities supported</dd></div>
+      </dl>
+    </div>
+
+    <!-- SIGNATURE : the logo's ascending rules, turned into the service stack -->
+    <div class="lg:pl-6">
+      <div class="flex items-center justify-between border-b border-white/10 pb-4">
+        <p class="text-[11px] font-semibold uppercase tracking-[.2em] text-white/40">The LightPro stack</p>
+        <p class="text-[11px] uppercase tracking-[.14em] text-brand">Six layers, one partner</p>
+      </div>
+      <ul id="stack" class="mt-7 space-y-2.5"></ul>
+      <div class="mt-8 border-l-2 border-brand pl-5">
+        <p id="stackTitle" class="font-display text-[15px] font-medium text-white"></p>
+        <p id="stackText" class="mt-1.5 text-[14px] leading-relaxed text-white/50"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND MARQUEE -->
+<div class="border-b border-hair bg-white py-9">
+  <p class="wrap mb-6 text-center text-[11px] font-semibold uppercase tracking-[.22em] text-ink-300">Authorised partner and sourcing channel</p>
+  <div class="overflow-hidden" style="mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)">
+    <div id="marquee" class="flex w-max animate-slide gap-14 pr-14"></div>
+  </div>
+</div>
+
+<!-- PRACTICES -->
+<section class="section">
+  <div class="wrap">
+    <div class="mb-12 max-w-3xl">
+      <p class="eyebrow">What we do</p>
+      <h2 class="h2 mt-5">Three practices that cover the whole estate</h2>
+      <p class="mt-5 text-[1.05rem] leading-relaxed text-ink-500">Most businesses buy hardware from one vendor, security from another and hands from a third. LightPro carries all three, so accountability never splits.</p>
+    </div>
+    <div class="grid gap-6 lg:grid-cols-3">
+      <a href="/digital-workspace-solutions" class="group flex flex-col border border-hair bg-white p-7 transition hover:border-brand hover:shadow-[0_18px_40px_-24px_rgba(11,12,11,.35)]">
+        <span class="font-display text-[13px] font-semibold tracking-[.2em] text-brand">01</span>
+        <h3 class="h3 mt-3 group-hover:text-brand-dark">Digital Workspace Solutions</h3>
+        <p class="mt-3 flex-1 text-[14.5px] leading-relaxed text-ink-500">Everything an employee touches — the laptop, the network it joins, the policies that govern it and the software that runs on it.</p>
+        <ul class="mt-5 space-y-2 border-t border-hair pt-4 text-[13.5px] text-ink-700">
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Network &amp; End-point</li>
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Device Management Solutions</li>
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Productivity Software &amp; Tools</li>
+        </ul>
+        <span class="mt-6 text-[13px] font-semibold uppercase tracking-[.15em] text-brand">Explore &rarr;</span>
+      </a>
+      <a href="/network-and-cyber-security-services" class="group flex flex-col border border-hair bg-white p-7 transition hover:border-brand hover:shadow-[0_18px_40px_-24px_rgba(11,12,11,.35)]">
+        <span class="font-display text-[13px] font-semibold tracking-[.2em] text-brand">02</span>
+        <h3 class="h3 mt-3 group-hover:text-brand-dark">Network &amp; Cyber Security Services</h3>
+        <p class="mt-3 flex-1 text-[14.5px] leading-relaxed text-ink-500">Design, deployment and monitoring of the perimeter and the endpoint, with documentation your auditors will accept.</p>
+        <ul class="mt-5 space-y-2 border-t border-hair pt-4 text-[13.5px] text-ink-700">
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Firewall &amp; perimeter security</li>
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Endpoint detection and response</li>
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Assessment, hardening and compliance</li>
+        </ul>
+        <span class="mt-6 text-[13px] font-semibold uppercase tracking-[.15em] text-brand">Explore &rarr;</span>
+      </a>
+      <a href="/professional-services" class="group flex flex-col border border-hair bg-white p-7 transition hover:border-brand hover:shadow-[0_18px_40px_-24px_rgba(11,12,11,.35)]">
+        <span class="font-display text-[13px] font-semibold tracking-[.2em] text-brand">03</span>
+        <h3 class="h3 mt-3 group-hover:text-brand-dark">LightPro Professional Services</h3>
+        <p class="mt-3 flex-1 text-[14.5px] leading-relaxed text-ink-500">The people and logistics behind the hardware — engineers, rollouts, support visits and secure storage.</p>
+        <ul class="mt-5 space-y-2 border-t border-hair pt-4 text-[13.5px] text-ink-700">
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>IT Staffing Services</li>
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Seamless Deployment</li>
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>On-Demand Services</li>
+          <li class="flex items-center gap-3"><span class="h-[2px] w-3 bg-brand"></span>Warehousing</li>
+        </ul>
+        <span class="mt-6 text-[13px] font-semibold uppercase tracking-[.15em] text-brand">Explore &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section bg-[#F7F8F6]">
+  <div class="wrap grid gap-14 lg:grid-cols-2 lg:gap-20">
+    <div>
+      <p class="eyebrow">Why LightPro</p>
+      <h2 class="h2 mt-5">We stay on the asset, not just the invoice</h2>
+      <p class="mt-5 text-[1.05rem] leading-relaxed text-ink-500">A box arriving is the easy part. What follows — the imaging, the enrolment, the policy, the failed unit at 4pm on a Friday, the audit trail at year end — is where an infrastructure partner is actually judged.</p>
+      <a href="/about" class="btn btn-outline mt-8">More about us</a>
+    </div>
+    <ul class="space-y-4" id="whyList"></ul>
+  </div>
+</section>
+
+<!-- LIFECYCLE -->
+<section class="section">
+  <div class="wrap">
+    <div class="mb-12 max-w-3xl">
+      <p class="eyebrow">How we work</p>
+      <h2 class="h2 mt-5">A defined path from requirement to renewal</h2>
+      <p class="mt-5 text-[1.05rem] leading-relaxed text-ink-500">Every engagement runs the same four stages, so you always know what happens next and who owns it.</p>
+    </div>
+    <ol id="steps" class="grid gap-px bg-hair sm:grid-cols-2 lg:grid-cols-4"></ol>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="section bg-[#F7F8F6]">
+  <div class="wrap">
+    <div class="mb-12 max-w-3xl">
+      <p class="eyebrow">Partner ecosystem</p>
+      <h2 class="h2 mt-5">The brands we specify, supply and support</h2>
+      <p class="mt-5 text-[1.05rem] leading-relaxed text-ink-500">We are vendor-aligned, not vendor-locked. The specification follows the workload.</p>
+    </div>
+    <ul id="brandGrid" class="grid grid-cols-2 gap-px bg-hair sm:grid-cols-3 lg:grid-cols-5"></ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-brand">
+  <div class="wrap flex flex-col gap-8 py-16 lg:flex-row lg:items-center lg:justify-between">
+    <div class="max-w-2xl">
+      <h2 class="h2 !text-white">Tell us what you are trying to build.</h2>
+      <p class="mt-4 text-[15.5px] leading-relaxed text-white/85">Send the headcount, the sites and the timeline. You will get a written scope and a costed proposal within two working days.</p>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/contact" class="btn bg-ink text-white hover:bg-white hover:!text-ink">Contact Us</a>
+      <a href="tel:+918041234567" class="btn btn-light">Call +91 80 4123 4567</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-ink-300">
+  <div class="rule"></div>
+  <div class="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <svg viewBox="0 0 260 108" class="h-20 w-auto">
+        <g fill="#fff">
+          <rect x="115" y="6" width="30" height="3.2"/><rect x="99" y="15" width="62" height="3.2"/>
+          <rect x="83" y="24" width="94" height="3.2"/><rect x="67" y="33" width="126" height="3.2"/>
+          <rect x="51" y="42" width="158" height="3.2"/><rect x="35" y="51" width="190" height="3.2"/>
+        </g>
+        <rect x="18" y="61" width="224" height="5" fill="#67A93B"/>
+        <text x="18" y="102" font-family="Outfit, sans-serif" font-size="46" font-weight="300">
+          <tspan fill="#fff">Ligh</tspan><tspan fill="#67A93B">TPRO</tspan></text>
+      </svg>
+      <p class="mt-6 max-w-[32ch] text-[14px] leading-relaxed text-white/55">IT infrastructure partner since 2016. We build and run the digital workspace — devices, network, security and the people who keep it all working.</p>
+      <a href="tel:+918041234567" class="mt-6 inline-block font-display text-xl font-light text-white hover:text-brand">+91 80 4123 4567</a>
+    </div>
+    <div>
+      <h4 class="text-[11px] font-semibold uppercase tracking-[.2em] text-brand">Digital Workspace Solutions</h4>
+      <ul class="mt-5 space-y-3 text-[14px] text-white/60">
+        <li><a href="/digital-workspace-solutions/network-and-endpoint" class="hover:text-white">Network &amp; End-point</a></li>
+        <li><a href="/digital-workspace-solutions/device-management-solutions" class="hover:text-white">Device Management Solutions</a></li>
+        <li><a href="/digital-workspace-solutions/productivity-software-and-tools" class="hover:text-white">Productivity Software &amp; Tools</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[11px] font-semibold uppercase tracking-[.2em] text-brand">LightPro Professional Services</h4>
+      <ul class="mt-5 space-y-3 text-[14px] text-white/60">
+        <li><a href="/professional-services/it-staffing-services" class="hover:text-white">IT Staffing Services</a></li>
+        <li><a href="/professional-services/seamless-deployment" class="hover:text-white">Seamless Deployment</a></li>
+        <li><a href="/professional-services/on-demand-services" class="hover:text-white">On-Demand Services</a></li>
+        <li><a href="/professional-services/warehousing" class="hover:text-white">Warehousing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[11px] font-semibold uppercase tracking-[.2em] text-brand">Company</h4>
+      <ul class="mt-5 space-y-3 text-[14px] text-white/60">
+        <li><a href="/about" class="hover:text-white">About</a></li>
+        <li><a href="/network-and-cyber-security-services" class="hover:text-white">Network &amp; Cyber Security</a></li>
+        <li><a href="/contact" class="hover:text-white">Contact Us</a></li>
+      </ul>
+      <address class="mt-6 not-italic text-[13.5px] leading-relaxed text-white/45">
+        LightPro Technologies Pvt. Ltd., HSR Layout, Bengaluru, Karnataka 560102<br>
+        <a href="mailto:sales@lightpro.in" class="hover:text-white">sales@lightpro.in</a>
+      </address>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="wrap flex flex-col gap-3 py-6 text-[12.5px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span id="yr"></span> LightPro Technologies Private Limited. All rights reserved.</p>
+      <div class="flex gap-6"><a href="#" class="hover:text-white">Privacy policy</a><a href="#" class="hover:text-white">Terms of service</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* sticky header shadow */
+addEventListener('scroll', () => {
+  const h = document.getElementById('hdr');
+  h.classList.toggle('border-hair', scrollY > 6);
+  h.classList.toggle('shadow-[0_10px_30px_-24px_rgba(11,12,11,.55)]', scrollY > 6);
+}, { passive: true });
+
+/* mobile drawer */
+document.getElementById('burger').addEventListener('click', e => {
+  const m = document.getElementById('mob');
+  const open = m.classList.toggle('hidden');
+  e.currentTarget.setAttribute('aria-expanded', String(!open));
+});
+
+/* signature stack */
+const layers = [
+  ['Productivity software','Microsoft 365, Adobe, Autodesk, DocuSign — licensed and renewal-tracked.'],
+  ['Device management','JAMF, Intune, Scalefusion and identity control across every endpoint.'],
+  ['End-point hardware','Lenovo, HP, Dell, Apple and more — specified, imaged and asset tagged.'],
+  ['Network infrastructure','Cisco Meraki, Aruba, Juniper and HPE switching, routing and wireless.'],
+  ['Cyber security','Fortinet and Sophos perimeter, SentinelOne endpoint, documented policy.'],
+  ['Professional services','Engineers, deployment crews, on-demand support and warehousing.']
+];
+const stack = document.getElementById('stack');
+let active = 2;
+function paint() {
+  stack.innerHTML = layers.map((l, i) => {
+    const w = 40 + i * 10, on = i === active;
+    return `<li><div class="flex items-center gap-4 cursor-pointer" data-i="${i}">
+      <span class="block h-[5px] transition-all duration-300 ${on ? 'bg-brand' : 'bg-white/25'}" style="width:${on ? w + 8 : w}%"></span>
+      <span class="whitespace-nowrap text-[13px] transition-colors ${on ? 'text-white' : 'text-white/40'}">${l[0]}</span>
+    </div></li>`;
+  }).join('');
+  document.getElementById('stackTitle').textContent = layers[active][0];
+  document.getElementById('stackText').textContent = layers[active][1];
+  stack.querySelectorAll('[data-i]').forEach(el =>
+    el.addEventListener('mouseenter', () => { active = +el.dataset.i; paint(); }));
+}
+paint();
+
+/* brands */
+const brands = ['Lenovo','HP','Dell','Asus','Microsoft','Apple','Samsung','Legrand','Dynabook','MeadBar',
+  'Cisco Meraki','Aruba','Juniper','HPE','Fortinet','Sophos',
+  'JAMF','Microsoft Intune','Scalefusion','42Gears','One Identity','Yubico','Veeam',
+  'Microsoft 365','Adobe','Autodesk','WPS Office','DocuSign','Bang & Olufsen','SentinelOne'];
+document.getElementById('marquee').innerHTML = [...brands, ...brands]
+  .map(b => `<span class="whitespace-nowrap font-display text-[19px] font-light tracking-tight text-ink-300">${b}</span>`).join('');
+document.getElementById('brandGrid').innerHTML = brands
+  .map(b => `<li class="group flex min-h-[86px] items-center justify-center bg-white px-3 text-center transition hover:bg-ink">
+    <span class="font-display text-[15px] font-medium tracking-tight text-ink-700 transition group-hover:text-brand">${b}</span></li>`).join('');
+
+/* why list */
+document.getElementById('whyList').innerHTML = [
+  'Nine years in continuous operation, with references you can call before you commit.',
+  'OEM-certified network, server and security engineers on staff, not subcontracted at the point of escalation.',
+  'A named account manager who knows your estate, your renewal dates and your procurement process.',
+  'Four-hour onsite response in Bengaluru and next-business-day cover across 18 cities.',
+  'Asset registers, erasure certificates and GST-compliant paperwork that reconcile at audit.',
+  'One contract, one invoice, one point of accountability across every site.'
+].map(t => `<li class="flex gap-4"><span class="mt-[11px] h-[3px] w-5 shrink-0 bg-brand"></span><span class="text-[15px] leading-relaxed text-ink-500">${t}</span></li>`).join('');
+
+/* steps */
+const steps = [
+  ['Assess','Requirement mapping, site survey, sizing and a budget model you can take to finance.'],
+  ['Supply','OEM sourcing, quotation, purchase order handling and compliant invoicing.'],
+  ['Deploy','Imaging, enrolment, racking, cabling and desk-side handover at every location.'],
+  ['Sustain','Monitoring, patching, AMC cover, spares pool and scheduled refresh.']
+];
+document.getElementById('steps').innerHTML = steps.map(([t, d], i) => `
+  <li class="bg-white p-7">
+    <div class="flex items-center gap-3">
+      <span class="font-display text-[13px] font-semibold text-brand">0${i + 1}</span>
+      <span class="h-[3px] flex-1 bg-hair"><span class="block h-full bg-brand" style="width:${((i + 1) / steps.length) * 100}%"></span></span>
+    </div>
+    <h3 class="h3 mt-5 !text-[17px]">${t}</h3>
+    <p class="mt-2.5 text-[14px] leading-relaxed text-ink-500">${d}</p>
+  </li>`).join('');
+</script>
+</body>
+</html>
