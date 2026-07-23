@@ -12,7 +12,7 @@ const stats = [
 
 export default function InfraTopology() {
   return (
-    <div className="w-full rounded-sm border border-white/10 bg-white/[0.04] p-5 backdrop-blur">
+    <div className="w-full rounded-sm border border-brand/25 bg-white/[0.05] p-5 shadow-[0_40px_90px_-40px_rgba(103,169,59,.35)] backdrop-blur">
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">Managed infrastructure view</p>
         <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-brand">
@@ -55,7 +55,7 @@ export default function InfraTopology() {
 
         {/* core switch */}
         <g transform="translate(150,168)">
-          <rect width="160" height="44" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.18)" />
+          <rect width="160" height="44" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(103,169,59,.3)" />
           <g stroke="#67A93B" strokeWidth="1.6" fill="none" transform="translate(18,14)">
             <rect x="0" y="0" width="26" height="16" rx="3" />
             <path d="M5 6h3M11 6h3M17 6h3M5 11h3M11 11h3M17 11h3" />
@@ -66,7 +66,7 @@ export default function InfraTopology() {
 
         {/* endpoints */}
         <g transform="translate(58,232)">
-          <rect width="104" height="70" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.12)" />
+          <rect width="104" height="70" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(103,169,59,.22)" />
           <g transform="translate(36,16)" stroke="#67A93B" strokeWidth="1.8" fill="none">
             <rect x="0" y="0" width="32" height="20" rx="2.5" />
             <path d="M-5 24h42" />
@@ -74,7 +74,7 @@ export default function InfraTopology() {
           <text x="52" y="58" fill="#D6D9D4" fontSize="11" fontFamily="Inter,sans-serif" textAnchor="middle" fontWeight="600">180 Laptops</text>
         </g>
         <g transform="translate(178,232)">
-          <rect width="104" height="70" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.12)" />
+          <rect width="104" height="70" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(103,169,59,.22)" />
           <g transform="translate(38,14)" stroke="#67A93B" strokeWidth="1.8" fill="none">
             <rect x="0" y="0" width="28" height="34" rx="3" />
             <path d="M6 8h16M6 14h16M6 20h10" />
@@ -82,7 +82,7 @@ export default function InfraTopology() {
           <text x="52" y="58" fill="#D6D9D4" fontSize="11" fontFamily="Inter,sans-serif" textAnchor="middle" fontWeight="600">6 Servers</text>
         </g>
         <g transform="translate(298,232)">
-          <rect width="104" height="70" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.12)" />
+          <rect width="104" height="70" rx="8" fill="rgba(255,255,255,.04)" stroke="rgba(103,169,59,.22)" />
           <g transform="translate(36,16)" stroke="#67A93B" strokeWidth="1.8" fill="none">
             <rect x="0" y="0" width="32" height="20" rx="2.5" />
             <path d="M-5 24h42M13 24h6" />

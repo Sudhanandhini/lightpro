@@ -29,6 +29,8 @@ export function Section({ eyebrow, title, lede, children, tone = 'white', center
 export function PageHero({ eyebrow, title, lede, crumbs = [] }) {
   return (
     <section className="relative overflow-hidden bg-ink pb-16 pt-14 text-white sm:pb-20 sm:pt-16">
+      <div aria-hidden className="pointer-events-none absolute inset-0"
+           style={{ backgroundImage: 'radial-gradient(900px 480px at 78% 15%, rgba(103,169,59,.32), transparent 62%), radial-gradient(620px 420px at 8% 95%, rgba(103,169,59,.14), transparent 65%)' }} />
       {/* the logo's ascending rules, used as page furniture */}
       <div aria-hidden className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 lg:block">
         {[26, 60, 94, 128, 162, 196, 230].map((w, i) => (
@@ -78,14 +80,8 @@ export function BrandGrid({ title, note, items }) {
                 <img
                   src={logo}
                   alt={b}
-                  className="max-h-8 max-w-[120px] object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                  className="max-h-8 max-w-[120px] object-contain grayscale-0 transition duration-300 group-hover:grayscale"
                 />
-
-                //  <img
-                //   src={logo}
-                //   alt={b}
-                //   className="max-h-8 max-w-[120px] object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
-                // />
               ) : (
                 <span className="font-display text-[15px] font-medium tracking-tight text-ink-700 transition group-hover:text-brand">
                   {b}
