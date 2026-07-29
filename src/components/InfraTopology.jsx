@@ -12,9 +12,9 @@ const stats = [
 
 export default function InfraTopology() {
   return (
-    <div className="w-full rounded-sm border border-brand/25 bg-white/[0.05] p-5 shadow-[0_40px_90px_-40px_rgba(103,169,59,.35)] backdrop-blur">
+    <div className="w-full rounded-sm border border-brand/25 bg-white/[0.15] p-5 shadow-[0_40px_90px_-40px_rgba(103,169,59,.35)] backdrop-blur">
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">Managed infrastructure view</p>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white">Managed infrastructure view</p>
         <p className="flex items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-brand">
           <span className="h-[7px] w-[7px] rounded-full bg-brand animate-blip" />
           All systems healthy

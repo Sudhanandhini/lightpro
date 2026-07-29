@@ -240,7 +240,8 @@ export default function Home() {
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06]" />
         <div className="wrap relative grid items-center gap-16 py-20 lg:grid-cols-[1.05fr_.95fr] lg:py-28">
           <div className="animate-rise">
-            <p className="eyebrow">Since {company.since} &middot; {company.city}</p>
+            <p className="eyebrow" style={{borderRadius:'50px', backgroundColor:'#a1a1a159', padding:'10px'}} >
+            <span>Since {company.since} </span>    Bengaluru-headquartered · PAN-India delivery</p>
             <h1 className="h1 mt-6 !text-white">
               The complete <span className="text-brand">digital workspace</span>, built and run by one partner.
             </h1>
@@ -256,7 +257,7 @@ export default function Home() {
 
             <dl className="mt-14 grid max-w-lg grid-cols-3 gap-px border-t border-white/10 bg-white/10">
               {[['400+', 'Business clients'], ['25,000+', 'Devices deployed'], ['18', 'Cities supported']].map(([n, l]) => (
-                <div key={l} className="bg-ink pt-6 px-5 text-center">
+                <div key={l} className=" pt-6 px-5 text-center">
                   <dt className="font-display text-[1.7rem] font-light tracking-tight text-white">{n}</dt>
                   <dd className="mt-1 text-[12.5px] text-white/40">{l}</dd>
                 </div>
