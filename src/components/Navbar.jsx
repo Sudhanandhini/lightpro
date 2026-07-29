@@ -42,7 +42,7 @@ export default function Navbar() {
 
   const linkClass = ({ isActive }) =>
     `relative py-2 text-[16px] font-medium tracking-tight transition-colors ${
-      isActive ? 'text-brand' : 'text-ink-700 hover:text-brand'
+      isActive ? 'text-brand' : 'text-black hover:text-brand'
     }`
 
   return (
@@ -82,7 +82,7 @@ export default function Navbar() {
                      onMouseLeave={() => setOpenKey(null)}>
                   <button
                     className={`flex items-center gap-1.5 py-2 text-[16px] font-medium tracking-tight transition-colors ${
-                      pathname.startsWith(item.to) ? 'text-brand' : 'text-ink-700 hover:text-brand'
+                      pathname.startsWith(item.to) ? 'text-brand' : 'text-black hover:text-brand'
                     }`}
                     aria-expanded={openKey === item.to}
                     aria-haspopup="true"
@@ -96,7 +96,7 @@ export default function Navbar() {
                       <div className="border border-hair bg-white shadow-[0_28px_60px_-30px_rgba(11,12,11,.5)]">
                         <div className="rule" />
                         <Link to={item.to}
-                              className="block border-b border-hair px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-ink-300 hover:text-brand">
+                              className="block border-b border-hair px-5 py-3 text-[13px] font-semibold uppercase tracking-[0.18em] text-black hover:text-brand">
                           Overview
                         </Link>
                         {item.children.map(c => (
@@ -114,7 +114,7 @@ export default function Navbar() {
                   )}
                 </div>
               ) : item.label === 'Contact Us' ? (
-                <Link key={item.to} to={item.to} className="btn-primary !px-5 !py-2.5 !text-[13px]">
+                <Link key={item.to} to={item.to} className="btn-primary bg-[#1d4601] !px-5 !py-2.5 !text-[13px]">
                   Contact Us
                 </Link>
               ) : (

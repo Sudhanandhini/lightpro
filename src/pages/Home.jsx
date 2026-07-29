@@ -234,9 +234,9 @@ export default function Home() {
   return (
     <>
       {/* ---------------- HERO ---------------- */}
-      <section className="relative overflow-hidden bg-ink text-white">
+      <section className="relative overflow-hidden bg-[#1d4601] text-white">
         <div aria-hidden className="pointer-events-none absolute inset-0"
-             style={{ backgroundImage: 'radial-gradient(900px 480px at 78% 18%, rgba(103,169,59,.35), transparent 62%), radial-gradient(620px 420px at 12% 92%, rgba(103,169,59,.16), transparent 65%)' }} />
+             style={{ backgroundImage: 'radial-gradient(900px 480px at 78% 18%, rgba(103, 169, 59, 0.35), transparent 62%), radial-gradient(620px 420px at 12% 92%, rgba(103,169,59,.16), transparent 65%)' }} />
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06]" />
         <div className="wrap relative grid items-center gap-16 py-20 lg:grid-cols-[1.05fr_.95fr] lg:py-28">
           <div className="animate-rise">
@@ -273,7 +273,7 @@ export default function Home() {
       {/* ---------------- BRAND MARQUEE ---------------- */}
       <div className="border-b border-hair bg-white py-9">
         <p className="wrap mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-300">
-          Authorised partner and sourcing channel
+          30+ Partners Across  IT Verticals
         </p>
         <div className="overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
           <div className="flex w-max animate-slide items-center gap-16 pr-16">
@@ -316,8 +316,10 @@ export default function Home() {
       </Section>
 
       {/* ---------------- WHY ---------------- */}
-      <section className="section bg-ink text-white/70">
-        <div className="wrap grid gap-14 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
+      <section className="section bg-[#1d4601]  text-white/70"  
+        style={{ backgroundImage: 'radial-gradient(900px 480px at 78% 18%, rgba(103, 169, 59, 0.35), transparent 62%), radial-gradient(620px 420px at 12% 92%, rgba(103,169,59,.16), transparent 65%)' }}>
+        <div className="wrap grid gap-14 lg:grid-cols-[.9fr_1.1fr] lg:gap-16"
+        >
           <div>
             <p className="eyebrow">Why LightPro</p>
             <h2 className="h2 mt-5 !text-white">We stay on the asset, not just the invoice</h2>
@@ -338,7 +340,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-px bg-white/10 sm:grid-cols-2">
             {whyItems.map(w => (
-              <div key={w.title} className="bg-ink p-7 transition hover:bg-white/[0.04]">
+              <div key={w.title} className=" p-7 transition hover:bg-white/[0.04]">
                 <div className="flex items-center gap-3">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/15 text-brand">{w.icon}</span>
                   <h3 className="font-display text-[15.5px] font-medium text-white">{w.title}</h3>
@@ -421,7 +423,7 @@ export default function Home() {
       </Section>
 
       {/* ---------------- CASE STUDIES ---------------- */}
-      <section className="section bg-ink">
+      <section className="section bg-[#1d4601] ">
         <div className="wrap">
           <div className="mb-12 max-w-3xl">
             <p className="eyebrow">Case studies</p>
@@ -448,13 +450,13 @@ export default function Home() {
       </section>
 
       {/* ---------------- BRANDS / PARTNER ECOSYSTEM ---------------- */}
-      <Section
+      {/* <Section
         eyebrow="Partner ecosystem"
         title="The brands we specify, supply and support"
         lede="We are vendor-aligned, not vendor-locked. The specification follows the workload."
       >
         <BrandGrid items={allBrands} />
-      </Section>
+      </Section> */}
 
       <CTA />
     </>

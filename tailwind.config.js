@@ -12,7 +12,7 @@ export default {
           line:    '#D6E7C4'
         },
         ink: {
-          DEFAULT: '#0B0C0B',   // logo black
+          DEFAULT: '#000',   // logo black
           800:     '#171A16',
           700:     '#2C302A',
           500:     '#5C6259',
