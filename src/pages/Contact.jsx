@@ -157,6 +157,41 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* map */}
+      <section className="border-t border-hair">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.05578330411296!2d77.59997288000902!3d12.914628141421968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156151379205%3A0x82c9f9b521bd8304!2sLightpro%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1785385477749!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0, display: 'block' }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+          title="LightPro Technologies location"
+        />
+      </section>
+
+      {/* direct lines to the management team */}
+      <section className="border-t border-hair bg-white py-14">
+        <div className="wrap">
+          <p className="eyebrow">Contact Us</p>
+          <h2 className="h2 mt-5">Speak to the management team directly</h2>
+          <div className="mt-10 grid gap-px bg-hair sm:grid-cols-3">
+            {[
+              { name: 'Sanketh Thilak', phone: '+91-9449973956', email: 'sanketh@lightprotechnologies.com' },
+              { name: 'Sharath PC',      phone: '+91-9739349449', email: 'sharath.pallakki@lightprotechnologies.com' },
+              { name: 'Thilipkumar A',   phone: '+91-8296831382', email: 'thilip@lightprotechnologies.com' }
+            ].map(p => (
+              <div key={p.name} className="bg-white p-8">
+                <h3 className="h3">{p.name}</h3>
+                <a href={`tel:${p.phone}`} className="mt-3 block text-[15px] text-ink-500 hover:text-brand">{p.phone}</a>
+                <a href={`mailto:${p.email}`} className="mt-1 block text-[14px] text-ink-500 hover:text-brand">{p.email}</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* quick links to every service, so contact is never a dead end */}
       <section className="border-t border-hair bg-[#F7F8F6] py-14">
         <div className="wrap">

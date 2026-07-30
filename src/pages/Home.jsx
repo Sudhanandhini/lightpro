@@ -240,7 +240,7 @@ export default function Home() {
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06]" />
         <div className="wrap relative grid items-center gap-16 py-20 lg:grid-cols-[1.05fr_.95fr] lg:py-28">
           <div className="animate-rise">
-            <p className="eyebrow" style={{borderRadius:'50px', backgroundColor:'#a1a1a159', padding:'10px'}} >
+            <p className="eyebrow1" style={{borderRadius:'50px', backgroundColor:'#a1a1a159', padding:'10px'}} >
             <span>Since {company.since} </span>    Bengaluru-headquartered · PAN-India delivery</p>
             <h1 className="h1 mt-6 !text-white">
               The complete <span className="text-brand">digital workspace</span>, built and run by one partner.

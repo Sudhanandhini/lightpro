@@ -18,20 +18,18 @@ export default function About() {
             <p className="eyebrow">Our story</p>
             <h2 className="h2 mt-5">Built around one uncomfortable truth</h2>
              <p className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
-              Hardware is easy to buy and hard to run. Most companies discover this the week a
-              new team starts and forty machines arrive in boxes with no image, no enrolment
-              and no asset tag - and no one on the invoice is responsible for that gap.
+              Lightpro Technologies Pvt Ltd is a customer-centric IT and hardware infrastructure solution provider having more 
+              than 18 years of exposure in IT industry with  dedication to meet client needs by following consultative approach.
+            
             </p>
             <p className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
-              LightPro was founded in {company.since} to close it. We began supplying devices to
-              startups in {company.city}, then added the network they plugged into, the security
-              policy that governed them, the management platform that enforced it and, eventually,
-              the engineers who ran the whole thing day to day.
+               Since  inception in 2016, we have worked as an extended team for growing startups, established businesses, helping 
+               them build, scale, and manage dynamic IT environments. Headquartered in Bengaluru, our team possesses the operational 
+               excellence to execute hassle-free technology upgrade projects and provide ongoing support across India.
             </p>
             <p className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
-              Today that is one continuous service: digital workspace solutions, network and cyber
-              security services, and professional services. Different teams inside LightPro, but a
-              single contract and a single point of accountability for the customer.
+               Along with providing solutions to end customers we constantly evolving ourselves to provide impactful, cost-effective,
+                 and industry-aligned IT solutions.
             </p>
           </div>
           <div >
@@ -66,6 +64,31 @@ export default function About() {
             ))}
           </div>
         </div>
+      </Section>
+
+      <Section tone="grey" eyebrow="Leadership" title="Our Management Team">
+         <p className="mb-14 text-[15.5px] leading-relaxed text-ink-500">
+          Our leadership team consists of seasoned IT professionals and business strategists dedicated to
+          delivering value creation, uncompromised ethics, and continuous improvement. We operate
+          with a people-first approach, prioritizing employee growth to maintain a positive environment
+          that translates into exceptional service for our clients.
+        </p>
+        <div className="grid gap-8 sm:grid-cols-3">
+          {[
+            { name: 'Sanketh Thilak', role: 'Director' },
+            { name: 'Sharath P C',    role: 'Director' },
+            { name: 'Thilipkumar A',  role: 'Director' }
+          ].map(m => (
+            <div key={m.name} className="bg-white p-8 text-center">
+              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand-tint/60 font-display text-[1.6rem] font-light text-brand">
+                {m.name.split(' ').map(w => w[0]).slice(0, 2).join('')}
+              </div>
+              <h3 className="h3 mt-5">{m.name}</h3>
+              <p className="mt-1 text-[13px] uppercase tracking-[0.14em] text-ink-300">{m.role}</p>
+            </div>
+          ))}
+        </div>
+       
       </Section>
 
       <CTA title="Want the reference calls before the proposal?" text="We will put you in touch with customers running the same shape of estate as yours." />

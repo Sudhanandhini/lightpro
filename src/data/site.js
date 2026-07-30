@@ -10,7 +10,7 @@ export const company = {
   phoneHref: 'tel:+918041234567',
   email: 'sales@lightpro.in',
   support: 'support@lightpro.in',
-  address: 'LightPro Technologies Pvt. Ltd., HSR Layout, Bengaluru, Karnataka 560102',
+  address: 'LightPro Technologies Pvt. Ltd., No. 32, BHCS Layout, Bannerghatta Main Road, Opp Gopalan Innovation Mall, Bangalore - 560076',
   hours: 'Monday to Saturday, 9:00 - 19:00 IST'
 }
 
