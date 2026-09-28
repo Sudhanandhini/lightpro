@@ -6,17 +6,21 @@ export default function ITStaffing() {
       <PageHero
         eyebrow="LightPro Professional Services"
         title="IT Staffing Services"
-        lede="Certified engineers placed with your team - for a project, a peak, a parental leave or a permanent seat. Screened by people who do the work themselves."
+        lede="LightPro staffing services provide flexible, skilled technology professionals to scale your workforce on-demand for short-term projects or permanent roles."
         crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'IT Staffing Services' }]}
       />
 
-      <Section eyebrow="Engagement models" title="Four ways to take our people">
+      <Section
+        eyebrow="Key offerings & capabilities"
+        title="Skilled professionals, tailored to your scale"
+        lede="Staffing service would empower your enterprise with skilled technology professionals, certified project teams, and OEM-certified engineers tailored to your operational scale."
+      >
         <div className="grid gap-px bg-hair md:grid-cols-2 lg:grid-cols-4">
           {[
-            { t: 'Contract',           d: 'A defined term, billed monthly. The engineer reports into your manager and follows your process.' },
-            { t: 'Contract to hire',   d: 'Evaluate on the job, convert when you are certain. Conversion terms agreed up front.' },
-            { t: 'Permanent placement',d: 'We source, screen and shortlist. You interview a shorter list of people who can actually do it.' },
-            { t: 'Managed team',       d: 'A pod with its own team lead, delivering against an outcome rather than a headcount.' }
+            { t: 'Certified Project Teams',     d: 'End-to-end deployment, integration, and commissioning managed by qualified professionals.' },
+            { t: 'On-Demand Technical Talent',  d: 'Access to L1/L2/L3 support engineers, network specialists, and infrastructure managers.' },
+            { t: 'Flexible Engagement Models',  d: 'Scalable staffing solutions ranging from short-term project rollouts to SLA-backed managed services.' },
+            { t: 'Pan-India On-Ground Support', d: 'Consistent technical deployment and localized workforce presence across multiple regions.' }
           ].map(c => (
             <div key={c.t} className="bg-white p-7">
               <span className="rule block !w-8" />

@@ -5,12 +5,29 @@ export default function Warehousing() {
     <>
       <PageHero
         eyebrow="LightPro Professional Services"
-        title="Warehousing"
-        lede="Secure storage, staging and asset custody in Bengaluru. Buy when the price is right, hold until the floor is ready, and ship the day the team lands."
-        crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'Warehousing' }]}
+        title="Pan India Last Mile Delivery &amp; Warehousing"
+        lede="Pan India last mile delivery and warehousing services provide secure nationwide storage and final-destination transport for enterprise IT assets and goods."
+        crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'Last Mile Delivery & Warehousing' }]}
       />
 
-      <Section eyebrow="Why hold stock with us" title="Procurement and readiness rarely share a calendar">
+      <Section eyebrow="Key features" title="Nationwide reach, secure custody">
+        <div className="grid gap-px bg-hair md:grid-cols-3">
+          {[
+            'Widespread logistical reach spanning hundreds of cities across India for secure, last-mile dispatch.',
+            'Safe transit and coordinated delivery of sensitive compute, mobility, and data center infrastructure.',
+            'Integrated IT asset relocation, inventory management, and systematic device deployment from regional staging hubs.'
+          ].map((f, i) => (
+            <div key={f} className="bg-white p-8">
+              <span className="font-display text-[13px] font-semibold tracking-[0.2em] text-brand">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <p className="mt-4 text-[15px] leading-relaxed text-ink-700">{f}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="grey" eyebrow="Why hold stock with us" title="Procurement and readiness rarely share a calendar">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
             <p className="lede">
@@ -34,7 +51,7 @@ export default function Warehousing() {
         </div>
       </Section>
 
-      <Section tone="grey" eyebrow="Use cases" title="Who uses the warehouse">
+      <Section eyebrow="Use cases" title="Who uses the warehouse">
         <div className="grid gap-px bg-hair md:grid-cols-3">
           {[
             { t: 'Delayed fit-outs',  d: 'Devices bought at the right price, held until the site handover date moves for the third time.' },
@@ -50,7 +67,7 @@ export default function Warehousing() {
         </div>
       </Section>
 
-      <Section eyebrow="Custody chain" title="From receipt to release">
+      <Section tone="grey" eyebrow="Custody chain" title="From receipt to release">
         <Steps items={[
           { title: 'Receive', text: 'Goods inward check against the purchase order, serial capture and damage inspection.' },
           { title: 'Store',   text: 'Racked by customer and batch, insured, inventoried and reconciled monthly.' },

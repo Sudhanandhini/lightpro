@@ -2,12 +2,10 @@ import { PageHero, Section, BrandGrid, RuleList, Steps, CTA } from '../component
 import { networkSecurityBrands } from '../data/site.js'
 
 const services = [
-  { t: 'Perimeter security',   d: 'Next-generation firewall design, deployment and policy authoring, with segmentation between corporate, guest and operational networks.' },
-  { t: 'Endpoint protection',  d: 'Detection and response rolled out across every managed device, with alerting that reaches a human rather than an unread console.' },
-  { t: 'Secure connectivity',  d: 'Site-to-site and remote access VPN, SD-WAN links and conditional access for a workforce that is not always in the building.' },
-  { t: 'Email and web control',d: 'Filtering, anti-phishing and content policy, plus the user awareness material that makes the controls stick.' },
-  { t: 'Assessment & hardening', d: 'Vulnerability assessment, configuration review and a remediation plan ranked by exposure rather than by ease.' },
-  { t: 'Monitoring & response', d: 'Continuous monitoring, log retention, incident triage and a defined escalation path with named owners.' }
+  { t: 'Risk Assessment and Management', d: 'We conduct a comprehensive cybersecurity risk assessment to identify potential vulnerabilities and threats to your organization. We then work with you to create a risk management plan to address and mitigate these risks.' },
+  { t: 'Perimeter & Network Security',   d: 'Our team uses the latest cybersecurity technologies to secure your network against unauthorized access, malware, and other security threats. We also provide continuous monitoring and management of your network to ensure that it remains secure.' },
+  { t: 'Data Protection',                d: 'We help you protect your sensitive data by implementing robust data protection measures, including encryption, access controls, and data backup and recovery.' },
+  { t: 'Incident Response',              d: 'In the event of a cybersecurity breach, we provide rapid incident response services to minimize the impact on your organization. We work with you to contain the breach, investigate the incident, and restore normal operations as quickly as possible.' }
 ]
 
 export default function CyberSecurity() {
@@ -16,12 +14,35 @@ export default function CyberSecurity() {
       <PageHero
         eyebrow="Services"
         title="Network &amp; Cyber Security Services"
-        lede="Design, deployment and monitoring of the perimeter and the endpoint - with the documentation your auditors, your insurers and your largest customer will ask to see."
+        lede="Wired and wireless networks, risk assessment, perimeter security, data protection and incident response - resilient, secure and scalable for any deployment size."
         crumbs={[{ label: 'Network & Cyber Security Services' }]}
       />
 
-      <Section eyebrow="Capability" title="Six services, delivered together or on their own">
-        <div className="grid gap-px bg-hair md:grid-cols-2 lg:grid-cols-3">
+      <Section eyebrow="Wired and Wireless Solutions" title="Future-proof networks, built for business">
+        <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
+          <p className="lede">
+            Recognized as an expert partner with leading enterprise wired &amp; wireless products,
+            extensive experience and proactive solutions. LightPro ensures to deliver more reliable
+            wired &amp; wireless designs and deployment that let clients focus on business without
+            connectivity concerns, building future-proof networks.
+          </p>
+          <div className="space-y-5 text-[15px] leading-relaxed text-ink-500">
+            <p>
+              We provide both controller-based and controller-less network management solutions,
+              delivering high-performance connectivity for any deployment size - large, small, or
+              distributed - while ensuring resilience, security, and scalability.
+            </p>
+            <p>
+              With expertise in creating efficient, highly available networks, our team at LightPro
+              can help design robust infrastructures that maintain stability during peak loads,
+              simplifying management with intelligent automation for streamlined operations.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="grey" eyebrow="Cyber security" title="Protecting your organization end to end">
+        <div className="grid gap-px bg-hair md:grid-cols-2">
           {services.map((s, i) => (
             <div key={s.t} className="group bg-white p-8 transition hover:bg-ink">
               <span className="font-display text-[13px] font-semibold tracking-[0.2em] text-brand">
@@ -34,11 +55,11 @@ export default function CyberSecurity() {
         </div>
       </Section>
 
-      <Section tone="grey" eyebrow="Technology partners" title="Platforms we deploy and support">
+      <Section eyebrow="Technology partners" title="Platforms we deploy and support">
         <BrandGrid items={[...networkSecurityBrands, 'SentinelOne', 'One Identity', 'Yubico', 'Veeam']} />
       </Section>
 
-      <Section eyebrow="Engagement" title="How a security engagement runs">
+      <Section tone="grey" eyebrow="Engagement" title="How a security engagement runs">
         <Steps items={[
           { title: 'Assess',    text: 'Current-state review of network, endpoints, identity and backup, with findings ranked by exposure.' },
           { title: 'Design',    text: 'Target architecture, policy set and a phased remediation plan costed against your budget cycle.' },

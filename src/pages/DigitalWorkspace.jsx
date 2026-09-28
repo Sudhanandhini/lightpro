@@ -3,17 +3,43 @@ import { nav, deviceBrands, networkSecurityBrands, deviceManagementBrands, produ
 
 const children = nav.find(n => n.label === 'Digital Workspace Solutions').children
 
+const capabilities = [
+  { t: 'Copilot+ PCs',              d: 'Copilot+ PCs with AI-ready performance.' },
+  { t: 'Military-grade durability', d: 'Military-grade (MIL-STD 810H) durability standards.' },
+  { t: 'Sustainable lifecycles',    d: 'Sustainable hardware lifecycles and recovery.' },
+  { t: 'Configuration & imaging',   d: 'Customized configuration and imaging services.' }
+]
+
 export default function DigitalWorkspace() {
   return (
     <>
       <PageHero
         eyebrow="Digital Workspace Solutions"
-        title="Everything an employee touches, from the desk to the cloud"
-        lede="The laptop, the network it joins, the policy that governs it and the software that runs on it. Specified together so nothing falls between vendors."
+        title="Digital Workspace Solutions"
+        lede="At LightPro, we build, secure and maintain computing infrastructure for Digital workspace."
         crumbs={[{ label: 'Digital Workspace Solutions' }]}
       />
 
       <Section
+        eyebrow="Key capabilities"
+        title="Advance your digital workplace"
+        lede="Advance your digital workplace with the world's most secure and sustainable PCs with their intelligent systems that provide a seamless balance of performance, security, and manageability."
+      >
+        <div className="grid gap-px bg-hair md:grid-cols-2 lg:grid-cols-4">
+          {capabilities.map((c, i) => (
+            <div key={c.t} className="bg-white p-7">
+              <span className="font-display text-[13px] font-semibold tracking-[0.2em] text-brand">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 className="h3 mt-4 text-[17px]">{c.t}</h3>
+              <p className="mt-3 text-[14px] leading-relaxed text-ink-500">{c.d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        tone="grey"
         eyebrow="Three disciplines"
         title="Choose the layer you need, or take all three"
         lede="Each one stands on its own. Together they are a complete, managed workspace."
@@ -25,7 +51,7 @@ export default function DigitalWorkspace() {
         </div>
       </Section>
 
-      <Section tone="grey" eyebrow="Partner ecosystem" title="Who we build with">
+      <Section eyebrow="Partner ecosystem" title="Who we build with">
         <div className="space-y-12">
           <BrandGrid title="Devices" items={deviceBrands} />
           <BrandGrid title="Networking &amp; security" items={networkSecurityBrands} />

@@ -34,13 +34,13 @@ export const nav = [
     to: '/professional-services',
     children: [
       { label: 'IT Staffing Services', to: '/professional-services/it-staffing-services',
-        blurb: 'Certified engineers, on your site or ours' },
+        blurb: 'Skilled technology professionals, on-demand or permanent' },
       { label: 'Seamless Deployment', to: '/professional-services/seamless-deployment',
-        blurb: 'Imaging, rollout and desk-side handover' },
+        blurb: 'Launch-ready IT and device rollouts, zero friction' },
       { label: 'On-Demand Services', to: '/professional-services/on-demand-services',
-        blurb: 'Break-fix, AMC and scheduled visits' },
-      { label: 'Warehousing', to: '/professional-services/warehousing',
-        blurb: 'Secure storage, staging and asset custody' }
+        blurb: 'On-site technicians, helpdesk and in-warranty support' },
+      { label: 'Last Mile Delivery & Warehousing', to: '/professional-services/warehousing',
+        blurb: 'Pan India storage and final-destination transport' }
     ]
   },
   { label: 'Contact Us', to: '/contact' }
@@ -93,6 +93,6 @@ export const practices = [
     title: 'LightPro Professional Services',
     to: '/professional-services',
     text: 'The people and logistics behind the hardware - engineers, rollouts, support visits and secure storage.',
-    points: ['IT Staffing Services', 'Seamless Deployment', 'On-Demand Services', 'Warehousing']
+    points: ['IT Staffing Services', 'Seamless Deployment', 'On-Demand Services', 'Last Mile Delivery & Warehousing']
   }
 ]

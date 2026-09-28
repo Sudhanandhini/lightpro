@@ -1,5 +1,17 @@
 import { PageHero, Section, RuleList, CTA } from '../components/UI.jsx'
 
+const features = [
+  'Certified on-site technicians available for urgent troubleshooting and hardware configurations across a massive city footprint.',
+  'Rapid response helpdesk and remote management support for hybrid and remote workforces.',
+  'Plug-and-play mobility and device management packages designed for rapid enterprise rollout.'
+]
+
+const warrantyFeatures = [
+  'OEM-certified repair services performed directly at client locations using genuine parts.',
+  'End-to-end asset lifecycle management, tracking warranty compliance, and minimizing asset downtime.',
+  'Direct coordination with leading hardware and mobile technology vendors for seamless claim processing.'
+]
+
 const tiers = [
   { t: 'Per-incident',  d: 'A single call-out, quoted before we travel. No contract, no retainer.',
     points: ['Response quoted per visit', 'Parts billed at cost plus labour', 'Report issued after every visit'] },
@@ -15,9 +27,41 @@ export default function OnDemandServices() {
       <PageHero
         eyebrow="LightPro Professional Services"
         title="On-Demand Services"
-        lede="Support sized to how often you actually need it - a single call-out, a standing monthly visit, or a full annual maintenance contract with a response time you can hold us to."
+        lede="Empower your business with flexible, on-demand technology solutions, expert technical assistance, and SLA-backed managed infrastructure designed to eliminate downtime and drive workplace efficiency."
         crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'On-Demand Services' }]}
       />
+
+      <Section eyebrow="Key features" title="Expert help, exactly when you need it">
+        <div className="grid gap-px bg-hair md:grid-cols-3">
+          {features.map((f, i) => (
+            <div key={f} className="bg-white p-8">
+              <span className="font-display text-[13px] font-semibold tracking-[0.2em] text-brand">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <p className="mt-4 text-[15px] leading-relaxed text-ink-700">{f}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="grey" eyebrow="In-Warranty Support" title="Protect your hardware investments">
+        <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
+          <div>
+            <p className="lede">
+              Protect your hardware investments with manufacturer-authorized repairs, genuine OEM
+              spare parts, and rapid turnaround times.
+            </p>
+            <p className="mt-5 text-[15px] leading-relaxed text-ink-500">
+              In-warranty support manages authorized repair, replacement, and technical
+              troubleshooting for hardware covered under manufacturer or enterprise warranties.
+            </p>
+          </div>
+          <div>
+            <h3 className="h3 mb-6">Key features</h3>
+            <RuleList items={warrantyFeatures} />
+          </div>
+        </div>
+      </Section>
 
       <Section eyebrow="Cover levels" title="Three ways to buy support">
         <div className="grid gap-6 lg:grid-cols-3">

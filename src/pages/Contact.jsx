@@ -10,7 +10,7 @@ const interests = [
   'IT Staffing Services',
   'Seamless Deployment',
   'On-Demand Services',
-  'Warehousing',
+  'Last Mile Delivery & Warehousing',
   
 ]
 
@@ -67,7 +67,7 @@ export default function Contact() {
             <dl className="mt-10 divide-y divide-hair border-y border-hair">
               {[
                 ['Head office', company.address],
-                ['Sales and procurement', `${company.phone} - ${company.hours}`],
+                ['Sales and procurement', `  ${company.hours}`],
                 ['Email', `${company.email} / ${company.support}`],
                 ['Support desk', '24x7 for AMC and managed services customers']
               ].map(([k, v]) => (

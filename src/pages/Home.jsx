@@ -242,8 +242,8 @@ export default function Home() {
           <div className="animate-rise">
             <p className="eyebrow1" style={{borderRadius:'50px', backgroundColor:'#a1a1a159', padding:'10px'}} >
             <span>Since {company.since} </span>    Bengaluru-headquartered · PAN-India delivery</p>
-            <h1 className="h1 mt-6 !text-white">
-              The complete <span className="text-brand">digital workspace</span>, built and run by one partner.
+            <h1 className="h1 mt-6 !text-brand">
+              Global Systems Integrator and Network Security Solutions Provider
             </h1>
             <p className="mt-7 max-w-[56ch] text-[1.08rem] leading-relaxed text-white/60">
               LightPro Technologies supplies the devices, the network, the security and the
