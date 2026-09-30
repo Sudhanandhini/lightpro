@@ -4,6 +4,12 @@ import InfraTopology from '../components/InfraTopology.jsx'
 import { Section, LinkCard, IconCard, BrandGrid, CTA } from '../components/UI.jsx'
 import { practices, allBrands, company } from '../data/site.js'
 import { getBrandLogo } from '../data/brandLogos.js'
+import ciscoImg from '../assets/cisco.png'
+import mimecastImg from '../assets/minecast.png'
+import druvaImg from '../assets/dura.png'
+import lenovoImg from '../assets/lenovo.png'
+import dataCenterImg from '../assets/data-center.png'
+import cyberSecurityImg from '../assets/cyber-security.png'
 
 function Icon({ children }) {
   return (
@@ -31,6 +37,16 @@ const solutions = [
     icon: <Icon><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M9 15l2 2 4-4" /></Icon> },
   { title: 'Managed IT & AMC', text: 'Your extended IT team: helpdesk, onsite engineers, patching, monitoring and annual maintenance under a clear SLA.', meta: ['4-hr response', '24x7 NOC'],
     icon: <Icon><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" /><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 7.9 19.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3 15a2 2 0 1 1 0-4 1.6 1.6 0 0 0 2.1-2.1l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 11 3a2 2 0 1 1 4 0 1.6 1.6 0 0 0 2.1 2.1l-.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.6 1.6 0 0 0 21 11a2 2 0 1 1 0 4z" /></Icon> }
+]
+
+// Nodes are placed clockwise around the ring starting at 12 o'clock; `ring` is the gradient border colour pair.
+const spotlights = [
+  { title: 'Cisco', img: ciscoImg, angle: -90, ring: ['#0EA5E9', '#6366F1'], text: 'Intelligent networks for the modern enterprise. Secure, scale and automate your hybrid infrastructure with industry-leading Cisco networking and cloud solutions.' },
+  { title: 'Mimecast', img: mimecastImg, angle: -30, ring: ['#EC4899', '#F97316'], text: 'Protect your communications, workforce and critical cloud data with AI-powered human risk management and advanced email defense.' },
+  { title: 'Druva', img: druvaImg, angle: 30, ring: ['#6366F1', '#A855F7'], text: 'Secure your enterprise data across workloads, SaaS apps and edge devices with Druva’s 100% SaaS data resiliency platform. No hardware. No complexity.' },
+  { title: 'Lenovo', img: lenovoImg, angle: 90, ring: ['#EF4444', '#F97316'], text: 'Focuses on structuring high-performance data centre portfolios, cloud environments and edge computing solutions.' },
+  { title: 'Data Center', img: dataCenterImg, angle: 150, ring: ['#A855F7', '#EC4899'], text: 'Scale your digital footprint with high-availability colocation, cloud connectivity and ultra-secure enterprise infrastructure designed to support next-generation AI and enterprise workloads.' },
+  { title: 'Cyber Security', img: cyberSecurityImg, angle: 210, ring: ['#67A93B', '#EAB308'], text: 'Protect your digital assets, workforce and infrastructure from evolving cyber threats with 24/7/365 managed detection, response and strategic security architecture.' }
 ]
 
 const whyItems = [
@@ -138,6 +154,100 @@ function ProductCard({ tag, title, text, specs, icon }) {
         </div>
       </div>
     </div>
+  )
+}
+
+const RING_RADIUS = 215
+
+const labelSide = {
+  top:    'bottom-full mb-3 left-1/2 -translate-x-1/2 text-center',
+  bottom: 'top-full mt-3 left-1/2 -translate-x-1/2 text-center',
+  right:  'left-full ml-4 top-1/2 -translate-y-1/2 text-left',
+  left:   'right-full mr-4 top-1/2 -translate-y-1/2 text-right'
+}
+
+function RingImage({ img, title, ring, size }) {
+  return (
+    <span className={`block rounded-full p-[4px] shadow-[0_14px_36px_-12px_rgba(0,0,0,.6)] ${size}`}
+          style={{ backgroundImage: `linear-gradient(135deg, ${ring[0]}, ${ring[1]})` }}>
+      <img src={img} alt={title} loading="lazy" className="h-full w-full rounded-full border-[3px] border-[#1d4601] object-cover" />
+    </span>
+  )
+}
+
+function SpotlightNode({ title, img, text, angle, ring }) {
+  const rad = (angle * Math.PI) / 180
+  const x = Math.round(Math.cos(rad) * RING_RADIUS)
+  const y = Math.round(Math.sin(rad) * RING_RADIUS)
+  const side = Math.abs(x) < 1 ? (y < 0 ? 'top' : 'bottom') : (x > 0 ? 'right' : 'left')
+  // Side nodes open their popup outward; top/bottom nodes open toward the centre.
+  const placement = side === 'top' ? 'below' : side === 'bottom' ? 'above' : side
+  const popupPos = {
+    below: 'left-1/2 top-full mt-4 -translate-x-1/2 translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0',
+    above: 'left-1/2 bottom-full mb-4 -translate-x-1/2 -translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0',
+    right: 'left-full ml-5 top-1/2 -translate-y-1/2 translate-x-2 group-hover:translate-x-0 group-focus-within:translate-x-0',
+    left:  'right-full mr-5 top-1/2 -translate-y-1/2 -translate-x-2 group-hover:translate-x-0 group-focus-within:translate-x-0'
+  }
+  const arrowPos = {
+    below: 'left-1/2 -top-1.5 -translate-x-1/2',
+    above: 'left-1/2 -bottom-1.5 -translate-x-1/2',
+    right: 'top-1/2 -left-1.5 -translate-y-1/2',
+    left:  'top-1/2 -right-1.5 -translate-y-1/2'
+  }
+  const isSide = placement === 'left' || placement === 'right'
+
+  return (
+    <div className="group absolute z-10 -translate-x-1/2 -translate-y-1/2 hover:z-30 focus-within:z-30"
+         style={{ left: `calc(50% + ${x}px)`, top: `calc(50% + ${y}px)` }}>
+      <button type="button" aria-label={title}
+              className="block rounded-full outline-none transition duration-300 group-hover:scale-110 focus-visible:scale-110 focus-visible:ring-2 focus-visible:ring-white">
+        <RingImage img={img} title={title} ring={ring} size="h-[118px] w-[118px]" />
+      </button>
+
+      <p className={`pointer-events-none absolute whitespace-nowrap font-display text-[17px] font-semibold text-white transition duration-200 ${labelSide[side]} ${
+        isSide ? 'group-hover:opacity-0 group-focus-within:opacity-0' : ''}`}>
+        {title}
+      </p>
+
+      <div role="tooltip"
+           className={`pointer-events-none absolute border border-white/10 bg-white p-5 text-left opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,.7)] transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100 ${
+             isSide ? 'w-[220px] xl:w-[280px]' : 'w-[280px]'} ${popupPos[placement]}`}>
+        <span aria-hidden className={`absolute h-3 w-3 rotate-45 bg-white ${arrowPos[placement]}`} />
+        <span className="block h-1 w-10" style={{ backgroundImage: `linear-gradient(90deg, ${ring[0]}, ${ring[1]})` }} />
+        <h3 className="mt-3 font-display text-[16px] font-semibold text-ink">{title}</h3>
+        <p className="mt-2 text-[13.5px] leading-relaxed text-ink-500">{text}</p>
+      </div>
+    </div>
+  )
+}
+
+function SpotlightWheel({ items }) {
+  return (
+    <>
+      {/* Desktop: radial diagram with hover popups */}
+      <div className="relative mx-auto hidden h-[640px] w-[640px] lg:block">
+        <div aria-hidden className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/25"
+             style={{ width: RING_RADIUS * 2, height: RING_RADIUS * 2 }} />
+        <div className="absolute left-1/2 top-1/2 flex h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-[10px] border-white/15 bg-gradient-to-br from-white to-[#E6E9E3] text-center shadow-[0_30px_70px_-20px_rgba(0,0,0,.6)]">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">LightPro</p>
+          <p className="mt-2 font-display text-[26px] font-bold leading-tight text-ink">Technology<br />Partners</p>
+        </div>
+        {items.map(s => <SpotlightNode key={s.title} {...s} />)}
+      </div>
+
+      {/* Mobile / tablet: stacked list with the text always visible */}
+      <div className="grid gap-5 sm:grid-cols-2 lg:hidden">
+        {items.map(s => (
+          <div key={s.title} className="flex gap-4 border border-white/10 bg-white/[0.04] p-5">
+            <RingImage img={s.img} title={s.title} ring={s.ring} size="h-20 w-20 shrink-0" />
+            <div>
+              <h3 className="font-display text-[16px] font-semibold text-white">{s.title}</h3>
+              <p className="mt-1.5 text-[13.5px] leading-relaxed text-white/60">{s.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 
@@ -293,6 +403,8 @@ export default function Home() {
         </div>
       </div>
 
+    
+
       {/* ---------------- OUR SOLUTIONS ---------------- */}
       <Section
         eyebrow="Our solutions"
@@ -303,6 +415,20 @@ export default function Home() {
           {solutions.map(s => <IconCard key={s.title} {...s} />)}
         </div>
       </Section>
+
+
+        {/* ---------------- TECHNOLOGY SPOTLIGHT ---------------- */}
+      <section className="section overflow-hidden bg-[#1d4601] text-white/70"
+        style={{ backgroundImage: 'radial-gradient(700px 520px at 50% 58%, rgba(103, 169, 59, 0.35), transparent 65%)' }}>
+        <div className="wrap">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="eyebrow justify-center">Technology partners</p>
+            <h2 className="h2 mt-5 !text-white">Enterprise platforms we design, deploy and support</h2>
+            <p className="mt-5 text-[1.05rem] leading-relaxed text-white/60">Hover over a platform to see how it strengthens your infrastructure.</p>
+          </div>
+          <SpotlightWheel items={spotlights} />
+        </div>
+      </section>
 
       {/* ---------------- PRACTICES ---------------- */}
       <Section
