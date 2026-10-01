@@ -15,7 +15,7 @@ export const company = {
 }
 
 export const nav = [
-  { label: 'About', to: '/about' },
+  { label: 'About Us', to: '/about' },
   {
     label: 'Digital Workspace Solutions',
     to: '/digital-workspace-solutions',

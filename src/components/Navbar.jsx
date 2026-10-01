@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { LogoMark } from './Logo.jsx'
 import { nav, company } from '../data/site.js'
-import logo from '../assets/logo-light.jpg'
+import logo from '../assets/logo.jpg'
 
 function Caret({ open }) {
   return (
