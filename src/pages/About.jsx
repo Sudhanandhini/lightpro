@@ -8,7 +8,7 @@ export default function About() {
       <PageHero
         eyebrow="About Us"
         title="Lightpro Technologies Pvt Ltd "
-        lede={`Along with providing solutions to end customers we constantly evolving ourselves to provide impactful, cost-effective, and industry-aligned IT solutions`}
+        lede={``}
         crumbs={[{ label: 'About Us' }]}
       />
 
