@@ -27,9 +27,19 @@ export default function OnDemandServices() {
       <PageHero
         eyebrow="LightPro Professional Services"
         title="On-Demand Services"
-        lede="Empower your business with flexible, on-demand technology solutions, expert technical assistance, and SLA-backed managed infrastructure designed to eliminate downtime and drive workplace efficiency."
+        lede=""
         crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'On-Demand Services' }]}
       />
+
+
+       <section  className="bg-white pt-16 sm:pt-20">
+        <div className="wrap">
+          <p className="lede ">
+            Empower your business with flexible, on-demand technology solutions, expert technical assistance, and SLA-backed managed infrastructure designed to eliminate downtime and drive workplace efficiency.
+          </p>
+        </div>
+      </section>
+
 
       <Section eyebrow="Key features" title="Expert help, exactly when you need it">
         <div className="grid gap-px bg-hair md:grid-cols-3">
@@ -63,7 +73,7 @@ export default function OnDemandServices() {
         </div>
       </Section>
 
-      <Section eyebrow="Cover levels" title="Three ways to buy support">
+      {/* <Section eyebrow="Cover levels" title="Three ways to buy support">
         <div className="grid gap-6 lg:grid-cols-3">
           {tiers.map((tier, i) => (
             <div key={tier.t} className={`flex flex-col border p-8 ${i === 2 ? 'border-brand bg-brand-tint/40' : 'border-hair bg-white'}`}>
@@ -82,9 +92,9 @@ export default function OnDemandServices() {
             </div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
-      <Section tone="grey" eyebrow="What we cover" title="Inside the contract">
+      {/* <Section tone="grey" eyebrow="What we cover" title="Inside the contract">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <RuleList items={[
             'Laptops, desktops, workstations, printers and peripherals.',
@@ -109,7 +119,7 @@ export default function OnDemandServices() {
             </div>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       <CTA title="Send us your asset list." text="We will price cover against it and tell you which assets are not worth contracting." />
     </>

@@ -8,8 +8,8 @@ export default function ProfessionalServices() {
     <>
       <PageHero
         eyebrow="LightPro Professional Services"
-        title="The people and logistics behind the hardware"
-        lede="Engineers, rollout crews, support visits and secure storage. The part of IT that cannot be shipped in a box, delivered under the same contract as everything else."
+        title="LightPro Professional Services"
+        lede=""
         crumbs={[{ label: 'LightPro Professional Services' }]}
       />
 
@@ -21,7 +21,7 @@ export default function ProfessionalServices() {
         </div>
       </Section>
 
-      <Section tone="grey" eyebrow="Why it matters" title="Hardware arrives on time. Projects fail on people.">
+      {/* <Section tone="grey" eyebrow="Why it matters" title="Hardware arrives on time. Projects fail on people.">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <p className="lede">
             The gap between a purchase order and a working desk is measured in engineer hours -
@@ -35,7 +35,7 @@ export default function ProfessionalServices() {
             'Bonded warehouse capacity for staging, buffer stock and asset custody.'
           ]} />
         </div>
-      </Section>
+      </Section> */}
 
       <CTA />
     </>

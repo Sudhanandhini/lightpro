@@ -67,9 +67,9 @@ export default function Contact() {
             <dl className="mt-10 divide-y divide-hair border-y border-hair">
               {[
                 ['Head office', company.address],
-                ['Sales and procurement', `  ${company.hours}`],
+                // ['Sales and procurement', `  ${company.hours}`],
                 ['Email', `${company.email} / ${company.support}`],
-                ['Support desk', '24x7 for AMC and managed services customers']
+                // ['Support desk', '24x7 for AMC and managed services customers']
               ].map(([k, v]) => (
                 <div key={k} className="py-5">
                   <dt className="text-[12px] font-semibold uppercase tracking-[0.14em] text-brand">{k}</dt>
@@ -78,12 +78,12 @@ export default function Contact() {
               ))}
             </dl>
 
-            <div className="mt-10 border-l-2 border-brand pl-5">
+            {/* <div className="mt-10 border-l-2 border-brand pl-5">
               <p className="text-[15px] leading-relaxed text-ink-500">
                 Prefer to talk first? Call the sales line and ask for the practice you need -
                 digital workspace, security, or professional services.
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* form */}
@@ -135,7 +135,7 @@ export default function Contact() {
                     </div>
                     <div className="sm:col-span-2">
                       <label className={label} htmlFor="message">Requirement details</label>
-                      <textarea className={`${field} min-h-[120px] resize-y`} id="message" name="message"
+                      <textarea className={`${field} min-h-[50px] resize-y`} id="message" name="message"
                                 placeholder="Team size, locations, timeline and any configuration standards you follow." />
                     </div>
                   </div>
@@ -157,21 +157,7 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* map */}
-      <section className="border-t border-hair">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.05578330411296!2d77.59997288000902!3d12.914628141421968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156151379205%3A0x82c9f9b521bd8304!2sLightpro%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1785385477749!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          style={{ border: 0, display: 'block' }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="strict-origin-when-cross-origin"
-          title="LightPro Technologies location"
-        />
-      </section>
-
-      {/* direct lines to the management team */}
+        {/* direct lines to the management team */}
       <section className="border-t border-hair bg-white py-14">
         <div className="wrap">
           <p className="eyebrow">Contact Us</p>
@@ -192,8 +178,24 @@ export default function Contact() {
         </div>
       </section>
 
+
+      {/* map */}
+      <section className="border-t border-hair">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243.05578330411296!2d77.59997288000902!3d12.914628141421968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156151379205%3A0x82c9f9b521bd8304!2sLightpro%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1785385477749!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          style={{ border: 0, display: 'block' }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
+          title="LightPro Technologies location"
+        />
+      </section>
+
+    
       {/* quick links to every service, so contact is never a dead end */}
-      <section className="border-t border-hair bg-[#F7F8F6] py-14">
+      {/* <section className="border-t border-hair bg-[#F7F8F6] py-14">
         <div className="wrap">
           <p className="eyebrow">Not sure who to ask for?</p>
           <div className="mt-8 grid gap-px  sm:grid-cols-2 lg:grid-cols-3">
@@ -205,7 +207,7 @@ export default function Contact() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

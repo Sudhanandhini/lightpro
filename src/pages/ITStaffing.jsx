@@ -6,15 +6,22 @@ export default function ITStaffing() {
       <PageHero
         eyebrow="LightPro Professional Services"
         title="IT Staffing Services"
-        lede="LightPro staffing services provide flexible, skilled technology professionals to scale your workforce on-demand for short-term projects or permanent roles."
+        lede=""
         crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'IT Staffing Services' }]}
       />
 
-      <Section
-        eyebrow="Key offerings & capabilities"
-        title="Skilled professionals, tailored to your scale"
-        lede="Staffing service would empower your enterprise with skilled technology professionals, certified project teams, and OEM-certified engineers tailored to your operational scale."
-      >
+      <section  className="bg-white pt-16 sm:pt-20">
+        <div className="wrap">
+          <p className="lede ">
+            LightPro staffing services provide flexible, skilled technology professionals to scale
+            your workforce on demand, for short-term projects or permanent roles. Our staffing
+            services empower your enterprise with skilled technology professionals, certified
+            project teams and OEM-certified engineers tailored to your operational scale.
+          </p>
+        </div>
+      </section>
+
+      <Section eyebrow="Key offerings & capabilities" title="Skilled professionals, tailored to your scale">
         <div className="grid gap-px bg-hair md:grid-cols-2 lg:grid-cols-4">
           {[
             { t: 'Certified Project Teams',     d: 'End-to-end deployment, integration, and commissioning managed by qualified professionals.' },
@@ -31,7 +38,7 @@ export default function ITStaffing() {
         </div>
       </Section>
 
-      <Section tone="grey" eyebrow="Roles" title="Where our bench is deep">
+      {/* <Section tone="grey" eyebrow="Roles" title="Where our bench is deep">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <RuleList items={[
             'Desktop and end-user support engineers, L1 through L3.',
@@ -57,16 +64,16 @@ export default function ITStaffing() {
             </div>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section eyebrow="Process" title="From brief to badge">
+      {/* <Section eyebrow="Process" title="From brief to badge">
         <Steps items={[
           { title: 'Brief',    text: 'Role, level, tooling, shift pattern, site and start date - captured in one call.' },
           { title: 'Shortlist',text: 'Screened and technically assessed candidates, typically within five working days.' },
           { title: 'Select',   text: 'You interview. We handle scheduling, feedback and offer negotiation.' },
           { title: 'Onboard',  text: 'Documentation, background checks, equipment and a thirty-day check-in.' }
         ]} />
-      </Section>
+      </Section> */}
 
       <CTA title="Send the role, not a job description." text="Tell us what needs to happen on the ground and we will tell you what shape of engineer does it." />
     </>

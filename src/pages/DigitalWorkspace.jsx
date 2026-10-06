@@ -16,14 +16,14 @@ export default function DigitalWorkspace() {
       <PageHero
         eyebrow="Digital Workspace Solutions"
         title="Digital Workspace Solutions"
-        lede="At LightPro, we build, secure and maintain computing infrastructure for Digital workspace."
+        lede=""
         crumbs={[{ label: 'Digital Workspace Solutions' }]}
       />
 
       <Section
         eyebrow="Key capabilities"
         title="Advance your digital workplace"
-        lede="Advance your digital workplace with the world's most secure and sustainable PCs with their intelligent systems that provide a seamless balance of performance, security, and manageability."
+        lede="At Lightpro, we build, secure and maintain computing infrastructure for Digital workspace. Advance your digital workplace with the world’s most secure and sustainable PCs with their intelligent systems that provide a seamless balance of performance, security, and manageability."
       >
         <div className="grid gap-px bg-hair md:grid-cols-2 lg:grid-cols-4">
           {capabilities.map((c, i) => (
@@ -51,14 +51,14 @@ export default function DigitalWorkspace() {
         </div>
       </Section>
 
-      <Section eyebrow="Partner ecosystem" title="Who we build with">
+      {/* <Section eyebrow="Partner ecosystem" title="Who we build with">
         <div className="space-y-12">
           <BrandGrid title="Devices" items={deviceBrands} />
           <BrandGrid title="Networking &amp; security" items={networkSecurityBrands} />
           <BrandGrid title="Device management" items={deviceManagementBrands} />
           <BrandGrid title="Productivity software" items={productivityBrands} />
         </div>
-      </Section>
+      </Section> */}
 
       <CTA />
     </>

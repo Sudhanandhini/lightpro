@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import InfraTopology from '../components/InfraTopology.jsx'
 import { Section, LinkCard, IconCard, BrandGrid, CTA } from '../components/UI.jsx'
@@ -39,14 +39,32 @@ const solutions = [
     icon: <Icon><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" /><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 7.9 19.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3 15a2 2 0 1 1 0-4 1.6 1.6 0 0 0 2.1-2.1l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 11 3a2 2 0 1 1 4 0 1.6 1.6 0 0 0 2.1 2.1l-.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.6 1.6 0 0 0 21 11a2 2 0 1 1 0 4z" /></Icon> }
 ]
 
-// Nodes are placed clockwise around the ring starting at 12 o'clock; `ring` is the gradient border colour pair.
+// Slides for the technology partner slider.
 const spotlights = [
-  { title: 'Cisco', img: ciscoImg, angle: -90, ring: ['#0EA5E9', '#6366F1'], text: 'Intelligent networks for the modern enterprise. Secure, scale and automate your hybrid infrastructure with industry-leading Cisco networking and cloud solutions.' },
-  { title: 'Mimecast', img: mimecastImg, angle: -30, ring: ['#EC4899', '#F97316'], text: 'Protect your communications, workforce and critical cloud data with AI-powered human risk management and advanced email defense.' },
-  { title: 'Druva', img: druvaImg, angle: 30, ring: ['#6366F1', '#A855F7'], text: 'Secure your enterprise data across workloads, SaaS apps and edge devices with Druva’s 100% SaaS data resiliency platform. No hardware. No complexity.' },
-  { title: 'Lenovo', img: lenovoImg, angle: 90, ring: ['#EF4444', '#F97316'], text: 'Focuses on structuring high-performance data centre portfolios, cloud environments and edge computing solutions.' },
-  { title: 'Data Center', img: dataCenterImg, angle: 150, ring: ['#A855F7', '#EC4899'], text: 'Scale your digital footprint with high-availability colocation, cloud connectivity and ultra-secure enterprise infrastructure designed to support next-generation AI and enterprise workloads.' },
-  { title: 'Cyber Security', img: cyberSecurityImg, angle: 210, ring: ['#67A93B', '#EAB308'], text: 'Protect your digital assets, workforce and infrastructure from evolving cyber threats with 24/7/365 managed detection, response and strategic security architecture.' }
+  { title: 'Cisco', tag: 'Enterprise networking', img: ciscoImg,
+    text: 'Intelligent Networks for the Modern Enterprise. Secure, scale, and automate your hybrid infrastructure with industry-leading Cisco networking and cloud solutions.',
+    points: ['Campus & branch LAN / WLAN', 'SD-WAN and Meraki cloud', 'Network assessment & AMC'],
+    to: '/digital-workspace-solutions/network-and-endpoint' },
+  { title: 'Mimecast', tag: 'Email & collaboration security', img: mimecastImg,
+    text: 'Protect your communications, workforce, and critical cloud data with AI-powered human risk management and advanced email defense.',
+    points: ['AI-powered threat protection', 'Secure archiving & e-discovery', 'Security awareness training'],
+    to: '/network-and-cyber-security-services' },
+  { title: 'Druva', tag: 'Cloud data protection', img: druvaImg,
+    text: 'Secure your enterprise data across workloads, SaaS apps, and edge devices with Druva’s 100% SaaS data resiliency platform. No hardware. No complexity.',
+    points: ['Endpoint & M365 backup', 'Ransomware recovery', 'Compliance-ready retention'],
+    to: '/network-and-cyber-security-services' },
+  { title: 'Lenovo', tag: 'Devices & infrastructure', img: lenovoImg,
+    text: 'Focuses on structuring high-performance data centre portfolios, cloud environments, and edge computing solutions.',
+    points: ['ThinkPad & ThinkCentre fleets', 'ThinkSystem servers & HCI', 'Imaging, tagging & warranty'],
+    to: '/digital-workspace-solutions' },
+  { title: 'Data Center', tag: 'Infrastructure services', img: dataCenterImg,
+    text: 'Scale your digital footprint with high-availability colocation, cloud connectivity, and ultra-secure enterprise infrastructure designed to support next-generation AI and enterprise workloads.',
+    points: ['Rack, power & structured cabling', 'Compute, storage & virtualisation', 'Migration with zero data loss'],
+    to: '/professional-services' },
+  { title: 'Cyber Security', tag: 'Managed security', img: cyberSecurityImg,
+    text: 'Protect your digital assets, workforce, and infrastructure from evolving cyber threats with 24/7/365 managed detection, response, and strategic security architecture.',
+    points: ['Firewall & perimeter security', 'EDR / XDR endpoint protection', '24x7 monitoring & response'],
+    to: '/network-and-cyber-security-services' }
 ]
 
 const whyItems = [
@@ -157,97 +175,120 @@ function ProductCard({ tag, title, text, specs, icon }) {
   )
 }
 
-const RING_RADIUS = 215
+// Timing copied from brilyant.com's banner: 5s autoplay, 500ms horizontal slide
+const SLIDE_MS = 5000
+const SLIDE_SPEED = 500
+// The image shows first; the copy rises in from below after this delay
+const TEXT_DELAY = 600
 
-const labelSide = {
-  top:    'bottom-full mb-3 left-1/2 -translate-x-1/2 text-center',
-  bottom: 'top-full mt-3 left-1/2 -translate-x-1/2 text-center',
-  right:  'left-full ml-4 top-1/2 -translate-y-1/2 text-left',
-  left:   'right-full mr-4 top-1/2 -translate-y-1/2 text-right'
-}
+function TechSlider({ items }) {
+  const n = items.length
+  // Track holds [last clone, ...items, first clone] so the loop always slides forward/back one step
+  const track = [items[n - 1], ...items, items[0]]
+  const [pos, setPos] = useState(1)
+  const [animate, setAnimate] = useState(true)
+  const [hovered, setHovered] = useState(false)
+  const [stopped, setStopped] = useState(false)
+  const moving = useRef(false)
+  const active = (pos - 1 + n) % n
 
-function RingImage({ img, title, ring, size }) {
-  return (
-    <span className={`block rounded-full p-[4px] shadow-[0_14px_36px_-12px_rgba(0,0,0,.6)] ${size}`}
-          style={{ backgroundImage: `linear-gradient(135deg, ${ring[0]}, ${ring[1]})` }}>
-      <img src={img} alt={title} loading="lazy" className="h-full w-full rounded-full border-[3px] border-[#1d4601] object-cover" />
-    </span>
-  )
-}
-
-function SpotlightNode({ title, img, text, angle, ring }) {
-  const rad = (angle * Math.PI) / 180
-  const x = Math.round(Math.cos(rad) * RING_RADIUS)
-  const y = Math.round(Math.sin(rad) * RING_RADIUS)
-  const side = Math.abs(x) < 1 ? (y < 0 ? 'top' : 'bottom') : (x > 0 ? 'right' : 'left')
-  // Side nodes open their popup outward; top/bottom nodes open toward the centre.
-  const placement = side === 'top' ? 'below' : side === 'bottom' ? 'above' : side
-  const popupPos = {
-    below: 'left-1/2 top-full mt-4 -translate-x-1/2 translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0',
-    above: 'left-1/2 bottom-full mb-4 -translate-x-1/2 -translate-y-2 group-hover:translate-y-0 group-focus-within:translate-y-0',
-    right: 'left-full ml-5 top-1/2 -translate-y-1/2 translate-x-2 group-hover:translate-x-0 group-focus-within:translate-x-0',
-    left:  'right-full mr-5 top-1/2 -translate-y-1/2 -translate-x-2 group-hover:translate-x-0 group-focus-within:translate-x-0'
+  const slideTo = p => {
+    if (moving.current) return
+    moving.current = true
+    setAnimate(true)
+    setPos(p)
+    // Once the slide finishes, a clone is swapped for the real slide it mirrors, without animation
+    setTimeout(() => {
+      moving.current = false
+      if (p === 0 || p === n + 1) {
+        setAnimate(false)
+        setPos(p === 0 ? n : 1)
+      }
+    }, SLIDE_SPEED)
   }
-  const arrowPos = {
-    below: 'left-1/2 -top-1.5 -translate-x-1/2',
-    above: 'left-1/2 -bottom-1.5 -translate-x-1/2',
-    right: 'top-1/2 -left-1.5 -translate-y-1/2',
-    left:  'top-1/2 -right-1.5 -translate-y-1/2'
-  }
-  const isSide = placement === 'left' || placement === 'right'
+  // Like Elementor's pause_on_interaction: any manual navigation ends autoplay
+  const userGo = p => { setStopped(true); slideTo(p) }
+
+  // Autoplay, paused while hovered
+  useEffect(() => {
+    if (hovered || stopped) return
+    const t = setTimeout(() => slideTo(pos + 1), SLIDE_MS)
+    return () => clearTimeout(t)
+  }, [pos, hovered, stopped])
+
+  useEffect(() => {
+    if (animate) return
+    const id = requestAnimationFrame(() => requestAnimationFrame(() => setAnimate(true)))
+    return () => cancelAnimationFrame(id)
+  }, [animate])
+
+  const current = items[active]
 
   return (
-    <div className="group absolute z-10 -translate-x-1/2 -translate-y-1/2 hover:z-30 focus-within:z-30"
-         style={{ left: `calc(50% + ${x}px)`, top: `calc(50% + ${y}px)` }}>
-      <button type="button" aria-label={title}
-              className="block rounded-full outline-none transition duration-300 group-hover:scale-110 focus-visible:scale-110 focus-visible:ring-2 focus-visible:ring-white">
-        <RingImage img={img} title={title} ring={ring} size="h-[118px] w-[118px]" />
-      </button>
-
-      <p className={`pointer-events-none absolute whitespace-nowrap font-display text-[17px] font-semibold text-white transition duration-200 ${labelSide[side]} ${
-        isSide ? 'group-hover:opacity-0 group-focus-within:opacity-0' : ''}`}>
-        {title}
-      </p>
-
-      <div role="tooltip"
-           className={`pointer-events-none absolute border border-white/10 bg-white p-5 text-left opacity-0 shadow-[0_24px_60px_-20px_rgba(0,0,0,.7)] transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100 ${
-             isSide ? 'w-[220px] xl:w-[280px]' : 'w-[280px]'} ${popupPos[placement]}`}>
-        <span aria-hidden className={`absolute h-3 w-3 rotate-45 bg-white ${arrowPos[placement]}`} />
-        <span className="block h-1 w-10" style={{ backgroundImage: `linear-gradient(90deg, ${ring[0]}, ${ring[1]})` }} />
-        <h3 className="mt-3 font-display text-[16px] font-semibold text-ink">{title}</h3>
-        <p className="mt-2 text-[13.5px] leading-relaxed text-ink-500">{text}</p>
-      </div>
-    </div>
-  )
-}
-
-function SpotlightWheel({ items }) {
-  return (
-    <>
-      {/* Desktop: radial diagram with hover popups */}
-      <div className="relative mx-auto hidden h-[640px] w-[640px] lg:block">
-        <div aria-hidden className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-white/25"
-             style={{ width: RING_RADIUS * 2, height: RING_RADIUS * 2 }} />
-        <div className="absolute left-1/2 top-1/2 flex h-[230px] w-[230px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full border-[10px] border-white/15 bg-gradient-to-br from-white to-[#E6E9E3] text-center shadow-[0_30px_70px_-20px_rgba(0,0,0,.6)]">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">LightPro</p>
-          <p className="mt-2 font-display text-[26px] font-bold leading-tight text-ink">Technology<br />Partners</p>
-        </div>
-        {items.map(s => <SpotlightNode key={s.title} {...s} />)}
-      </div>
-
-      {/* Mobile / tablet: stacked list with the text always visible */}
-      <div className="grid gap-5 sm:grid-cols-2 lg:hidden">
-        {items.map(s => (
-          <div key={s.title} className="flex gap-4 border border-white/10 bg-white/[0.04] p-5">
-            <RingImage img={s.img} title={s.title} ring={s.ring} size="h-20 w-20 shrink-0" />
-            <div>
-              <h3 className="font-display text-[16px] font-semibold text-white">{s.title}</h3>
-              <p className="mt-1.5 text-[13.5px] leading-relaxed text-white/60">{s.text}</p>
+    // Boxed banner like brilyant.com: image slides, side arrows, dots
+    // .wrap lines the banner up with the header's content width, as on brilyant.com
+    <section className="wrap pt-6 lg:pt-10" aria-roledescription="carousel" aria-label="Technology partners">
+      <div className="relative overflow-hidden rounded-3xl bg-[#1d4601] text-white"
+           onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+        {/* Image area always keeps the slides' 1997x788 shape, so artwork is never cropped */}
+        <div className="relative aspect-[1997/788] w-full">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="flex h-full"
+                 style={{
+                   transform: `translateX(-${pos * 100}%)`,
+                   transition: animate ? `transform ${SLIDE_SPEED}ms ease` : 'none'
+                 }}>
+              {track.map((s, i) => (
+                <img key={i} src={s.img} alt="" aria-hidden
+                     className="pointer-events-none h-full w-full shrink-0 object-cover" />
+              ))}
             </div>
           </div>
-        ))}
+          {/* Shade only the empty left half, where the copy sits on wide screens */}
+          <div aria-hidden className="pointer-events-none absolute inset-0 hidden xl:block"
+               style={{ backgroundImage: 'linear-gradient(90deg, rgba(29,70,1,.55) 0%, rgba(29,70,1,.3) 35%, transparent 50%)' }} />
+
+          {/* Large side arrows */}
+          {[['Previous slide', -1, 'M15 18l-6-6 6-6', 'left-1 sm:left-3'], ['Next slide', 1, 'M9 18l6-6-6-6', 'right-1 sm:right-3']].map(([label, d, path, side]) => (
+            <button key={label} type="button" aria-label={label} onClick={() => userGo(pos + d)}
+                    className={`absolute top-1/2 z-10 -translate-y-1/2 p-1 text-white/80 transition hover:text-white sm:p-2 ${side}`}>
+              <svg className="h-7 w-7 sm:h-11 sm:w-11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={path} /></svg>
+            </button>
+          ))}
+        </div>
+
+        {/* Slide copy: stacked under the image on small screens; on xl it sits over the image's
+            empty left side, capped at 46% width so it never runs into the artwork */}
+        <div className="px-6 pb-16 pt-8 sm:px-10 xl:absolute xl:inset-y-0 xl:left-0 xl:flex xl:w-[46%] xl:items-center xl:py-0 xl:pl-20 xl:pr-4">
+          <div key={current.title} className="animate-fade-in-up" aria-live="polite"
+               style={{ animationDelay: `${TEXT_DELAY}ms` }}>
+            <p className="text-[12px] font-semibold uppercase tracking-[0.22em] text-white/90 sm:text-[13px]">
+              {/* {current.title} */}
+            </p>
+            <p className="mt-4 text-[17px] leading-relaxed text-white sm:text-[19px] xl:text-[21px]">{current.text}</p>
+            <div className="mt-6 flex flex-wrap gap-3 xl:mt-8">
+              {/* <Link to={current.to}
+                    className="rounded-full bg-brand px-6 py-2.5 text-[14px] font-medium text-white transition hover:bg-brand-dark sm:px-7 sm:py-3 sm:text-[15px]">
+                Explore {current.title}
+              </Link> */}
+              <Link to="/contact"
+                    className="rounded-full bg-brand border border-white/60 px-6 py-2.5 text-[14px] font-medium text-white transition hover:bg-white hover:text-[#1d4601] sm:px-7 sm:py-3 sm:text-[15px]">
+                Talk to an expert
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Dot pagination */}
+        <div className="absolute inset-x-0 bottom-5 flex justify-center gap-2.5">
+          {items.map((s, i) => (
+            <button key={s.title} type="button" onClick={() => i !== active && userGo(i + 1)}
+                    aria-label={`Show ${s.title}`} aria-current={i === active}
+                    className={`h-2.5 w-2.5 rounded-full transition-colors ${i === active ? 'bg-brand' : 'bg-white hover:bg-white/80'}`} />
+          ))}
+        </div>
       </div>
-    </>
+    </section>
   )
 }
 
@@ -344,7 +385,7 @@ export default function Home() {
   return (
     <>
       {/* ---------------- HERO ---------------- */}
-      <section className="relative overflow-hidden bg-[#1d4601] text-white">
+    {/* <section className="relative overflow-hidden bg-[#1d4601] text-white">
         <div aria-hidden className="pointer-events-none absolute inset-0"
              style={{ backgroundImage: 'radial-gradient(900px 480px at 78% 18%, rgba(103, 169, 59, 0.35), transparent 62%), radial-gradient(620px 420px at 12% 92%, rgba(103,169,59,.16), transparent 65%)' }} />
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06]" />
@@ -379,13 +420,17 @@ export default function Home() {
             <InfraTopology />
           </div>
         </div>
-      </section>
+      </section>  */}
+
+         <TechSlider items={spotlights} />
 
       {/* ---------------- BRAND MARQUEE ---------------- */}
-      <div className="border-b border-hair bg-white py-9">
+      <div className="border-hair bg-white py-9">
         <p className="wrap mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-300">
           30+ Partners Across  IT Verticals
         </p>
+        {/* .wrap keeps the logo strip the same width as the banner above */}
+        <div className="wrap">
         <div className="overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
           <div className="flex w-max animate-slide items-center gap-16 pr-16">
             {[...allBrands, ...allBrands].map((b, i) => {
@@ -401,9 +446,10 @@ export default function Home() {
             })}
           </div>
         </div>
+        </div>
       </div>
 
-    
+
 
       {/* ---------------- OUR SOLUTIONS ---------------- */}
       <Section
@@ -417,18 +463,8 @@ export default function Home() {
       </Section>
 
 
-        {/* ---------------- TECHNOLOGY SPOTLIGHT ---------------- */}
-      <section className="section overflow-hidden bg-[#1d4601] text-white/70"
-        style={{ backgroundImage: 'radial-gradient(700px 520px at 50% 58%, rgba(103, 169, 59, 0.35), transparent 65%)' }}>
-        <div className="wrap">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <p className="eyebrow justify-center">Technology partners</p>
-            <h2 className="h2 mt-5 !text-white">Enterprise platforms we design, deploy and support</h2>
-            <p className="mt-5 text-[1.05rem] leading-relaxed text-white/60">Hover over a platform to see how it strengthens your infrastructure.</p>
-          </div>
-          <SpotlightWheel items={spotlights} />
-        </div>
-      </section>
+      {/* ---------------- TECHNOLOGY PARTNERS SLIDER ---------------- */}
+   
 
       {/* ---------------- PRACTICES ---------------- */}
       <Section

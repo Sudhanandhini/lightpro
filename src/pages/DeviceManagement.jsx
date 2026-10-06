@@ -7,49 +7,49 @@ export default function DeviceManagement() {
       <PageHero
         eyebrow="Digital Workspace Solutions"
         title="Device Management Solutions"
-        lede="Control of every endpoint from one console - enrolment, policy, identity, patching and backup - whether the machine is in the office, at home or on a client site."
+        lede="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         crumbs={[{ label: 'Digital Workspace Solutions', to: '/digital-workspace-solutions' }, { label: 'Device Management Solutions' }]}
       />
 
-      <Section eyebrow="Platforms" title="The management stack we deploy and run" lede="We licence, configure and administer these platforms, or hand them over fully documented for your own team to run.">
+      <Section eyebrow="Lorem ipsum" title="Lorem ipsum dolor sit amet" lede="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
         <BrandGrid items={deviceManagementBrands} />
       </Section>
 
-      <Section tone="grey" eyebrow="Capability" title="What management actually covers">
+      <Section tone="grey" eyebrow="Lorem ipsum" title="Consectetur adipiscing elit">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <RuleList items={[
-            'Zero-touch enrolment so a device configures itself the first time a user signs in.',
-            'Configuration profiles, application deployment and version control across Windows, macOS, iOS and Android.',
-            'Conditional access and multi-factor authentication tied to hardware security keys.',
-            'Patch and update rings, with staged rollout and rollback.',
-            'Remote lock, locate and wipe for lost or separated devices.',
-            'Backup and recovery for endpoints, servers and virtual workloads.',
-            'Compliance reporting your auditors can read without translation.'
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+            'Duis aute irure dolor in reprehenderit in voluptate velit esse.',
+            'Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
+            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
+            'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit.'
           ]} />
           <div className="border border-hair bg-white p-8">
-            <h3 className="h3">Who this is for</h3>
+            <h3 className="h3">Lorem ipsum dolor</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-ink-500">
-              Teams that have outgrown manual setup. The threshold is usually somewhere near
-              fifty devices, or the first time an employee leaves and nobody is certain what
-              was on their laptop.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.
             </p>
             <div className="mt-7 border-t border-hair pt-6">
-              <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-brand">Typical outcome</p>
+              <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-brand">Lorem ipsum</p>
               <p className="mt-3 text-[15px] leading-relaxed text-ink-500">
-                New joiner productive on day one without an engineer visit. Leaver revoked in
-                minutes. Estate reportable at any moment.
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam.
               </p>
             </div>
           </div>
         </div>
       </Section>
 
-      <Section eyebrow="Engagement" title="How a rollout runs">
+      <Section eyebrow="Lorem ipsum" title="Sed do eiusmod tempor">
         <Steps items={[
-          { title: 'Discover',  text: 'Inventory the existing estate, identity provider and application set.' },
-          { title: 'Design',    text: 'Policy baselines, enrolment method, access rules and exception handling.' },
-          { title: 'Pilot',     text: 'A controlled group proves the build before the estate moves.' },
-          { title: 'Transition',text: 'Staged migration, documentation handover and administrator training.' }
+          { title: 'Lorem', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+          { title: 'Ipsum', text: 'Sed do eiusmod tempor incididunt ut labore et dolore.' },
+          { title: 'Dolor', text: 'Ut enim ad minim veniam, quis nostrud exercitation.' },
+          { title: 'Amet',  text: 'Duis aute irure dolor in reprehenderit in voluptate.' }
         ]} />
       </Section>
 

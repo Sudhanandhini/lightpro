@@ -44,6 +44,9 @@
 
   @keyframes blip { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
   .animate-blip { animation: blip 2s infinite; }
+  /* Same as animate.css fadeInUp, which brilyant.com uses for banner copy */
+  @keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 100%, 0); } to { opacity: 1; transform: none; } }
+  .animate-fade-in-up { animation: fadeInUp 1s both; }
 }
 
 .wrap{

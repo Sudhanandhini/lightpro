@@ -6,9 +6,18 @@ export default function SeamlessDeployment() {
       <PageHero
         eyebrow="LightPro Professional Services"
         title="Seamless Deployment"
-        lede="Seamless deployment delivers launch-ready IT, device rollouts, and infrastructure systems with single-point accountability and zero friction."
+        lede=""
         crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'Seamless Deployment' }]}
       />
+
+
+        <section  className="bg-white pt-16 sm:pt-20">
+        <div className="wrap">
+          <p className="lede ">
+          Seamless deployment delivers launch-ready IT, device rollouts, and infrastructure systems with single-point accountability and zero friction.
+          </p>
+        </div>
+      </section>
 
       <Section eyebrow="Fast, Flawless IT Rollouts" title="Launch-ready from day one">
         <div className="grid gap-px bg-hair md:grid-cols-3">
@@ -50,7 +59,7 @@ export default function SeamlessDeployment() {
           ))}
         </div>
       </Section>
-
+{/* 
       <Section eyebrow="Scope" title="What a deployment includes">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
@@ -73,9 +82,9 @@ export default function SeamlessDeployment() {
             'Old device collection, certified erasure and disposal or buy-back.'
           ]} />
         </div>
-      </Section>
+      </Section> */}
 
-      <Section tone="grey" eyebrow="Programme types" title="Deployments we run">
+      {/* <Section tone="grey" eyebrow="Programme types" title="Deployments we run">
         <div className="grid gap-px bg-hair md:grid-cols-3">
           {[
             { t: 'New office build', d: 'From empty floor to working desks - cabling, network, devices and meeting rooms on a fixed date.' },
@@ -89,16 +98,16 @@ export default function SeamlessDeployment() {
             </div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
-      <Section eyebrow="Method" title="The four stages of a rollout">
+      {/* <Section eyebrow="Method" title="The four stages of a rollout">
         <Steps items={[
           { title: 'Plan',    text: 'Site survey, access requirements, delivery windows and a named client-side owner.' },
           { title: 'Stage',   text: 'Build, image, enrol and tag at our warehouse, then quality check every unit.' },
           { title: 'Deploy',  text: 'Scheduled delivery, installation and desk-side handover with sign-off per user.' },
           { title: 'Close',   text: 'Snag list cleared, asset register issued, old hardware collected and certified.' }
         ]} />
-      </Section>
+      </Section> */}
 
       <CTA title="Give us the date the floor opens." text="We will work backwards from it and tell you what has to be ordered this week." />
     </>

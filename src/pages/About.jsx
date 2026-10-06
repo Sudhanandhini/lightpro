@@ -6,17 +6,17 @@ export default function About() {
   return (
     <>
       <PageHero
-        eyebrow="About"
+        eyebrow="About Us"
         title="Lightpro Technologies Pvt Ltd "
         lede={`Along with providing solutions to end customers we constantly evolving ourselves to provide impactful, cost-effective, and industry-aligned IT solutions`}
-        crumbs={[{ label: 'About' }]}
+        crumbs={[{ label: 'About Us' }]}
       />
 
       <Section>
         <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
           <div>
             <p className="eyebrow">Our story</p>
-            <h2 className="h2 mt-5">About Us</h2>
+            <h2 className="h2 mt-3 mb-5">About Us</h2>
              <p className="space-y-5 text-[15.5px] leading-relaxed text-ink-500">
               Lightpro Technologies Pvt Ltd is a customer-centric IT and hardware infrastructure solution provider having more 
               than 18 years of exposure in IT industry with  dedication to meet client needs by following consultative approach.
@@ -64,7 +64,7 @@ export default function About() {
       </Section>
 
 
-     
+{/*      
       <Section eyebrow="At a glance" title="Where we operate">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <RuleList items={[
@@ -82,17 +82,17 @@ export default function About() {
             ))}
           </div>
         </div>
-      </Section>
+      </Section> */}
 
 
-       <Section tone="grey" eyebrow="How we operate" title="Four commitments we hold ourselves to">
+       {/* <Section tone="grey" eyebrow="How we operate" title="Four commitments we hold ourselves to">
         <Steps items={[
           { title: 'Specify honestly', text: 'The right configuration for the workload, not the one with the best margin.' },
           { title: 'Deliver ready',    text: 'Imaged, enrolled, tagged and documented before it leaves our warehouse.' },
           { title: 'Answer fast',      text: 'Defined response times, a named manager and an engineer who already knows your estate.' },
           { title: 'Close the loop',   text: 'Certified erasure, buy-back options and responsible disposal at end of life.' }
         ]} />
-      </Section>
+      </Section> */}
 
 
  

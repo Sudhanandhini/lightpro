@@ -63,7 +63,9 @@ export default function Navbar() {
       <header
         ref={barRef}
         className={`sticky top-0 z-50 border-b bg-white backdrop-blur transition-shadow ${
-          scrolled ? 'border-hair shadow-[0_10px_30px_-24px_rgba(11,12,11,.55)]' : 'border-transparent'
+          scrolled
+            ? 'border-hair shadow-[0_6px_20px_-4px_rgba(11,12,11,.18)]'
+            : 'border-transparent shadow-[0_4px_14px_-2px_rgba(11,12,11,.12)]'
         }`}
       >
         <div className="wrap flex h-auto items-center justify-between gap-6">

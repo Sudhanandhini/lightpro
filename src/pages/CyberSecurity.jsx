@@ -14,7 +14,7 @@ export default function CyberSecurity() {
       <PageHero
         eyebrow="Services"
         title="Network &amp; Cyber Security Services"
-        lede="Wired and wireless networks, risk assessment, perimeter security, data protection and incident response - resilient, secure and scalable for any deployment size."
+        lede=""
         crumbs={[{ label: 'Network & Cyber Security Services' }]}
       />
 
@@ -55,20 +55,20 @@ export default function CyberSecurity() {
         </div>
       </Section>
 
-      <Section eyebrow="Technology partners" title="Platforms we deploy and support">
+      {/* <Section eyebrow="Technology partners" title="Platforms we deploy and support">
         <BrandGrid items={[...networkSecurityBrands, 'SentinelOne', 'One Identity', 'Yubico', 'Veeam']} />
-      </Section>
+      </Section> */}
 
-      <Section tone="grey" eyebrow="Engagement" title="How a security engagement runs">
+      {/* <Section tone="grey" eyebrow="Engagement" title="How a security engagement runs">
         <Steps items={[
           { title: 'Assess',    text: 'Current-state review of network, endpoints, identity and backup, with findings ranked by exposure.' },
           { title: 'Design',    text: 'Target architecture, policy set and a phased remediation plan costed against your budget cycle.' },
           { title: 'Implement', text: 'Controlled deployment with change windows, rollback plans and no unannounced outages.' },
           { title: 'Operate',   text: 'Monitoring, patching, periodic review and an annual reassessment against the original baseline.' }
         ]} />
-      </Section>
+      </Section> */}
 
-      <section className="section bg-ink">
+      {/* <section className="section bg-ink">
         <div className="wrap grid gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
             <p className="eyebrow">Straight answer</p>
@@ -86,7 +86,7 @@ export default function CyberSecurity() {
             'We will tell you when the cheaper fix is a process change rather than a product.'
           ]} />
         </div>
-      </section>
+      </section> */}
 
       <CTA title="Start with an assessment, not a proposal." text="A current-state review gives you a ranked list of exposures and a costed plan. What you do next is your decision." />
     </>
