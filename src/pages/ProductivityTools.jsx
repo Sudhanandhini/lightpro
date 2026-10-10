@@ -15,7 +15,7 @@ export default function ProductivityTools() {
         <BrandGrid items={productivityBrands} />
       </Section>
 
-      <Section tone="grey" eyebrow="Lorem ipsum" title="Consectetur adipiscing elit">
+      {/* <Section tone="grey" eyebrow="Lorem ipsum" title="Consectetur adipiscing elit">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <div>
             <p className="lede">
@@ -36,7 +36,7 @@ export default function ProductivityTools() {
             'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.'
           ]} />
         </div>
-      </Section>
+      </Section> */}
 
       <CTA title="Lorem ipsum dolor sit amet." text="Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
     </>

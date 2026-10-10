@@ -10,6 +10,12 @@ import druvaImg from '../assets/dura.png'
 import lenovoImg from '../assets/lenovo.png'
 import dataCenterImg from '../assets/data-center.png'
 import cyberSecurityImg from '../assets/cyber-security.png'
+import ciscoMobile from '../assets/mobile-cisco.jpg'
+import mimecastMobile from '../assets/mobile-minecast.jpg'
+import druvaMobile from '../assets/mobile-dura.jpg'
+import lenovoMobile from '../assets/mobile-lenovo.jpg'
+import dataCenterMobile from '../assets/mobile-datacenter.jpg'
+import cyberSecurityMobile from '../assets/mobile-cyber-security.jpg'
 
 function Icon({ children }) {
   return (
@@ -21,140 +27,148 @@ function Icon({ children }) {
 }
 
 const solutions = [
-  { title: 'Corporate laptop rental', text: 'Business-class Dell, Lenovo and HP laptops with pre-imaged builds, domain join and asset tagging before dispatch.', meta: ['i5 / i7 / Ryzen', '1-500 units'],
+  { title: 'Occaecat cupidatat non', text: 'Proident sunt in culpa qui officia deserunt mollit anim id est laborum lorem ipsum dolor sit.', meta: ['Lorem ipsum dolor sit amet', 'In reprehenderit'],
     icon: <Icon><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M2 20h20" /></Icon> },
-  { title: 'MacBook rental', text: 'MacBook Air and Pro on M-series silicon for design, engineering and leadership teams, MDM-enrolled on arrival.', meta: ['M2 / M3 / M4', 'Apple MDM'],
+  { title: 'Amet consectetur', text: 'Adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad.', meta: ['Elit sed do eiusmod tempor', 'In voluptate'],
     icon: <Icon><rect x="4" y="5" width="16" height="11" rx="1.6" /><path d="M2 19h20l-2-3H4z" /></Icon> },
-  { title: 'Desktop & workstation rental', text: 'All-in-one desktops for operations floors and GPU workstations for CAD, rendering and data science workloads.', meta: ['RTX / Quadro', 'ISV certified'],
+  { title: 'Minim veniam quis nostrud', text: 'Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in.', meta: ['Labore et dolore', 'Velit esse'],
     icon: <Icon><rect x="2" y="4" width="20" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></Icon> },
-  { title: 'Servers & storage', text: 'Rack and tower servers, NAS and SAN storage, virtualisation and backup - sized to your actual workload, not a template.', meta: ['PowerEdge / ProLiant', 'VMware'],
+  { title: 'Reprehenderit in voluptate', text: 'Velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.', meta: ['Ut enim ad', 'Cillum'],
     icon: <Icon><rect x="3" y="3" width="18" height="7" rx="2" /><rect x="3" y="14" width="18" height="7" rx="2" /><path d="M7 6.5h.01M7 17.5h.01" /></Icon> },
-  { title: 'Networking', text: 'Structured cabling, managed switching, enterprise Wi-Fi and SD-WAN links designed for multi-floor and multi-site offices.', meta: ['Cisco / Aruba', 'Wi-Fi 6E'],
+  { title: 'Mollit', text: 'Anim id est laborum lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod.', meta: ['Veniam quis nostrud', 'Dolore eu'],
     icon: <Icon><circle cx="12" cy="12" r="3" /><path d="M12 2v7M12 15v7M2 12h7M15 12h7" /></Icon> },
-  { title: 'Firewalls & security', text: 'Next-gen firewall deployment, endpoint protection, VPN, content filtering and audit-ready policy documentation.', meta: ['Fortinet / Sophos', 'UTM'],
+  { title: 'Tempor incididunt ut', text: 'Labore et dolore magna aliqua ut enim ad minim veniam quis nostrud.', meta: ['Laboris nisi ut', 'Fugiat'],
     icon: <Icon><path d="M12 3l8 3.5v5.8c0 5-3.4 8.4-8 9.7-4.6-1.3-8-4.7-8-9.7V6.5z" /><path d="M9.5 12l1.8 1.8 3.4-3.6" /></Icon> },
-  { title: 'Software licensing', text: 'Microsoft 365, Windows Server, Adobe, antivirus and OEM licences - genuine, compliant and renewal-tracked for you.', meta: ['Volume licensing', 'Renewal alerts'],
+  { title: 'Exercitation ullamco', text: 'Laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate.', meta: ['Ex ea', 'Nulla pariatur'],
     icon: <Icon><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M9 15l2 2 4-4" /></Icon> },
-  { title: 'Managed IT & AMC', text: 'Your extended IT team: helpdesk, onsite engineers, patching, monitoring and annual maintenance under a clear SLA.', meta: ['4-hr response', '24x7 NOC'],
+  { title: 'Velit esse cillum dolore', text: 'Eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt.', meta: ['Duis aute', 'Excepteur sint'],
     icon: <Icon><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" /><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 7.9 19.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3 15a2 2 0 1 1 0-4 1.6 1.6 0 0 0 2.1-2.1l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 11 3a2 2 0 1 1 4 0 1.6 1.6 0 0 0 2.1 2.1l-.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A1.6 1.6 0 0 0 21 11a2 2 0 1 1 0 4z" /></Icon> }
 ]
 
 // Slides for the technology partner slider.
 const spotlights = [
-  { title: 'Cisco', tag: 'Enterprise networking', img: ciscoImg,
+  { title: 'Cisco', tag: 'Enterprise networking', img: ciscoImg, mobileImg: ciscoMobile,
     text: 'Intelligent Networks for the Modern Enterprise. Secure, scale, and automate your hybrid infrastructure with industry-leading Cisco networking and cloud solutions.',
     points: ['Campus & branch LAN / WLAN', 'SD-WAN and Meraki cloud', 'Network assessment & AMC'],
     to: '/digital-workspace-solutions/network-and-endpoint' },
-  { title: 'Mimecast', tag: 'Email & collaboration security', img: mimecastImg,
+  { title: 'Mimecast', tag: 'Email & collaboration security', img: mimecastImg, mobileImg: mimecastMobile,
     text: 'Protect your communications, workforce, and critical cloud data with AI-powered human risk management and advanced email defense.',
     points: ['AI-powered threat protection', 'Secure archiving & e-discovery', 'Security awareness training'],
     to: '/network-and-cyber-security-services' },
-  { title: 'Druva', tag: 'Cloud data protection', img: druvaImg,
+  { title: 'Druva', tag: 'Cloud data protection', img: druvaImg, mobileImg: druvaMobile,
     text: 'Secure your enterprise data across workloads, SaaS apps, and edge devices with Druva’s 100% SaaS data resiliency platform. No hardware. No complexity.',
     points: ['Endpoint & M365 backup', 'Ransomware recovery', 'Compliance-ready retention'],
     to: '/network-and-cyber-security-services' },
-  { title: 'Lenovo', tag: 'Devices & infrastructure', img: lenovoImg,
+  { title: 'Lenovo', tag: 'Devices & infrastructure', img: lenovoImg, mobileImg: lenovoMobile,
     text: 'Focuses on structuring high-performance data centre portfolios, cloud environments, and edge computing solutions.',
     points: ['ThinkPad & ThinkCentre fleets', 'ThinkSystem servers & HCI', 'Imaging, tagging & warranty'],
     to: '/digital-workspace-solutions' },
-  { title: 'Data Center', tag: 'Infrastructure services', img: dataCenterImg,
+  { title: 'Data Center', tag: 'Infrastructure services', img: dataCenterImg, mobileImg: dataCenterMobile,
     text: 'Scale your digital footprint with high-availability colocation, cloud connectivity, and ultra-secure enterprise infrastructure designed to support next-generation AI and enterprise workloads.',
     points: ['Rack, power & structured cabling', 'Compute, storage & virtualisation', 'Migration with zero data loss'],
     to: '/professional-services' },
-  { title: 'Cyber Security', tag: 'Managed security', img: cyberSecurityImg,
+  { title: 'Cyber Security', tag: 'Managed security', img: cyberSecurityImg, mobileImg: cyberSecurityMobile,
     text: 'Protect your digital assets, workforce, and infrastructure from evolving cyber threats with 24/7/365 managed detection, response, and strategic security architecture.',
     points: ['Firewall & perimeter security', 'EDR / XDR endpoint protection', '24x7 monitoring & response'],
     to: '/network-and-cyber-security-services' }
 ]
 
 const whyItems = [
-  { title: 'Established since 2016', text: 'Nine years in continuous operation, with references you can call before you commit.',
+  { title: 'Enim ad minim', text: 'Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     icon: <Icon><path d="M12 2l2.5 6.5L21 11l-6.5 2.5L12 20l-2.5-6.5L3 11l6.5-2.5z" /></Icon> },
-  { title: 'Certified experts', text: 'OEM-certified network, server and security engineers on staff, not subcontracted at the point of escalation.',
+  { title: 'Duis aute', text: 'Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur.',
     icon: <Icon><circle cx="12" cy="9" r="5" /><path d="M8.5 13.5L7 22l5-2.5L17 22l-1.5-8.5" /></Icon> },
-  { title: 'Dedicated account manager', text: 'A named account manager who knows your estate, your renewal dates and your procurement process.',
+  { title: 'Sint occaecat cupidatat', text: 'Non proident sunt in culpa qui officia deserunt mollit anim id est laborum lorem ipsum.',
     icon: <Icon><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.9" /></Icon> },
-  { title: 'Enterprise support', text: 'Four-hour onsite response in Bengaluru and next-business-day cover across 18 cities.',
+  { title: 'Dolor sit', text: 'Amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore.',
     icon: <Icon><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.4 1.8.6 2.8.8a2 2 0 0 1 1.7 2z" /></Icon> },
-  { title: 'Audit-ready paperwork', text: 'Asset registers, erasure certificates and GST-compliant paperwork that reconcile at audit.',
+  { title: 'Et dolore', text: 'Magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco.',
     icon: <Icon><path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></Icon> },
-  { title: 'Single point of accountability', text: 'One contract, one invoice, one point of accountability across every site.',
+  { title: 'Laboris nisi ut aliquip', text: 'Ex ea commodo consequat duis aute irure dolor in reprehenderit in.',
     icon: <Icon><path d="M9 17H7a5 5 0 1 1 0-10h2M15 7h2a5 5 0 1 1 0 10h-2M8 12h8" /></Icon> }
 ]
 
 const industries = [
-  { title: 'IT & software', text: 'Developer-grade laptops, high-core workstations and staging servers.',
+  { title: 'Voluptate velit esse', text: 'Cillum dolore eu fugiat nulla pariatur excepteur.',
     icon: <Icon><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></Icon> },
-  { title: 'Startups', text: 'Rent instead of buy - preserve runway and scale headcount without capex.',
+  { title: 'Sint', text: 'Occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim.',
     icon: <Icon><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></Icon> },
-  { title: 'Healthcare', text: 'HIS-ready endpoints, secure storage and patient-data-safe disposal.',
+  { title: 'Id', text: 'Est laborum lorem ipsum dolor sit amet.',
     icon: <Icon><path d="M12 5v14M5 12h14" /><circle cx="12" cy="12" r="9" /></Icon> },
-  { title: 'Education', text: 'Lab rollouts, exam-season rentals and campus-wide Wi-Fi coverage.',
+  { title: 'Consectetur', text: 'Adipiscing elit sed do eiusmod tempor incididunt ut.',
     icon: <Icon><path d="M22 9L12 4 2 9l10 5z" /><path d="M6 11v6c0 1.7 2.7 3 6 3s6-1.3 6-3v-6" /></Icon> },
-  { title: 'Manufacturing', text: 'Shop-floor terminals, rugged devices and plant network hardening.',
+  { title: 'Labore', text: 'Et dolore magna aliqua ut enim ad minim.',
     icon: <Icon><path d="M3 21V8l7-5 7 5v13" /><path d="M17 12h4v9M7 21v-6h6v6" /></Icon> },
-  { title: 'BFSI & finance', text: 'Hardened endpoints, encrypted disks and audit-ready asset registers.',
+  { title: 'Veniam quis nostrud', text: 'Exercitation ullamco laboris nisi ut aliquip ex ea.',
     icon: <Icon><path d="M3 20h18M5 20V9l7-5 7 5v11M10 20v-6h4v6" /></Icon> },
-  { title: 'Retail', text: 'POS systems, back-office servers and multi-store network links.',
+  { title: 'Commodo', text: 'Consequat duis aute irure dolor in reprehenderit in.',
     icon: <Icon><path d="M6 2L3 6v14h18V6l-3-4z" /><path d="M3 6h18M16 10a4 4 0 0 1-8 0" /></Icon> },
-  { title: 'Government & PSU', text: 'GeM-compliant supply, tender documentation and long-term AMC.',
+  { title: 'Officia deserunt', text: 'Mollit anim id est laborum sed ut perspiciatis.',
     icon: <Icon><path d="M12 3l8 3.5v5.8c0 5-3.4 8.4-8 9.7-4.6-1.3-8-4.7-8-9.7V6.5z" /></Icon> }
 ]
 
+// Placeholder copy for the practice cards; links still come from site data
+const practiceItems = practices.map((p, i) => ({
+  ...p,
+  title: ['Lorem ipsum dolor sit', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor'][i],
+  text: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.',
+  points: p.points.map((_, j) => ['Lorem ipsum dolor', 'Sit amet consectetur', 'Adipiscing elit sed', 'Eiusmod tempor'][j])
+}))
+
 const lifecycle = [
-  { n: '01', title: 'Consultation',  text: 'Requirement mapping, sizing and budget modelling with your team.' },
-  { n: '02', title: 'Procurement',   text: 'OEM sourcing, quotation, PO handling and compliant invoicing.' },
-  { n: '03', title: 'Deployment',    text: 'Delivery, racking, cabling and desk-side handover at every site.' },
-  { n: '04', title: 'Configuration', text: 'Imaging, domain join, MDM enrolment and security baselines.' },
-  { n: '05', title: 'Maintenance',   text: 'Preventive checks, patching, monitoring and AMC coverage.' },
-  { n: '06', title: 'Upgrade',       text: 'Capacity reviews, refresh cycles and mid-term hardware swaps.' },
-  { n: '07', title: 'Support',       text: 'Helpdesk, onsite engineers, spares pool and SLA reporting.' }
+  { n: '01', title: 'Sint',  text: 'Occaecat cupidatat non proident sunt in culpa qui officia.' },
+  { n: '02', title: 'Deserunt',   text: 'Mollit anim id est laborum lorem ipsum dolor.' },
+  { n: '03', title: 'Sit',    text: 'Amet consectetur adipiscing elit sed do eiusmod tempor incididunt.' },
+  { n: '04', title: 'Ut', text: 'Labore et dolore magna aliqua ut enim ad.' },
+  { n: '05', title: 'Minim',   text: 'Veniam quis nostrud exercitation ullamco laboris nisi.' },
+  { n: '06', title: 'Ut',       text: 'Aliquip ex ea commodo consequat duis aute irure.' },
+  { n: '07', title: 'Dolor',       text: 'In reprehenderit in voluptate velit esse cillum dolore.' }
 ]
 
 const products = [
-  { tag: 'Rental', title: 'Business laptop fleet', text: 'Dell Latitude, Lenovo ThinkPad and HP EliteBook - imaged and asset-tagged before dispatch.', specs: ['i5 / i7', '8-32GB RAM', '256GB-1TB SSD'],
+  { tag: 'Eu', title: 'Fugiat nulla pariatur', text: 'Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit.', specs: ['Mollit anim id', 'Est laborum', 'Lorem ipsum'],
     icon: <Icon><rect x="3" y="4" width="18" height="12" rx="2" /><path d="M2 20h20" /></Icon> },
-  { tag: 'Rental', title: 'MacBook Air & Pro', text: 'M-series MacBooks, MDM-enrolled on arrival for design, engineering and leadership teams.', specs: ['M2 / M3 / M4', '16-36GB RAM', 'Apple MDM'],
+  { tag: 'Anim', title: 'Id est laborum lorem', text: 'Ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.', specs: ['Dolor sit amet consectetur adipiscing', 'Elit sed', 'Do eiusmod'],
     icon: <Icon><rect x="4" y="5" width="16" height="11" rx="1.6" /><path d="M2 19h20l-2-3H4z" /></Icon> },
-  { tag: 'Rental / Purchase', title: 'Rack & tower servers', text: 'PowerEdge and ProLiant servers sized to your workload, with virtualisation and backup built in.', specs: ['Dual Xeon', 'Up to 128GB RAM', 'RAID storage'],
+  { tag: 'Incididunt ut labore', title: 'Et dolore magna aliqua', text: 'Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex.', specs: ['Tempor incididunt', 'Ut labore et dolore', 'Magna aliqua'],
     icon: <Icon><rect x="3" y="3" width="18" height="7" rx="2" /><rect x="3" y="14" width="18" height="7" rx="2" /><path d="M7 6.5h.01M7 17.5h.01" /></Icon> },
-  { tag: 'Purchase', title: 'Enterprise Wi-Fi & firewall', text: 'Managed switching, Wi-Fi 6E access points and next-gen firewalls, installed and configured.', specs: ['Cisco Meraki', 'Fortinet', 'Wi-Fi 6E'],
+  { tag: 'Ea', title: 'Commodo consequat duis aute', text: 'Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.', specs: ['Ut enim', 'Ad', 'Minim veniam'],
     icon: <Icon><path d="M12 3l8 3.5v5.8c0 5-3.4 8.4-8 9.7-4.6-1.3-8-4.7-8-9.7V6.5z" /><path d="M9.5 12l1.8 1.8 3.4-3.6" /></Icon> }
 ]
 
 const plans = [
-  { term: 'Short term', title: 'Project & pilot', text: 'For proof-of-concepts, short projects and seasonal headcount.',
-    points: ['1-6 month terms', 'Same laptop model guaranteed', 'Swap on failure within 24 hrs', 'Flexible unit count'] },
-  { term: 'Standard', title: 'Growth plan', featured: true, text: 'The most common plan for scaling teams.',
-    points: ['12-24 month terms', 'Mid-term scale-up and swap-out', 'Asset tagging & imaging included', 'Priority 4-hr onsite response'] },
-  { term: 'Long term', title: 'Enterprise plan', text: 'For estates on a three-year refresh cycle.',
-    points: ['36-month terms', 'Buy-back option at term end', 'Dedicated account manager', 'Consolidated single invoice'] }
+  { term: 'Nulla pariatur', title: 'Excepteur sint occaecat', text: 'Cupidatat non proident sunt in culpa qui.',
+    points: ['Quis nostrud exercitation', 'Ullamco laboris nisi ut', 'Aliquip ex ea commodo consequat duis', 'Aute irure dolor'] },
+  { term: 'Officia', title: 'Deserunt mollit', featured: true, text: 'Anim id est laborum lorem ipsum dolor.',
+    points: ['In reprehenderit in', 'Voluptate velit esse cillum', 'Dolore eu fugiat nulla pariatur', 'Excepteur sint occaecat cupidatat'] },
+  { term: 'Sit amet', title: 'Consectetur adipiscing', text: 'Elit sed do eiusmod tempor incididunt ut.',
+    points: ['Non proident', 'Sunt in culpa qui officia', 'Deserunt mollit anim', 'Id est laborum'] }
 ]
 
 // Placeholder quotes - swap for verified customer feedback before this goes live.
 const testimonials = [
-  { quote: 'LightPro re-imaged and shipped 40 laptops in two days when we had a new cohort starting. Nobody else quoted that turnaround.', name: 'IT Manager', role: 'SaaS company, Bengaluru' },
-  { quote: 'One invoice for laptops, the network and the firewall. Our finance team stopped chasing three different vendors.', name: 'Operations Lead', role: 'D2C retail brand' },
-  { quote: 'Their engineers know our estate better than our own helpdesk did - renewal dates, warranty status, all of it.', name: 'Head of IT', role: 'Manufacturing company, Pune' }
+  { quote: 'Labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.', name: 'Consequat duis', role: 'Aute irure dolor' },
+  { quote: 'In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non.', name: 'Proident sunt', role: 'In culpa qui' },
+  { quote: 'Officia deserunt mollit anim id est laborum lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.', name: 'Incididunt ut labore', role: 'Et dolore magna' }
 ]
 
 // Illustrative outcomes - replace with verified figures from real engagements before this goes live.
 const cases = [
-  { sector: 'SaaS / Startup', title: '180 seats deployed in under four weeks for a scaling fintech', text: 'A fast-growing fintech needed laptops, MDM enrolment and a new office network live before their new office opened.',
-    metrics: [['180', 'Devices deployed'], ['4 wks', 'Start to handover'], ['0', 'Missed SLA windows']] },
-  { sector: 'Manufacturing', title: 'AMC coverage cut unplanned downtime across three plants', text: 'Preventive maintenance and a four-hour onsite SLA replaced a patchwork of local vendors across three manufacturing sites.',
-    metrics: [['3', 'Plants covered'], ['4 hr', 'Onsite SLA'], ['-50%', 'Unplanned downtime']] },
-  { sector: 'BFSI', title: 'Nationwide branch rollout under one audit-ready contract', text: 'Hardened endpoints and encrypted storage delivered to branches in nine cities under one consolidated, audit-ready contract.',
-    metrics: [['9', 'Cities covered'], ['1', 'Consolidated contract'], ['100%', 'Assets tagged']] }
+  { sector: 'Aliqua ut enim', title: 'Ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip', text: 'Ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.',
+    metrics: [['180', 'Lorem ipsum'], ['4 wks', 'Dolor sit amet'], ['0', 'Consectetur adipiscing elit']] },
+  { sector: 'Nulla', title: 'Pariatur excepteur sint occaecat cupidatat non proident sunt', text: 'In culpa qui officia deserunt mollit anim id est laborum lorem ipsum dolor sit amet consectetur adipiscing.',
+    metrics: [['3', 'Sed do'], ['4 hr', 'Eiusmod tempor'], ['-50%', 'Incididunt ut']] },
+  { sector: 'Elit', title: 'Sed do eiusmod tempor incididunt ut labore', text: 'Et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut.',
+    metrics: [['9', 'Labore et'], ['1', 'Dolore magna'], ['100%', 'Aliqua ut']] }
 ]
 
 const faqs = [
-  { q: 'What is the minimum rental term?', a: 'Our shortest standard term is one month, though most customers run 12-36 month plans. Project-based short-term rentals can be arranged case by case.' },
-  { q: 'How fast can you deliver a bulk laptop order?', a: 'Standard bulk orders from our Bengaluru stock dispatch within 48 hours, imaged, asset-tagged and ready to hand over.' },
-  { q: 'Do you support offices outside Bengaluru?', a: 'Yes. We deliver and support nationwide, with onsite engineers and next-business-day cover across 18 cities.' },
-  { q: 'What happens if a rented device fails?', a: 'We swap it under SLA, typically within four hours in Bengaluru and next business day elsewhere, so your team is never without a working machine.' },
-  { q: 'Can we mix rental and outright purchase in one order?', a: 'Yes - many customers rent laptops for flexible headcount and purchase servers and network hardware outright, all on one consolidated invoice.' },
-  { q: 'Is GST-compliant invoicing included?', a: 'Every order, rental or purchase, comes with GST-compliant invoicing and, on request, an asset register for your audit trail.' }
+  { q: 'Aliquip ex ea commodo consequat duis?', a: 'Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in.' },
+  { q: 'Culpa qui officia deserunt mollit anim id est laborum?', a: 'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna.' },
+  { q: 'Aliqua ut enim ad minim veniam?', a: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.' },
+  { q: 'Dolor in reprehenderit in voluptate velit esse?', a: 'Cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum lorem ipsum.' },
+  { q: 'Dolor sit amet consectetur adipiscing elit sed do eiusmod tempor?', a: 'Incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex.' },
+  { q: 'Ea commodo consequat duis?', a: 'Aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.' }
 ]
 
 function ProductCard({ tag, title, text, specs, icon }) {
@@ -230,8 +244,9 @@ function TechSlider({ items }) {
     <section className="wrap pt-6 lg:pt-10" aria-roledescription="carousel" aria-label="Technology partners">
       <div className="relative overflow-hidden rounded-3xl bg-[#1d4601] text-white"
            onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-        {/* Image area always keeps the slides' 1997x788 shape, so artwork is never cropped */}
-        <div className="relative aspect-[1997/788] w-full">
+        {/* Image area keeps the artwork's shape so it is never cropped:
+            1040x787 mobile images below md, 1997x788 banners from md up */}
+        <div className="relative aspect-[1040/787] w-full md:aspect-[1997/788]">
           <div className="absolute inset-0 overflow-hidden">
             <div className="flex h-full"
                  style={{
@@ -239,8 +254,11 @@ function TechSlider({ items }) {
                    transition: animate ? `transform ${SLIDE_SPEED}ms ease` : 'none'
                  }}>
               {track.map((s, i) => (
-                <img key={i} src={s.img} alt="" aria-hidden
-                     className="pointer-events-none h-full w-full shrink-0 object-cover" />
+                <picture key={i} className="h-full w-full shrink-0">
+                  <source media="(max-width: 767px)" srcSet={s.mobileImg} />
+                  <img src={s.img} alt="" aria-hidden
+                       className="pointer-events-none h-full w-full object-cover" />
+                </picture>
               ))}
             </div>
           </div>
@@ -272,7 +290,7 @@ function TechSlider({ items }) {
                 Explore {current.title}
               </Link> */}
               <Link to="/contact"
-                    className="rounded-full bg-brand border border-white/60 px-6 py-2.5 text-[14px] font-medium text-white transition hover:bg-white hover:text-[#1d4601] sm:px-7 sm:py-3 sm:text-[15px]">
+                    className="rounded-full bg-brand   px-6 py-2.5 text-[14px] font-medium text-white transition hover:bg-white hover:text-[#1d4601] sm:px-7 sm:py-3 sm:text-[15px]">
                 Talk to an expert
               </Link>
             </div>
@@ -425,9 +443,9 @@ export default function Home() {
          <TechSlider items={spotlights} />
 
       {/* ---------------- BRAND MARQUEE ---------------- */}
-      <div className="border-hair bg-white py-9">
+      <div className="border-hair bg-white py-9 " style={{ marginTop: '100px' }}>
         <p className="wrap mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-300">
-          30+ Partners Across  IT Verticals
+          Lorem ipsum dolor sit amet
         </p>
         {/* .wrap keeps the logo strip the same width as the banner above */}
         <div className="wrap">
@@ -453,9 +471,9 @@ export default function Home() {
 
       {/* ---------------- OUR SOLUTIONS ---------------- */}
       <Section
-        eyebrow="Our solutions"
-        title="One partner for every layer of your IT infrastructure"
-        lede="From a single MacBook for a new joiner to a full branch rollout with servers, switches and firewalls - sourced, configured, deployed and supported end to end."
+        eyebrow="Lorem ipsum"
+        title="Lorem ipsum dolor sit amet consectetur adipiscing elit"
+        lede="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       >
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map(s => <IconCard key={s.title} {...s} />)}
@@ -469,12 +487,12 @@ export default function Home() {
       {/* ---------------- PRACTICES ---------------- */}
       <Section
         tone="grey"
-        eyebrow="What we do"
-        title="Three practices that cover the whole estate"
-        lede="Most businesses buy hardware from one vendor, security from another and hands from a third. LightPro carries all three, so accountability never splits."
+        eyebrow="Dolor sit amet"
+        title="Duis aute irure dolor in reprehenderit"
+        lede="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus."
       >
         <div className="grid gap-6 lg:grid-cols-3">
-          {practices.map(p => <LinkCard key={p.to} {...p} />)}
+          {practiceItems.map(p => <LinkCard key={p.to} {...p} />)}
         </div>
       </Section>
 
@@ -484,16 +502,16 @@ export default function Home() {
         <div className="wrap grid gap-14 lg:grid-cols-[.9fr_1.1fr] lg:gap-16"
         >
           <div>
-            <p className="eyebrow">Why LightPro</p>
-            <h2 className="h2 mt-5 !text-white">We stay on the asset, not just the invoice</h2>
+            <p className="eyebrow">Lorem ipsum</p>
+            <h2 className="h2 mt-5 !text-white">Lorem ipsum dolor sit amet consectetur</h2>
             <p className="mt-5 text-[1.05rem] leading-relaxed text-white/60">
-              A box arriving is the easy part. What follows - the imaging, the enrolment, the
-              policy, the failed unit at 4pm on a Friday, the audit trail at year end - is
-              where an infrastructure partner is actually judged.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              {['ISO-aligned processes', 'GST compliant invoicing', 'Asset tagging & audit reports', 'Buy-back & e-waste disposal'].map(c => (
+              {['Lorem ipsum dolor', 'Sit amet consectetur', 'Adipiscing elit sed do', 'Eiusmod tempor incididunt'].map(c => (
                 <span key={c} className="border border-white/15 px-4 py-2 text-[12.5px] text-white/70">{c}</span>
               ))}
             </div>
@@ -517,9 +535,9 @@ export default function Home() {
 
       {/* ---------------- INDUSTRIES ---------------- */}
       <Section
-        eyebrow="Industries served"
-        title="Infrastructure tuned to how your industry actually works"
-        lede="Compliance needs, uptime tolerance and device profiles differ by sector. We build the specification around yours."
+        eyebrow="Consectetur adipiscing"
+        title="Nemo enim ipsam voluptatem quia voluptas sit aspernatur"
+        lede="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit sed quia non numquam."
         center
       >
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -530,9 +548,9 @@ export default function Home() {
       {/* ---------------- IT INFRASTRUCTURE LIFECYCLE ---------------- */}
       <Section
         tone="grey"
-        eyebrow="IT infrastructure lifecycle"
-        title="Seven stages, one accountable partner at every one"
-        lede="Most vendors sell you a box and disappear. We stay on the asset from the first requirement call to the day it is refreshed or retired."
+        eyebrow="Ut enim ad minim"
+        title="Quis autem vel eum iure reprehenderit qui in ea"
+        lede="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores."
         center
       >
         <div className="relative mt-4">
@@ -553,9 +571,9 @@ export default function Home() {
 
       {/* ---------------- FEATURED PRODUCTS ---------------- */}
       <Section
-        eyebrow="Featured products"
-        title="Enterprise hardware, available to rent or purchase"
-        lede="Current stock from our Bengaluru warehouse. Configuration and availability confirmed at quotation stage."
+        eyebrow="Sed do eiusmod"
+        title="Temporibus autem quibusdam et aut officiis debitis"
+        lede="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur."
       >
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map(p => <ProductCard key={p.title} {...p} />)}
@@ -565,9 +583,9 @@ export default function Home() {
       {/* ---------------- CORPORATE RENTAL SOLUTIONS ---------------- */}
       <Section
         tone="grey"
-        eyebrow="Corporate rental solutions"
-        title="A plan for wherever you are in the growth curve"
-        lede="Every plan includes imaging, asset tagging and GST-compliant invoicing. Mix and match across your estate as needed."
+        eyebrow="Tempor incididunt"
+        title="Nam libero tempore cum soluta nobis est eligendi"
+        lede="Omnis voluptas assumenda est, omnis dolor repellendus. Et harum quidem rerum facilis est et expedita distinctio."
       >
         <div className="grid gap-8 lg:grid-cols-3">
           {plans.map(p => <PlanCard key={p.title} {...p} />)}
@@ -576,9 +594,9 @@ export default function Home() {
 
       {/* ---------------- CLIENT FEEDBACK ---------------- */}
       <Section
-        eyebrow="Client feedback"
-        title="What it is like to run your estate through us"
-        lede="A sample of the feedback our account managers hear directly from customers."
+        eyebrow="Magna aliqua"
+        title="Similique sunt in culpa qui officia deserunt mollitia"
+        lede="Animi, id est laborum et dolorum fuga harum quidem rerum facilis est."
       >
         <div className="grid gap-6 lg:grid-cols-3">
           {testimonials.map(t => <QuoteCard key={t.name + t.role} {...t} />)}
@@ -589,9 +607,9 @@ export default function Home() {
       <section className="section bg-[#1d4601] ">
         <div className="wrap">
           <div className="mb-12 max-w-3xl">
-            <p className="eyebrow">Case studies</p>
-            <h2 className="h2 mt-5 !text-white">Engagements built the same way we describe them</h2>
-            <p className="mt-5 text-[1.05rem] leading-relaxed text-white/60">Illustrative outcomes based on the shape of engagements we run - ask your account manager for references from your sector.</p>
+            <p className="eyebrow">Quis nostrud</p>
+            <h2 className="h2 mt-5 !text-white">Ullamco laboris nisi ut aliquip ex ea commodo</h2>
+            <p className="mt-5 text-[1.05rem] leading-relaxed text-white/60">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
           <div className="grid gap-6 lg:grid-cols-3">
             {cases.map(c => <CaseCard key={c.title} {...c} />)}
@@ -603,9 +621,9 @@ export default function Home() {
       <section className="section bg-[#F7F8F6]">
         <div className="wrap grid gap-14 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
           <div>
-            <p className="eyebrow">FAQs</p>
-            <h2 className="h2 mt-5">Answers before you ask</h2>
-            <p className="lede mt-5">Can&apos;t find what you need here? Send it straight to the team that will actually answer it.</p>
+            <p className="eyebrow">Lorem ipsum</p>
+            <h2 className="h2 mt-5">Dolor sit amet consectetur</h2>
+            <p className="lede mt-5">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</p>
             <Link to="/contact" className="btn-outline mt-8">Ask us directly</Link>
           </div>
           <Faq items={faqs} />
@@ -621,7 +639,10 @@ export default function Home() {
         <BrandGrid items={allBrands} />
       </Section> */}
 
-      <CTA />
+      <CTA
+        title="Lorem ipsum dolor sit amet consectetur."
+        text="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+      />
     </>
   )
 }

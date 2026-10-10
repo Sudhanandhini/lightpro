@@ -15,7 +15,7 @@ export default function DeviceManagement() {
         <BrandGrid items={deviceManagementBrands} />
       </Section>
 
-      <Section tone="grey" eyebrow="Lorem ipsum" title="Consectetur adipiscing elit">
+      {/* <Section tone="grey" eyebrow="Lorem ipsum" title="Consectetur adipiscing elit">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <RuleList items={[
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -42,16 +42,16 @@ export default function DeviceManagement() {
             </div>
           </div>
         </div>
-      </Section>
+      </Section> */}
 
-      <Section eyebrow="Lorem ipsum" title="Sed do eiusmod tempor">
+      {/* <Section eyebrow="Lorem ipsum" title="Sed do eiusmod tempor">
         <Steps items={[
           { title: 'Lorem', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
           { title: 'Ipsum', text: 'Sed do eiusmod tempor incididunt ut labore et dolore.' },
           { title: 'Dolor', text: 'Ut enim ad minim veniam, quis nostrud exercitation.' },
           { title: 'Amet',  text: 'Duis aute irure dolor in reprehenderit in voluptate.' }
         ]} />
-      </Section>
+      </Section> */}
 
       <CTA />
     </>

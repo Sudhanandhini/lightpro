@@ -50,7 +50,7 @@ export default function Warehousing() {
         </div>
       </Section>
 
-      <Section eyebrow="Lorem ipsum" title="Sed do eiusmod tempor">
+      {/* <Section eyebrow="Lorem ipsum" title="Sed do eiusmod tempor">
         <div className="grid gap-px bg-hair md:grid-cols-3">
           {[
             { t: 'Lorem ipsum', d: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.' },
@@ -64,16 +64,16 @@ export default function Warehousing() {
             </div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 
-      <Section tone="grey" eyebrow="Lorem ipsum" title="Ut enim ad minim veniam">
+      {/* <Section tone="grey" eyebrow="Lorem ipsum" title="Ut enim ad minim veniam">
         <Steps items={[
           { title: 'Lorem', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
           { title: 'Ipsum', text: 'Sed do eiusmod tempor incididunt ut labore et dolore.' },
           { title: 'Dolor', text: 'Ut enim ad minim veniam, quis nostrud exercitation.' },
           { title: 'Amet',  text: 'Duis aute irure dolor in reprehenderit in voluptate.' }
         ]} />
-      </Section>
+      </Section> */}
 
       <CTA title="Lorem ipsum dolor sit amet." text="Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
     </>
