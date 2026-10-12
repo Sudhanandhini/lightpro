@@ -1,4 +1,4 @@
-import { PageHero, Section, LinkCard, RuleList, CTA } from '../components/UI.jsx'
+import { PageHero, Section, LinkCard, RuleList } from '../components/UI.jsx'
 import { nav } from '../data/site.js'
 
 const children = nav.find(n => n.label === 'LightPro Professional Services').children
@@ -37,7 +37,6 @@ export default function ProfessionalServices() {
         </div>
       </Section> */}
 
-      <CTA />
     </>
   )
 }

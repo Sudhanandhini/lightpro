@@ -1,7 +1,8 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import { CTA } from './components/UI.jsx'
 
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -19,6 +20,8 @@ import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
+  const { pathname } = useLocation()
+
   return (
     <div className="flex min-h-screen flex-col">
       <ScrollToTop />
@@ -44,6 +47,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        {pathname !== '/contact' && <CTA />}
       </main>
       <Footer />
     </div>

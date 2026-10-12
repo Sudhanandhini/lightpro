@@ -1,4 +1,4 @@
-import { PageHero, Section, RuleList, CTA } from '../components/UI.jsx'
+import { PageHero, Section, RuleList } from '../components/UI.jsx'
 
 const features = [
   'Certified on-site technicians available for urgent troubleshooting and hardware configurations across a massive city footprint.',
@@ -121,7 +121,6 @@ export default function OnDemandServices() {
         </div>
       </Section> */}
 
-      <CTA title="Send us your asset list." text="We will price cover against it and tell you which assets are not worth contracting." />
     </>
   )
 }

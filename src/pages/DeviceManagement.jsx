@@ -1,4 +1,4 @@
-import { PageHero, Section, BrandGrid, RuleList, Steps, CTA } from '../components/UI.jsx'
+import { PageHero, Section, BrandGrid, RuleList, Steps } from '../components/UI.jsx'
 import { deviceManagementBrands } from '../data/site.js'
 
 export default function DeviceManagement() {
@@ -7,11 +7,11 @@ export default function DeviceManagement() {
       <PageHero
         eyebrow="Digital Workspace Solutions"
         title="Device Management Solutions"
-        lede="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        lede=""
         crumbs={[{ label: 'Digital Workspace Solutions', to: '/digital-workspace-solutions' }, { label: 'Device Management Solutions' }]}
       />
 
-      <Section eyebrow="Lorem ipsum" title="Lorem ipsum dolor sit amet" lede="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+      <Section eyebrow="" title="" lede=" ">
         <BrandGrid items={deviceManagementBrands} />
       </Section>
 
@@ -53,7 +53,6 @@ export default function DeviceManagement() {
         ]} />
       </Section> */}
 
-      <CTA />
     </>
   )
 }

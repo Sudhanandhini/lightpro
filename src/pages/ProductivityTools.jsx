@@ -1,4 +1,4 @@
-import { PageHero, Section, BrandGrid, RuleList, CTA } from '../components/UI.jsx'
+import { PageHero, Section, BrandGrid, RuleList } from '../components/UI.jsx'
 import { productivityBrands } from '../data/site.js'
 
 export default function ProductivityTools() {
@@ -7,11 +7,11 @@ export default function ProductivityTools() {
       <PageHero
         eyebrow="Digital Workspace Solutions"
         title="Productivity Software &amp; Tools"
-        lede="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        lede=""
         crumbs={[{ label: 'Digital Workspace Solutions', to: '/digital-workspace-solutions' }, { label: 'Productivity Software & Tools' }]}
       />
 
-      <Section eyebrow="Lorem ipsum" title="Lorem ipsum dolor sit amet" lede="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.">
+      <Section eyebrow="" title="" lede="">
         <BrandGrid items={productivityBrands} />
       </Section>
 
@@ -38,7 +38,6 @@ export default function ProductivityTools() {
         </div>
       </Section> */}
 
-      <CTA title="Lorem ipsum dolor sit amet." text="Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
     </>
   )
 }

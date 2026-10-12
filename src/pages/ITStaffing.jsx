@@ -1,4 +1,4 @@
-import { PageHero, Section, RuleList, Steps, CTA } from '../components/UI.jsx'
+import { PageHero, Section, RuleList, Steps } from '../components/UI.jsx'
 
 export default function ITStaffing() {
   return (
@@ -75,7 +75,6 @@ export default function ITStaffing() {
         ]} />
       </Section> */}
 
-      <CTA title="Send the role, not a job description." text="Tell us what needs to happen on the ground and we will tell you what shape of engineer does it." />
     </>
   )
 }

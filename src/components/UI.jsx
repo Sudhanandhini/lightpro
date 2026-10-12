@@ -180,7 +180,7 @@ export function Steps({ items }) {
 }
 
 /* ---------- closing call to action ---------- */
-export function CTA({ title = 'Tell us what you are trying to build.', text = 'Send the headcount, the sites and the timeline. You will get a written scope and a costed proposal within two working days.', primary = { to: '/contact', label: 'Contact Us' } }) {
+export function CTA({ title = 'Ready to power your workplace with the right IT?', text = 'From devices and networks to security and on-ground support, LightPro delivers end-to-end IT solutions across India. Talk to our team and get a tailored proposal for your business.', primary = { to: '/contact', label: 'Contact Us' } }) {
   return (
     <section className="bg-brand">
       <div className="wrap flex flex-col gap-8 py-16 lg:flex-row lg:items-center lg:justify-between">

@@ -1,4 +1,4 @@
-import { PageHero, Section, RuleList, Steps, CTA } from '../components/UI.jsx'
+import { PageHero, Section, RuleList, Steps } from '../components/UI.jsx'
 
 export default function SeamlessDeployment() {
   return (
@@ -37,7 +37,7 @@ export default function SeamlessDeployment() {
         </div>
       </Section>
 
-      <Section
+      {/* <Section
         tone="grey"
         eyebrow="Pan India Last Mile Delivery & Warehousing"
         title="Secure storage, delivered to the final destination"
@@ -58,7 +58,7 @@ export default function SeamlessDeployment() {
             </div>
           ))}
         </div>
-      </Section>
+      </Section> */}
 {/* 
       <Section eyebrow="Scope" title="What a deployment includes">
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
@@ -109,7 +109,6 @@ export default function SeamlessDeployment() {
         ]} />
       </Section> */}
 
-      <CTA title="Give us the date the floor opens." text="We will work backwards from it and tell you what has to be ordered this week." />
     </>
   )
 }

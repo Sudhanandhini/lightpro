@@ -1,4 +1,4 @@
-import { PageHero, Section, BrandGrid, RuleList, Steps, CTA } from '../components/UI.jsx'
+import { PageHero, Section, BrandGrid, RuleList, Steps } from '../components/UI.jsx'
 import { networkSecurityBrands } from '../data/site.js'
 
 const services = [
@@ -88,7 +88,6 @@ export default function CyberSecurity() {
         </div>
       </section> */}
 
-      <CTA title="Start with an assessment, not a proposal." text="A current-state review gives you a ranked list of exposures and a costed plan. What you do next is your decision." />
     </>
   )
 }

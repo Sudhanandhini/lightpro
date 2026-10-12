@@ -1,4 +1,4 @@
-import { PageHero, Section, RuleList, Steps, CTA } from '../components/UI.jsx'
+import { PageHero, Section, RuleList, Steps } from '../components/UI.jsx'
 
 export default function Warehousing() {
   return (
@@ -6,10 +6,10 @@ export default function Warehousing() {
       <PageHero
         eyebrow="LightPro Professional Services"
         title="Pan India Last Mile Delivery &amp; Warehousing"
-        lede="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        lede=""
         crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'Last Mile Delivery & Warehousing' }]}
       />
-
+{/* 
       <Section eyebrow="Lorem ipsum" title="Lorem ipsum dolor sit amet">
         <div className="grid gap-px bg-hair md:grid-cols-3">
           {[
@@ -25,28 +25,27 @@ export default function Warehousing() {
             </div>
           ))}
         </div>
-      </Section>
-
-      <Section tone="grey" eyebrow="Lorem ipsum" title="Consectetur adipiscing elit">
-        <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
-          <div>
-            <p className="lede">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p className="mt-5 text-[15px] leading-relaxed text-ink-500">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-            </p>
-          </div>
-          <RuleList items={[
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-            'Duis aute irure dolor in reprehenderit in voluptate velit esse.',
-            'Excepteur sint occaecat cupidatat non proident, sunt in culpa.',
-            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.'
-          ]} />
+      </Section> */}
+ <Section
+        tone="grey"
+        eyebrow="Pan India Last Mile Delivery & Warehousing"
+        title=""
+        lede="Pan India last mile delivery and warehousing services provide secure nationwide storage and final-destination transport for enterprise IT assets and goods."
+      >
+        <h3 className="h3 mb-6">Key features</h3>
+        <div className="grid gap-px bg-hair md:grid-cols-3">
+          {[
+            'Widespread logistical reach spanning hundreds of cities across India for secure, last-mile dispatch.',
+            'Safe transit and coordinated delivery of sensitive compute, mobility, and data center infrastructure.',
+            'Integrated IT asset relocation, inventory management, and systematic device deployment from regional staging hubs.'
+          ].map((f, i) => (
+            <div key={f} className="bg-white p-8">
+              <span className="font-display text-[13px] font-semibold tracking-[0.2em] text-brand">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <p className="mt-4 text-[15px] leading-relaxed text-ink-700">{f}</p>
+            </div>
+          ))}
         </div>
       </Section>
 
@@ -75,7 +74,6 @@ export default function Warehousing() {
         ]} />
       </Section> */}
 
-      <CTA title="Lorem ipsum dolor sit amet." text="Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
     </>
   )
 }

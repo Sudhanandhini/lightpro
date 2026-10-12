@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import InfraTopology from '../components/InfraTopology.jsx'
-import { Section, LinkCard, IconCard, BrandGrid, CTA } from '../components/UI.jsx'
+import { Section, LinkCard, IconCard, BrandGrid } from '../components/UI.jsx'
 import { practices, allBrands, company } from '../data/site.js'
 import { getBrandLogo } from '../data/brandLogos.js'
 import ciscoImg from '../assets/cisco.png'
@@ -639,10 +639,6 @@ export default function Home() {
         <BrandGrid items={allBrands} />
       </Section> */}
 
-      <CTA
-        title="Lorem ipsum dolor sit amet consectetur."
-        text="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
-      />
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { PageHero, Section, LinkCard, BrandGrid, CTA } from '../components/UI.jsx'
+import { PageHero, Section, LinkCard, BrandGrid } from '../components/UI.jsx'
 import { nav, deviceBrands, networkSecurityBrands, deviceManagementBrands, productivityBrands } from '../data/site.js'
 
 const children = nav.find(n => n.label === 'Digital Workspace Solutions').children
@@ -60,7 +60,6 @@ export default function DigitalWorkspace() {
         </div>
       </Section> */}
 
-      <CTA />
     </>
   )
 }

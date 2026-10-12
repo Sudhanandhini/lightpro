@@ -1,4 +1,4 @@
-import { PageHero, Section, RuleList, Steps, CTA } from '../components/UI.jsx'
+import { PageHero, Section, RuleList, Steps } from '../components/UI.jsx'
 import { company } from '../data/site.js'
 import teamImage from '../assets/team.jpg'
 
@@ -96,7 +96,6 @@ export default function About() {
 
 
  
-      <CTA title="Want the reference calls before the proposal?" text="We will put you in touch with customers running the same shape of estate as yours." />
     </>
   )
 }
