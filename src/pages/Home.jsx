@@ -443,9 +443,9 @@ export default function Home() {
          <TechSlider items={spotlights} />
 
       {/* ---------------- BRAND MARQUEE ---------------- */}
-      <div className="border-hair bg-white py-9 " style={{ marginTop: '100px' }}>
+      <div className="border-hair bg-white py-9 " style={{ marginTop: '70px' , marginBottom: '50px' }}>
         <p className="wrap mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-300">
-          Lorem ipsum dolor sit amet
+          30+ partners accross IT Venticals
         </p>
         {/* .wrap keeps the logo strip the same width as the banner above */}
         <div className="wrap">
@@ -470,7 +470,7 @@ export default function Home() {
 
 
       {/* ---------------- OUR SOLUTIONS ---------------- */}
-      <Section
+      {/* <Section
         eyebrow="Lorem ipsum"
         title="Lorem ipsum dolor sit amet consectetur adipiscing elit"
         lede="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -478,14 +478,14 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {solutions.map(s => <IconCard key={s.title} {...s} />)}
         </div>
-      </Section>
+      </Section> */}
 
 
       {/* ---------------- TECHNOLOGY PARTNERS SLIDER ---------------- */}
    
 
       {/* ---------------- PRACTICES ---------------- */}
-      <Section
+      {/* <Section
         tone="grey"
         eyebrow="Dolor sit amet"
         title="Duis aute irure dolor in reprehenderit"
@@ -494,10 +494,10 @@ export default function Home() {
         <div className="grid gap-6 lg:grid-cols-3">
           {practiceItems.map(p => <LinkCard key={p.to} {...p} />)}
         </div>
-      </Section>
+      </Section> */}
 
       {/* ---------------- WHY ---------------- */}
-      <section className="section bg-[#1d4601]  text-white/70"  
+      {/* <section className="section bg-[#1d4601]  text-white/70"  
         style={{ backgroundImage: 'radial-gradient(900px 480px at 78% 18%, rgba(103, 169, 59, 0.35), transparent 62%), radial-gradient(620px 420px at 12% 92%, rgba(103,169,59,.16), transparent 65%)' }}>
         <div className="wrap grid gap-14 lg:grid-cols-[.9fr_1.1fr] lg:gap-16"
         >
@@ -531,10 +531,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ---------------- INDUSTRIES ---------------- */}
-      <Section
+      {/* <Section
         eyebrow="Consectetur adipiscing"
         title="Nemo enim ipsam voluptatem quia voluptas sit aspernatur"
         lede="Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit sed quia non numquam."
@@ -543,10 +543,10 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map(i => <IconCard key={i.title} {...i} />)}
         </div>
-      </Section>
+      </Section> */}
 
       {/* ---------------- IT INFRASTRUCTURE LIFECYCLE ---------------- */}
-      <Section
+      {/* <Section
         tone="grey"
         eyebrow="Ut enim ad minim"
         title="Quis autem vel eum iure reprehenderit qui in ea"
@@ -567,10 +567,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </Section>
+      </Section> */}
 
       {/* ---------------- FEATURED PRODUCTS ---------------- */}
-      <Section
+      {/* <Section
         eyebrow="Sed do eiusmod"
         title="Temporibus autem quibusdam et aut officiis debitis"
         lede="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur."
@@ -578,10 +578,10 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {products.map(p => <ProductCard key={p.title} {...p} />)}
         </div>
-      </Section>
+      </Section> */}
 
       {/* ---------------- CORPORATE RENTAL SOLUTIONS ---------------- */}
-      <Section
+      {/* <Section
         tone="grey"
         eyebrow="Tempor incididunt"
         title="Nam libero tempore cum soluta nobis est eligendi"
@@ -590,10 +590,10 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-3">
           {plans.map(p => <PlanCard key={p.title} {...p} />)}
         </div>
-      </Section>
+      </Section> */}
 
       {/* ---------------- CLIENT FEEDBACK ---------------- */}
-      <Section
+      {/* <Section
         eyebrow="Magna aliqua"
         title="Similique sunt in culpa qui officia deserunt mollitia"
         lede="Animi, id est laborum et dolorum fuga harum quidem rerum facilis est."
@@ -601,10 +601,10 @@ export default function Home() {
         <div className="grid gap-6 lg:grid-cols-3">
           {testimonials.map(t => <QuoteCard key={t.name + t.role} {...t} />)}
         </div>
-      </Section>
+      </Section> */}
 
       {/* ---------------- CASE STUDIES ---------------- */}
-      <section className="section bg-[#1d4601] ">
+      {/* <section className="section bg-[#1d4601] ">
         <div className="wrap">
           <div className="mb-12 max-w-3xl">
             <p className="eyebrow">Quis nostrud</p>
@@ -615,10 +615,10 @@ export default function Home() {
             {cases.map(c => <CaseCard key={c.title} {...c} />)}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ---------------- FAQS ---------------- */}
-      <section className="section bg-[#F7F8F6]">
+      {/* <section className="section bg-[#F7F8F6]">
         <div className="wrap grid gap-14 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
           <div>
             <p className="eyebrow">Lorem ipsum</p>
@@ -628,7 +628,7 @@ export default function Home() {
           </div>
           <Faq items={faqs} />
         </div>
-      </section>
+      </section> */}
 
       {/* ---------------- BRANDS / PARTNER ECOSYSTEM ---------------- */}
       {/* <Section

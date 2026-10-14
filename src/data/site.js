@@ -6,8 +6,8 @@ export const company = {
   short: 'LightPro',
   since: 2016,
   city: 'Bengaluru',
-  phone: '+91 80 4123 4567',
-  phoneHref: 'tel:+918041234567',
+  phone: [ '+91-9449973956', '+91-9739349449', '+91-8296831382'],
+  
   email: 'sales@lightpro.in',
   support: 'support@lightpro.in',
   address: 'LightPro Technologies Pvt. Ltd., No. 32, BHCS Layout, Bannerghatta Main Road, Opp Gopalan Innovation Mall, Bangalore - 560076',

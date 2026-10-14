@@ -48,7 +48,7 @@ export default function Navbar() {
   return (
     <>
       {/* utility strip */}
-      <div className="hidden bg-ink text-white lg:block">
+      {/* <div className="hidden bg-ink text-white lg:block">
         <div className="wrap flex h-9 items-center justify-between text-[12px]">
           <p className="text-white/60">
             IT infrastructure partner since {company.since} &middot; {company.city} &middot; deploying across India
@@ -58,7 +58,7 @@ export default function Navbar() {
             <a href={`mailto:${company.email}`} className="hover:text-brand">{company.email}</a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <header
         ref={barRef}

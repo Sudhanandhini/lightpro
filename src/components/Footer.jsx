@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Logo from './Logo.jsx'
 import { nav, company } from '../data/site.js'
 import logo from '../assets/logolight1.png'
+import logofooter from '../assets/footer-logo.png'
 
 export default function Footer() {
   const groups = nav.filter(n => n.children)
@@ -10,15 +11,19 @@ export default function Footer() {
       <div className="rule" />
       <div className="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Logo className="h-20 w-auto" light />
-          {/* <img src={logo} alt="LightPro Technologies" className="h-auto w-[160px]" /> */}
+         {/* [ <Logo className="h-20 w-auto" light />] */}
+          <img src={logofooter} alt="LightPro Technologies" className="h-auto w-[160px]" />
           <p className="mt-6 max-w-[32ch] text-[14px] leading-relaxed text-white/55">
             IT infrastructure partner since {company.since}. We build and run the digital
             workspace - devices, network, security and the people who keep it all working.
           </p>
-          <a href={company.phoneHref} className="mt-6 inline-block font-display text-xl font-light text-white hover:text-brand">
-            {company.phone}
-          </a>
+          <div className="mt-6 flex flex-col gap-3">
+            {company.phone.map((phone, index) => (
+              <a key={index} href={`tel:${phone}`} className="font-display text-md font-light text-white/70 hover:text-brand">
+                {phone}
+              </a>
+            ))}
+          </div>
         </div>
 
         {groups.map(g => (
