@@ -4,16 +4,16 @@ export default function ITStaffing() {
   return (
     <>
       <PageHero
-        eyebrow="LightPro Professional Services"
+        eyebrow="Lightpro Professional Services"
         title="IT Staffing Services"
         lede=""
-        crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'IT Staffing Services' }]}
+        crumbs={[{ label: 'Lightpro Professional Services', to: '/professional-services' }, { label: 'IT Staffing Services' }]}
       />
 
       <section  className="bg-white pt-16 sm:pt-20">
         <div className="wrap">
           <p className="lede ">
-            LightPro staffing services provide flexible, skilled technology professionals to scale
+            Lightpro staffing services provide flexible, skilled technology professionals to scale
             your workforce on demand, for short-term projects or permanent roles. Our staffing
             services empower your enterprise with skilled technology professionals, certified
             project teams and OEM-certified engineers tailored to your operational scale.
@@ -51,7 +51,7 @@ export default function ITStaffing() {
           <div className="border border-hair bg-white p-8">
             <h3 className="h3">How we screen</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-ink-500">
-              Every candidate is assessed by a LightPro engineer working in the same discipline,
+              Every candidate is assessed by a Lightpro engineer working in the same discipline,
               on a practical task rather than a keyword-matched CV. Background verification and
               certification checks are completed before we put a name in front of you.
             </p>

@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo.jsx'
 import { nav, company } from '../data/site.js'
-import logo from '../assets/logolight1.png'
-import logofooter from '../assets/footer-logo.png'
+import logofooter from '../assets/footer-logo2.webp'
 
 export default function Footer() {
   const groups = nav.filter(n => n.children)
@@ -12,14 +11,14 @@ export default function Footer() {
       <div className="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
          {/* [ <Logo className="h-20 w-auto" light />] */}
-          <img src={logofooter} alt="LightPro Technologies" className="h-auto w-[160px]" />
-          <p className="mt-6 max-w-[32ch] text-[14px] leading-relaxed text-white/55">
+          <img src={logofooter} alt="Lightpro Technologies" width="300" height="173" loading="lazy" decoding="async" className="h-auto w-[160px]" />
+          <p className="mt-6 max-w-[32ch] text-[14px] leading-relaxed text-white/90">
             IT infrastructure partner since {company.since}. We build and run the digital
             workspace - devices, network, security and the people who keep it all working.
           </p>
           <div className="mt-6 flex flex-col gap-3">
             {company.phone.map((phone, index) => (
-              <a key={index} href={`tel:${phone}`} className="font-display text-md font-light text-white/70 hover:text-brand">
+              <a key={index} href={`tel:${phone}`} className="font-display text-md font-light text-white/90 hover:text-brand">
                 {phone}
               </a>
             ))}
@@ -32,7 +31,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {g.children.map(c => (
                 <li key={c.to}>
-                  <Link to={c.to} className="text-[14px] text-white/60 transition hover:text-white">{c.label}</Link>
+                  <Link to={c.to} className="text-[14px] text-white/90 transition hover:text-white">{c.label}</Link>
                 </li>
               ))}
             </ul>
@@ -42,19 +41,28 @@ export default function Footer() {
         <div>
           <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand">Company</h4>
           <ul className="mt-5 space-y-3">
-            <li><Link to="/about" className="text-[14px] text-white/60 hover:text-white">About</Link></li>
-            <li><Link to="/network-and-cyber-security-services" className="text-[14px] text-white/60 hover:text-white">Network &amp; Cyber Security</Link></li>
-            <li><Link to="/contact" className="text-[14px] text-white/60 hover:text-white">Contact Us</Link></li>
+            <li><Link to="/about" className="text-[14px] text-white/90 hover:text-white">About</Link></li>
+            <li><Link to="/network-and-cyber-security-services" className="text-[14px] text-white/90 hover:text-white">Network &amp; Cyber Security</Link></li>
+            <li><Link to="/contact" className="text-[14px] text-white/90 hover:text-white">Contact Us</Link></li>
           </ul>
-          <address className="mt-6 not-italic text-[13.5px] leading-relaxed text-white/45">
-            {company.address}<br />
-            <a href={`mailto:${company.email}`} className="hover:text-white">{company.email}</a>
+              <address className="mt-6 not-italic text-[13.5px] leading-relaxed text-white/90 flex flex-col gap-1">
+          {company.address.map((line, index) => (
+            <span key={index}>{line}</span>
+          ))}
+          </address>
+          <address className="mt-6 not-italic text-[13.5px] leading-relaxed text-white/90 flex flex-col gap-3">
+         
+            {company.email.map((email, index) => (
+              <a key={index} href={`mailto:${email}`} className="hover:text-white">
+                {email}
+              </a>
+            ))}
           </address>
         </div>
       </div>
 
       <div className="border-t border-white/10">
-        <div className="wrap flex flex-col gap-3 py-6 text-[12.5px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="wrap flex flex-col gap-3 py-6 text-[12.5px] text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} {company.name}. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="https://www.sunsys.in/" className="hover:text-white"> Developed By Sunsys Technologies</a>

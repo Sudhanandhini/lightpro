@@ -22,7 +22,7 @@ export default function CyberSecurity() {
         <div className="grid gap-14 lg:grid-cols-2 lg:gap-20">
           <p className="lede">
             Recognized as an expert partner with leading enterprise wired &amp; wireless products,
-            extensive experience and proactive solutions. LightPro ensures to deliver more reliable
+            extensive experience and proactive solutions. Lightpro ensures to deliver more reliable
             wired &amp; wireless designs and deployment that let clients focus on business without
             connectivity concerns, building future-proof networks.
           </p>
@@ -33,7 +33,7 @@ export default function CyberSecurity() {
               distributed - while ensuring resilience, security, and scalability.
             </p>
             <p>
-              With expertise in creating efficient, highly available networks, our team at LightPro
+              With expertise in creating efficient, highly available networks, our team at Lightpro
               can help design robust infrastructures that maintain stability during peak loads,
               simplifying management with intelligent automation for streamlined operations.
             </p>

@@ -4,10 +4,10 @@ export default function Warehousing() {
   return (
     <>
       <PageHero
-        eyebrow="LightPro Professional Services"
+        eyebrow="Lightpro Professional Services"
         title="Pan India Last Mile Delivery &amp; Warehousing"
         lede=""
-        crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'Last Mile Delivery & Warehousing' }]}
+        crumbs={[{ label: 'Lightpro Professional Services', to: '/professional-services' }, { label: 'Last Mile Delivery & Warehousing' }]}
       />
 {/* 
       <Section eyebrow="Lorem ipsum" title="Lorem ipsum dolor sit amet">

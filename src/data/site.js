@@ -2,15 +2,14 @@
 // Edit here and every menu, sub-menu and footer link updates.
 
 export const company = {
-  name: 'LightPro Technologies Private Limited',
-  short: 'LightPro',
+  name: 'Lightpro Technologies Private Limited',
+  short: 'Lightpro',
   since: 2016,
   city: 'Bengaluru',
   phone: [ '+91-9449973956', '+91-9739349449', '+91-8296831382'],
   
-  email: 'sales@lightpro.in',
-  support: 'support@lightpro.in',
-  address: 'LightPro Technologies Pvt. Ltd., No. 32, BHCS Layout, Bannerghatta Main Road, Opp Gopalan Innovation Mall, Bangalore - 560076',
+  email: ['sanketh@lightprotechnologies.com ','sharath.pallakki@lightprotechnologies.com ','thilip@lightprotechnologies.com'],
+  address: ['Lightpro Technologies Pvt. Ltd.','No. 32, BHCS Layout, Bannerghatta Main Road, Opp Gopalan Innovation Mall, Bangalore - 560076'],
   hours: 'Monday to Saturday, 9:00 - 19:00 IST'
 }
 
@@ -30,7 +29,7 @@ export const nav = [
   },
   { label: 'Network & Cyber Security Services', to: '/network-and-cyber-security-services' },
   {
-    label: 'LightPro Professional Services',
+    label: 'Lightpro Professional Services',
     to: '/professional-services',
     children: [
       { label: 'IT Staffing Services', to: '/professional-services/it-staffing-services',
@@ -54,7 +53,10 @@ export const deviceBrands = [
 ]
 
 export const networkSecurityBrands = [
-  'Cisco Meraki', 'Aruba', 'Juniper', 'HPE', 'Fortinet', 'Sophos'
+  'Cisco Meraki', 'Aruba', 'Juniper', 'HPE', 'Fortinet',
+  'Apple', 'Samsung', 'Legrand', 'Dynabook', 'MeadBar',
+  'Lenovo', 'HP', 'Dell', 'Asus', 'Microsoft',
+  'Sophos'
 ]
 
 export const deviceManagementBrands = [
@@ -90,7 +92,7 @@ export const practices = [
   },
   {
     n: '03',
-    title: 'LightPro Professional Services',
+    title: 'Lightpro Professional Services',
     to: '/professional-services',
     text: 'The people and logistics behind the hardware - engineers, rollouts, support visits and secure storage.',
     points: ['IT Staffing Services', 'Seamless Deployment', 'On-Demand Services', 'Last Mile Delivery & Warehousing']

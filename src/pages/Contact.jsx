@@ -66,9 +66,13 @@ export default function Contact() {
 
             <dl className="mt-10 divide-y divide-hair border-y border-hair">
               {[
-                ['Head office', company.address],
+                ['Head office', company.address.map((line) => (
+                  <span key={line} className="block">{line}</span>
+                ))],
                 // ['Sales and procurement', `  ${company.hours}`],
-                ['Email', `${company.email} / ${company.support}`],
+                ['Email', company.email.map((email) => (
+                  <a key={email} href={`mailto:${email.trim()}`} className="block hover:text-brand">{email.trim()}</a>
+                ))],
                 // ['Support desk', '24x7 for AMC and managed services customers']
               ].map(([k, v]) => (
                 <div key={k} className="py-5">
@@ -189,7 +193,7 @@ export default function Contact() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="strict-origin-when-cross-origin"
-          title="LightPro Technologies location"
+          title="Lightpro Technologies location"
         />
       </section>
 

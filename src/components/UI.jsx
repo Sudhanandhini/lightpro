@@ -30,14 +30,14 @@ export function PageHero({ eyebrow, title, lede, crumbs = [] }) {
   return (
     <section className="relative overflow-hidden bg-ink pb-16 pt-14 text-white sm:pb-20 sm:pt-16">
       <div aria-hidden className="pointer-events-none absolute inset-0"
-           style={{ backgroundImage: 'radial-gradient(900px 480px at 78% 15%, rgba(103,169,59,.32), transparent 62%), radial-gradient(620px 420px at 8% 95%, rgba(103,169,59,.14), transparent 65%)' }} />
+           style={{ backgroundImage: 'radial-gradient(900px 480px at 72% 28%, rgb(154 247 92 / 25%), transparent 92%), radial-gradient(620px 420px at 8% 95%, rgba(103, 169, 59, 0.14), transparent 65%)' }} />
       {/* the logo's ascending rules, used as page furniture */}
-      <div aria-hidden className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 lg:block">
+      {/* <div aria-hidden className="pointer-events-none absolute -right-24 top-1/2 hidden -translate-y-1/2 lg:block">
         {[26, 60, 94, 128, 162, 196, 230].map((w, i) => (
           <div key={i} className="mb-[10px] h-[3px] bg-white/10" style={{ width: w + 'px', marginLeft: (230 - w) / 2 }} />
         ))}
         <div className="h-[5px] w-[280px] -translate-x-[25px] bg-brand" />
-      </div>
+      </div> */}
 
       <div className="wrap relative">
         {crumbs.length > 0 && (
@@ -79,6 +79,8 @@ export function BrandGrid({ title, note, items }) {
               {logo ? (
                 <img
                   src={logo}
+                  loading="lazy"
+                  decoding="async"
                   alt={b}
                   className="max-h-8 max-w-[120px] object-contain grayscale-0 transition duration-300 group-hover:grayscale"
                 />
@@ -180,7 +182,7 @@ export function Steps({ items }) {
 }
 
 /* ---------- closing call to action ---------- */
-export function CTA({ title = 'Ready to power your workplace with the right IT?', text = 'From devices and networks to security and on-ground support, LightPro delivers end-to-end IT solutions across India. Talk to our team and get a tailored proposal for your business.', primary = { to: '/contact', label: 'Contact Us' } }) {
+export function CTA({ title = 'Ready to power your workplace with the right IT?', text = 'From devices and networks to security and on-ground support, Lightpro delivers end-to-end IT solutions across India. Talk to our team and get a tailored proposal for your business.', primary = { to: '/contact', label: 'Contact Us' } }) {
   return (
     <section className="bg-brand">
       <div className="wrap flex flex-col gap-8 py-16 lg:flex-row lg:items-center lg:justify-between">
@@ -189,8 +191,8 @@ export function CTA({ title = 'Ready to power your workplace with the right IT?'
           <p className="mt-4 text-[15.5px] leading-relaxed text-white/85">{text}</p>
         </div>
         <div className="flex flex-wrap gap-4">
-          <Link to={primary.to} className="btn bg-ink text-white hover:bg-white hover:text-ink">{primary.label}</Link>
-          <a href="tel:+918041234567" className="btn-light">Call +91 80 4123 4567</a>
+          <Link to={primary.to} className="btn-light">{primary.label}</Link>
+          <a href="tel:09739349449" className="btn-light">Call +91-9739349449</a>
         </div>
       </div>
     </section>

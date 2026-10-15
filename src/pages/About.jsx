@@ -1,6 +1,6 @@
 import { PageHero, Section, RuleList, Steps } from '../components/UI.jsx'
 import { company } from '../data/site.js'
-import teamImage from '../assets/team.jpg'
+import teamImage from '../assets/team.webp'
 
 export default function About() {
   return (
@@ -33,7 +33,7 @@ export default function About() {
             </p>
           </div>
           <div >
-           <img src={teamImage} alt="Our team" />
+           <img src={teamImage} alt="Lightpro Technologies team" width="1400" height="934" loading="lazy" decoding="async" className="h-auto w-full" />
           </div>
         </div>
       </Section>

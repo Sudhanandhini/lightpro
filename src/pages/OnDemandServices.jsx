@@ -25,10 +25,10 @@ export default function OnDemandServices() {
   return (
     <>
       <PageHero
-        eyebrow="LightPro Professional Services"
+        eyebrow="Lightpro Professional Services"
         title="On-Demand Services"
         lede=""
-        crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'On-Demand Services' }]}
+        crumbs={[{ label: 'Lightpro Professional Services', to: '/professional-services' }, { label: 'On-Demand Services' }]}
       />
 
 

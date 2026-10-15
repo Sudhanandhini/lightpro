@@ -1,16 +1,16 @@
 import { PageHero, Section, LinkCard, RuleList } from '../components/UI.jsx'
 import { nav } from '../data/site.js'
 
-const children = nav.find(n => n.label === 'LightPro Professional Services').children
+const children = nav.find(n => n.label === 'Lightpro Professional Services').children
 
 export default function ProfessionalServices() {
   return (
     <>
       <PageHero
-        eyebrow="LightPro Professional Services"
-        title="LightPro Professional Services"
+        eyebrow="Lightpro Professional Services"
+        title="Lightpro Professional Services"
         lede=""
-        crumbs={[{ label: 'LightPro Professional Services' }]}
+        crumbs={[{ label: 'Lightpro Professional Services' }]}
       />
 
       <Section eyebrow="Four services" title="Hands, wherever the work is">

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
  * The logo is a stack of rules that widen as they descend. Read from the top down
  * that is exactly how a workspace is built: a person at the top, resting on
  * software, devices, management, network and, at the base, the people who run it.
- * Hovering a layer widens it and names what LightPro delivers there.
+ * Hovering a layer widens it and names what Lightpro delivers there.
  */
 const layers = [
   { label: 'Productivity software',  to: '/digital-workspace-solutions/productivity-software-and-tools', detail: 'Microsoft 365, Adobe, Autodesk, DocuSign - licensed and renewal-tracked.' },
@@ -23,7 +23,7 @@ export default function LayerStack() {
   return (
     <div className="w-full">
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">The LightPro stack</p>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">The Lightpro stack</p>
         <p className="text-[11px] uppercase tracking-[0.14em] text-brand">Six layers, one partner</p>
       </div>
 

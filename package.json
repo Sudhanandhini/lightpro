@@ -6,10 +6,11 @@
   "description": "LightPro Technologies Private Limited - corporate website (React + Tailwind + Node)",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
     "preview": "vite preview",
     "start": "node server/index.js",
-    "serve": "npm run build && node server/index.js"
+    "serve": "npm run build && node server/index.js",
+    "optimize-images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -22,6 +23,7 @@
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
+    "sharp": "^0.33.5",
     "tailwindcss": "^3.4.13",
     "vite": "^5.4.8"
   }

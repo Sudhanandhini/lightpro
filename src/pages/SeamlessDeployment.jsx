@@ -4,10 +4,10 @@ export default function SeamlessDeployment() {
   return (
     <>
       <PageHero
-        eyebrow="LightPro Professional Services"
+        eyebrow="Lightpro Professional Services"
         title="Seamless Deployment"
         lede=""
-        crumbs={[{ label: 'LightPro Professional Services', to: '/professional-services' }, { label: 'Seamless Deployment' }]}
+        crumbs={[{ label: 'Lightpro Professional Services', to: '/professional-services' }, { label: 'Seamless Deployment' }]}
       />
 
 

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { LogoMark } from './Logo.jsx'
 import { nav, company } from '../data/site.js'
-import logo from '../assets/logo.jpg'
+import logo from '../assets/logo.webp'
 
 function Caret({ open }) {
   return (
@@ -70,9 +70,9 @@ export default function Navbar() {
       >
         <div className="wrap flex h-auto items-center justify-between gap-6">
           {/* logo, left */}
-          <Link to="/" aria-label="LightPro Technologies home" className="shrink-0">
+          <Link to="/" aria-label="Lightpro Technologies home" className="shrink-0">
             {/* <LogoMark className="h-auto w-[200px]" /> */}
-            <img src={logo} alt="LightPro Technologies" className="h-auto w-[160px]" />
+            <img src={logo} alt="Lightpro Technologies" width="480" height="339" fetchpriority="high" className="h-auto w-[160px]" />
           </Link>
 
           {/* menu, right */}

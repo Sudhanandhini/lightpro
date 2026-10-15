@@ -4,18 +4,18 @@ import InfraTopology from '../components/InfraTopology.jsx'
 import { Section, LinkCard, IconCard, BrandGrid } from '../components/UI.jsx'
 import { practices, allBrands, company } from '../data/site.js'
 import { getBrandLogo } from '../data/brandLogos.js'
-import ciscoImg from '../assets/cisco.png'
-import mimecastImg from '../assets/minecast.png'
-import druvaImg from '../assets/dura.png'
-import lenovoImg from '../assets/lenovo.png'
-import dataCenterImg from '../assets/data-center.png'
-import cyberSecurityImg from '../assets/cyber-security.png'
-import ciscoMobile from '../assets/mobile-cisco.jpg'
-import mimecastMobile from '../assets/mobile-minecast.jpg'
-import druvaMobile from '../assets/mobile-dura.jpg'
-import lenovoMobile from '../assets/mobile-lenovo.jpg'
-import dataCenterMobile from '../assets/mobile-datacenter.jpg'
-import cyberSecurityMobile from '../assets/mobile-cyber-security.jpg'
+import ciscoImg from '../assets/cisco.webp'
+import mimecastImg from '../assets/minecast.webp'
+import druvaImg from '../assets/dura.webp'
+import lenovoImg from '../assets/lenovo.webp'
+import dataCenterImg from '../assets/data-center.webp'
+import cyberSecurityImg from '../assets/cyber-security.webp'
+import ciscoMobile from '../assets/mobile-cisco.webp'
+import mimecastMobile from '../assets/mobile-minecast.webp'
+import druvaMobile from '../assets/mobile-dura.webp'
+import lenovoMobile from '../assets/mobile-lenovo.webp'
+import dataCenterMobile from '../assets/mobile-datacenter.webp'
+import cyberSecurityMobile from '../assets/mobile-cyber-security.webp'
 
 function Icon({ children }) {
   return (
@@ -256,7 +256,8 @@ function TechSlider({ items }) {
               {track.map((s, i) => (
                 <picture key={i} className="h-full w-full shrink-0">
                   <source media="(max-width: 767px)" srcSet={s.mobileImg} />
-                  <img src={s.img} alt="" aria-hidden
+                  <img src={s.img} alt="" aria-hidden width="1920" height="758"
+                       fetchpriority={i === 1 ? "high" : "auto"} decoding="async"
                        className="pointer-events-none h-full w-full object-cover" />
                 </picture>
               ))}
@@ -289,10 +290,10 @@ function TechSlider({ items }) {
                     className="rounded-full bg-brand px-6 py-2.5 text-[14px] font-medium text-white transition hover:bg-brand-dark sm:px-7 sm:py-3 sm:text-[15px]">
                 Explore {current.title}
               </Link> */}
-              <Link to="/contact"
+              {/* <Link to="/contact"
                     className="rounded-full bg-brand   px-6 py-2.5 text-[14px] font-medium text-white transition hover:bg-white hover:text-[#1d4601] sm:px-7 sm:py-3 sm:text-[15px]">
                 Talk to an expert
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -415,7 +416,7 @@ export default function Home() {
               Global Systems Integrator and Network Security Solutions Provider
             </h1>
             <p className="mt-7 max-w-[56ch] text-[1.08rem] leading-relaxed text-white/60">
-              LightPro Technologies supplies the devices, the network, the security and the
+              Lightpro Technologies supplies the devices, the network, the security and the
               people behind them - from a single laptop to a multi-site rollout, specified,
               deployed and supported end to end.
             </p>
@@ -454,7 +455,7 @@ export default function Home() {
             {[...allBrands, ...allBrands].map((b, i) => {
               const logo = getBrandLogo(b)
               return logo ? (
-                <img key={i} src={logo} alt={b}
+                <img key={i} src={logo} alt={b} loading="lazy" decoding="async"
                      className="h-8 max-w-[120px] shrink-0 object-contain grayscale-0 transition duration-300 hover:grayscale" />
               ) : (
                 <span key={i} className="whitespace-nowrap font-display text-[19px] font-light tracking-tight text-ink-300">

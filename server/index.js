@@ -41,12 +41,24 @@ app.get('/api/health', (_req, res) => res.json({ ok: true, service: 'lightpro-we
 
 /* --- static build ------------------------------------------------------ */
 if (fs.existsSync(dist)) {
-  app.use(express.static(dist, { maxAge: '1y', index: false }))
-  app.get('*', (_req, res) => res.sendFile(path.join(dist, 'index.html')))
+  // Each page is pre-rendered: /about -> dist/about.html, / -> dist/index.html
+  const html = { setHeaders: res => res.setHeader('Cache-Control', 'no-cache') }
+  // The build uses base '/lightpro/' (vite.config.js), so the site lives under that path
+  const site = express.Router()
+  app.get('/', (_req, res) => res.redirect('/lightpro/'))
+  app.use('/lightpro', site)
+  site.get('*', (req, res, next) => {
+    const clean = req.path.replace(/\/+$/, '')
+    const file = path.join(dist, clean ? clean + '.html' : 'index.html')
+    if (!file.startsWith(dist) || !fs.existsSync(file)) return next()
+    res.sendFile(file, html)
+  })
+  site.use(express.static(dist, { maxAge: '1y', immutable: true, index: false, redirect: false }))
+  site.use((_req, res) => res.status(404).sendFile(path.join(dist, '404.html'), html))
 } else {
   app.get('*', (_req, res) =>
     res.status(503).send('<h1>Build missing</h1><p>Run <code>npm run build</code> first.</p>')
   )
 }
 
-app.listen(PORT, () => console.log(`LightPro site running on http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`LightPro site running on http://localhost:${PORT}/lightpro/`))

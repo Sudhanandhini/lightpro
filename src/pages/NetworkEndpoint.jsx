@@ -1,5 +1,5 @@
 import { PageHero, Section, BrandGrid, RuleList } from '../components/UI.jsx'
-import { deviceBrands, networkSecurityBrands } from '../data/site.js'
+import {  networkSecurityBrands } from '../data/site.js'
 
 export default function NetworkEndpoint() {
   return (
@@ -12,7 +12,7 @@ export default function NetworkEndpoint() {
       />
 
       <Section eyebrow="" title="" lede="">
-        <BrandGrid items={[...deviceBrands, ...networkSecurityBrands]} note="" />
+        <BrandGrid items={[ ...networkSecurityBrands]} note="" />
         <div className="mt-14 grid gap-14 lg:grid-cols-2 lg:gap-20">
           {/* <div>
             <h3 className="h3">Lorem ipsum dolor</h3>

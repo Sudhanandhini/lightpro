@@ -1,5 +1,5 @@
 /**
- * LightPro mark, redrawn as SVG from the supplied logo:
+ * Lightpro mark, redrawn as SVG from the supplied logo:
  * an ascending stack of rules resting on a green baseline,
  * with the "LighTPRO" wordmark below it.
  */
@@ -9,7 +9,7 @@ export default function Logo({ className = 'h-11', light = false }) {
     { w: 30 }, { w: 62 }, { w: 94 }, { w: 126 }, { w: 158 }, { w: 190 }
   ]
   return (
-    <svg viewBox="0 0 260 115" className={className} role="img" aria-label="LightPro Technologies">
+    <svg viewBox="0 0 260 115" className={className} role="img" aria-label="Lightpro Technologies">
       <g fill={ink}>
         {bars.map((b, i) => (
           <rect key={i} x={(260 - b.w) / 2} y={6 + i * 9} width={b.w} height="3.2" />
@@ -33,7 +33,7 @@ export default function Logo({ className = 'h-11', light = false }) {
 export function LogoMark({ className = 'h-9', light = false }) {
   const ink = light ? '#FFFFFF' : '#0B0C0B'
   return (
-    <svg viewBox="0 0 200 62" className={className} role="img" aria-label="LightPro Technologies">
+    <svg viewBox="0 0 200 62" className={className} role="img" aria-label="Lightpro Technologies">
       <g fill={ink}>
         <rect x="86" y="2" width="28" height="2.6" />
         <rect x="70" y="9" width="60" height="2.6" />
